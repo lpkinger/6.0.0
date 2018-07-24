@@ -1,0 +1,104 @@
+.x-menu-item-text, .x-html-editor-tb .x-font-select, .x-panel-header-default-framed, .x-tip-header, .x-tip-body, .x-form-invalid-tip-body, .x-tip-header-text, .x-progress-text, .x-toolbar, .x-toolbar .x-form-item-label, .x-toolbar .x-toolbar-text, .x-window-header-text-default, .x-grid-rowbody, .x-grid-row .x-grid-cell, .x-grid-group-title, .x-grid-row-editor .x-form-field, .x-grid-row-editor .x-form-display-field, .x-form-invalid-under, .x-fieldset-header, .x-column-header, .x-mask-msg div, .x-btn-group-header-text-default-framed, table.x-datepicker-inner a, .x-monthpicker-item, .x-dd-drag-ghost {
+    font-family: "microsoft yahei", sans-serif;
+    color: #333;
+}
+/** grid-start **/
+/** grid-header-start **/
+.x-column-header {
+	background: #5684a1;
+    color: white;
+    box-sizing: border-box;
+    border-right: 1px #ababab solid;
+}
+#newrownumberer .x-column-header-inner {
+    border-bottom: 0.5px solid #d0d0d0;
+    background-color: #e4e4e4;
+}
+.x-column-header-inner {
+    background-color: #5684a1;
+    zoom: 1;
+    position: relative;
+    white-space: nowrap;
+    padding: 0px 6px;
+}
+.x-column-header-over {
+	background-image: none;
+	background-color: #6b94ad;
+}
+.x-grid-header-1 {
+    border-width: 1px;
+    border-color: #ffffff;
+    background-image: none;
+    background-color: #e4e4e4;
+    text-align: center;
+}
+.x-grid-header-ct .x-form-item {
+    margin-bottom: 0px;
+}
+.x-grid-header-ct .x-form-field {
+    background-color: #f1f1f1 !important;
+    border: 1px solid #c1c1c1;
+    font-size: 14px !important;
+    color: #515151;
+}
+.x-grid-header-ct .x-form-text {
+    background-image: none;
+    margin-top: 0.5px;
+    height: 24px;
+    line-height: 24px;
+}
+/** grid-header-end **/
+
+/** grid-body-start **/
+.x-grid-row {
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    padding: 0 1px;
+}
+.x-grid-cell-special .x-grid-cell-inner {
+    color: #000000 !important;
+    background-color: #e4e4e4 !important;
+}
+.x-panel-with-col-lines .x-grid-row .x-grid-cell {
+    padding-right: 0;
+    border-right: 0.5px solid #fefefe;
+    border-bottom: 0.5px solid #f3f3f3;
+    border-top: none;
+}
+.x-panel-with-col-lines .x-grid-row .x-grid-cell .x-grid-cell-inner {
+	height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    padding: 0px 6px;
+    white-space: nowrap;
+    font-size: 13.5px;
+}
+.x-grid-row .x-grid-cell {
+    background-color: #efefef;
+}
+.x-grid-row-alt .x-grid-cell, .x-grid-row-alt .x-grid-rowwrap-div {
+    background-color: #CDE1EF;
+}
+.x-grid-row .x-grid-cell-special {
+    padding: 0;
+    border-right: 1px solid #c6c6c6;
+    background-color: #f6f6f6;
+    border-left-color: #f2f2f2;
+}
+.x-grid-row-over .x-grid-cell, .x-grid-row-over .x-grid-rowwrap-div {
+	background-color: #81c6f2;
+	color: black;
+}
+.x-grid-row-selected .x-grid-cell, .x-grid-row-selected .x-grid-rowwrap-div {
+    border-color: #a3bae9;
+    background-color: #81c6f2 !important;
+    color: black;
+}
+/** grid-body-end **/
+/** grid-end **/
+
+/** icon-start **/
+/** icon-end **/

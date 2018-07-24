@@ -1,0 +1,119 @@
+.x-window-body-default {
+    background: #ffffff;
+    color: black;
+}
+
+.x-bs-box {
+	height: 100%;
+	padding: 0px 5px 0px 10px;
+	font-size: 14px;
+}
+
+.x-bs-child {
+	width: 188px;
+	margin: 1px 2px;
+	float: left;
+	height: 21px;
+    line-height: 21px;
+    border-width: 0px;
+    border-style: none;
+}
+
+.x-bs-text {
+	float: left;
+	text-align: left !important;
+	padding: 2px 2px;
+	color: #333333;
+}
+
+.x-bs-child .x-bs-text {
+	width: 184px;
+	height: 17px;
+    line-height: 17px;
+	font-size: 13px;
+	overflow-wrap: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.x-bs-group {
+	width: 100%;
+	font-size: 14px;
+	margin: 1px 0px;
+	color: #3285FF;
+	font-weight:bold;
+	height: 23px;
+    line-height: 23px;
+} 
+
+.x-bs-over{
+    color:#333 ; 
+	background-color: #bcd2ee;
+	background-image: none;
+} 
+
+.x-btn-over .x-bs-text {
+	background-color:#bcd2ee;
+    background-image: none;
+    border-style:none;
+    cursor: pointer;
+}
+
+.emptytext {
+    text-align: center;
+    height: 200px;
+    width: 600px;
+    line-height: 200px;
+    vertical-align: middle;
+}
+ 
+.x-btn-item-add {
+	background-repeat: no-repeat;
+	width: 16px;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    right: 3px !important;;
+}
+
+.x-bs-over .x-btn-item-add {
+	background-image: url(../../resource/images/icon/add-blue.png);
+}
+
+.x-bs-over .x-btn-item-add:hover{
+	background-image: url(../../resource/images/icon/add-white.png);
+}
+
+/* .x-btn-item-add:hover {
+	background-color: #388af2;
+} */
+
+#benchWin{
+	-moz-box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, .2);
+	box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, .2);
+    border: none transparent !important;
+    background-color: #fff !important;
+}
+
+.x-bench-search > .x-form-item-body > .x-form-trigger-wrap ::after{
+	content: ' ';
+    display: block;
+    border-style: solid;
+    border-width: 5px 0 11px 12px;
+    border-color: #fff;
+    position: absolute;
+    left: 100%;
+    top: -1px;
+    -moz-clip-path: polygon(100% 0px, 0 50%, 100% 100%);
+    -webkit-clip-path: polygon(100% 0px, 0 50%, 100% 100%);
+    -o-clip-path: polygon(100% 0px, 0 50%, 100% 100%);
+    -ms-clip-path: polygon(100% 0px, 0 50%, 100% 100%);
+    -khtml-clip-path: polygon(100% 0px, 0 50%, 100% 100%);
+    clip-path: polygon(100% 0px, 0 50%, 100% 100%);
+    margin-top: 16px;
+    margin-left: 6px;
+}
+
+
+

@@ -1,0 +1,11 @@
+.custom-tip,.custom-tip-body,.custom-tip-body-text{display:inline-block;*display:inline;*zoom:1;position:relative;border-style:solid;border-color:#ddd;}
+.custom-tip-body,.custom-tip-body-text{border-width:0 1px;*left:-2px;background-color:#f3f3f3;}
+.custom-tip{border-width:1px;line-height:1.5;min-width: 50px;}
+.custom-tip-body{margin:0 -2px;}
+.custom-tip-body-text{margin:1px -2px;padding:0 6px;}
+.custom-tip-arrow-bottom,.custom-tip-arrow-bottom-i{position:absolute;left:44%;overflow:hidden;width:0;height:0;border-left:6px dotted transparent;border-right:6px dotted transparent;border-top:6px solid transparent;}
+.custom-tip-arrow-left,.custom-tip-arrow-left-i{position:absolute;top:34%;overflow:hidden;width:0;height:0;border-top:6px dotted transparent;border-bottom:6px dotted transparent;border-right:6px solid transparent;}
+.custom-tip-arrow-bottom{top:26px;border-top-color:#ddd;}
+.custom-tip-arrow-bottom-i{top:25px;border-top-color:#f3f3f3;}
+.custom-tip-arrow-left{left:-9px;border-right-color:#ddd;}
+.custom-tip-arrow-left-i{left:-8px;border-right-color:#f3f3f3;}

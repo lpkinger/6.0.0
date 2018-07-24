@@ -1,0 +1,85 @@
+.remove{
+	padding : 0;
+	display: block;
+    margin: 8px;
+}
+
+#title{
+	background-color:#ebe9e9;
+	padding : 0;
+	margin : 0;
+	height : 95px;
+	border-radius : 5px;
+}
+#imageIcon{
+	display : block;
+	position : absolute;
+	padding-left : 5px;
+}
+#DYOnly{
+	font-family : MicrosoftYaHei Regular;
+	font-size : 13px;
+	color : #000000;
+	position : absolute;
+	left : 100px;
+	padding-top : 37px;
+	display:block;
+}
+#intro{
+	background-color:#faf9f9;
+	padding : 0;
+	border-radius : 5px;
+}
+#JJ{
+	color : red;
+	font-family : MicrosoftYaHei Regular;
+	font-size : 13px;
+	padding-left : 20px;
+}
+#introa{
+	color : #000000;
+	font-family : MicrosoftYaHei Regular;
+	font-size : 13px;
+}
+#introb{
+	color : #575757;
+	font-family : MicrosoftYaHei Regular;
+	font-size : 12px;
+	padding-left : 52px;
+}
+#introc{
+	color : #575757;
+	font-family : MicrosoftYaHei Regular;
+	font-size : 12px;
+}
+#main{
+	background-color: #ebe9e9;
+	padding : 0;
+	border-radius : 5px;
+}
+#main h3{
+	margin : 0;
+	padding : 0;
+}
+#image{
+	padding : 0;
+	border-radius : 5px;
+	background-color: #ebe9e9;
+}
+#NoPic{
+	margin : 0;
+	padding : 0;
+	background-color : #000033;
+	font-family : MicrosoftYaHei Regular;
+	font-weight : 700;
+	color : #CC0033;
+	border-radius : 5px;
+}
+#imageMain{
+	height : 225px;
+	width : 330px;
+}
+#imageMain2{
+	height : 42px;
+	width : 336px;
+}

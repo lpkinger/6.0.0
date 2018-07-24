@@ -1,0 +1,32 @@
+<pre><code>
+callback2wayDataBindingJson : {
+    fileName: '2 ways data binding',
+    sheets: [ {name: 'First', id: 1, color: 'red' } ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" },
+    ],
+    cells: [
+        { sheet: 1, row: 11, col: 2, json: {data: "Larry Page", onCustomBindingFn: "CUSTOM_2WAY_BINDING_DATA_FN", id:"1000", color: "blue" } }, 
+        { sheet: 1, row: 11, col: 3, json: {data: "Google Inc."} }, 
+    ]
+}
+</code></pre>
+
+Custom defined callback function with cell editor
+<pre><code>
+/**
+ * This is custom defined function to popup custom editor for data communicate.
+ * @param {Object} jsonData: the json data in the cell
+ * @param {Integer} row: the row index for the cell
+ * @param {Integer} column: the column index for the cell
+ * @return {String}: the html string to be displayed during mouse move over
+ */
+function CUSTOM_2WAY_BINDING_DATA_FN(jsonData, row, column) {
+	var cellEditor = Ext.create('customer.CellEditor',{
+		jsonData: jsonData,
+		row: row,
+		column: column
+	});
+	cellEditor.show();
+}
+</code></pre>

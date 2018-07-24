@@ -1,0 +1,59 @@
+<pre>
+filterCellsJson : { 
+    fileName: 'Filter cell ranges',
+    sheets: [
+        {name: 'filter', id: 1, color: 'red' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,4]" },
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30}}, 	
+        {sheet: 1, row: 10, col: 0, json: {height: 30}},
+        {sheet: 1, row: 12, col: 0, json: {height: 30}},
+        {sheet: 1, row: 0, col: 2, json: {width: 100}},
+        {sheet: 1, row: 0, col: 3, json: {width: 100}},
+        {sheet: 1, row: 0, col: 4, json: {width: 150}},
+        {sheet: 1, row: 0, col: 6, json: {width: 150}},
+        {sheet: 1, row: 2, col: 2, json: {data: "Apply filter to the cell range", fw:"bold", fz:14 }}, 
+
+        {sheet: 1, row: 4, col: 2, json: { data: "CATEGORY" } },
+        {sheet: 1, row: 4, col: 3, json: { data: "ESTIMATED" } },
+        {sheet: 1, row: 4, col: 4, json: { data: "ACTUAL", plain: 1, trigger: "ss-filter ss-filtered-trigger"} },
+        {sheet: 1, row: 5, col: 2, json: { data: "Bouquets" } },
+        {sheet: 1, row: 5, col: 3, json: { data: "500" } },
+        {sheet: 1, row: 5, col: 4, json: { data: "450" } },
+        {sheet: 1, row: 6, col: 2, json: { data: "Boutonnires"  } },
+        {sheet: 1, row: 6, col: 3, json: { data: "200" } },
+        {sheet: 1, row: 6, col: 4, json: { data: "150" } },
+        {sheet: 1, row: 7, col: 2, json: { data: "Corsages" } },
+        {sheet: 1, row: 7, col: 3, json: { data: "100" } },
+        {sheet: 1, row: 7, col: 4, json: { data: "80" } },
+        {sheet: 1, row: 8, col: 2, json: { data: "Flowers" } },
+        {sheet: 1, row: 8, col: 3, json: { data: "300" } },
+        {sheet: 1, row: 8, col: 4, json: { data: "300" } },
+        
+        {sheet: 1, row: 3, col: 6, json: { data: "Filter" } },
+        {sheet: 1, row: 4, col: 6, json: { data: "100" } },
+        {sheet: 1, row: 5, col: 6, json: { data: "120" } },
+        {sheet: 1, row: 6, col: 6, json: { data: "150" } },
+        {sheet: 1, row: 7, col: 6, json: { data: "200" } },
+        {sheet: 1, row: 8, col: 6, json: { data: "300" } },
+        
+        {sheet: 1, row: 10, col: 6, json: { data: "Click and add filter", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 125%;", onBtnClickFn: "BTN_ADD_FILTER_CALLBACK_FN" } },	
+        {sheet: 1, row: 12, col: 6, json: { data: "Remove filter", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 125%;", onBtnClickFn: "BTN_REMOVE_FILTER_CALLBACK_FN" } }	
+    ]
+},
+</pre>
+
+<pre>
+// function to add filter to the list
+function BTN_ADD_FILTER_CALLBACK_FN() {
+	SHEET_API.addFilter2Span(SHEET_API_HD, [1, 3, 6, 8, 6]);
+}
+
+// function to remove filter
+function BTN_REMOVE_FILTER_CALLBACK_FN() {
+	SHEET_API.removeFilter(SHEET_API_HD, 1);
+}
+</pre>

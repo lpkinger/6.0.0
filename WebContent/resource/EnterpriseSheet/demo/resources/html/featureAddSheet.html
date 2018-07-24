@@ -1,0 +1,12 @@
+<pre><code>
+var newTab = {
+    name: 'sheet5',
+	color: 'red'
+};
+
+SHEET_API.addSheetTab(SHEET_API_HD, newTab, function(sheetId) {
+    alert("ok, sheet tab is added with id =" + sheetId);
+    var cells = [{ sheet: sheetId, row: 2, col: 2, json: { data: "Add data to the new tab"}}]; 
+    SHEET_API.updateCells(SHEET_API_HD, cells);
+}, this);
+</code></pre>

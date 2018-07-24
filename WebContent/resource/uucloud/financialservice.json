@@ -1,0 +1,27 @@
+                {
+                "text":"金融服务",
+    			"leaf":false,
+    			"iconCls":"x-tree-icon-cloud-parent x-tree-icon-financial",
+    			"cls": "x-tree-cls-root",
+    			"queryMode": "SYSSETTING",
+                "children": [{
+                   "text":  "保理融资申请",
+                   "url":"jsps/common/datalist.jsp?whoami=FinancingApply",
+                   "cls": "x-tree-cls-node",
+                   "leaf":true,
+                   "addurl": "jsps/fs/cust/financingApply.jsp",
+                   "id":12101
+                },{
+                   "text":  "买方客户额度",
+                   "url":"jsps/common/datalist.jsp?whoami=FsCustomerCredit",
+                   "cls": "x-tree-cls-node",
+                   "leaf":true,
+                   "id":12102
+                },{
+                   "text":  "应收账款转让",
+                   "url":"jsps/common/datalist.jsp?whoami=RecBalanceAssign",
+                   "cls": "x-tree-cls-node",
+                   "leaf":true,
+                   "id":12103
+                }]
+            }

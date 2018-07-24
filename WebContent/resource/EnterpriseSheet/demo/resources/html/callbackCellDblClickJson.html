@@ -1,0 +1,27 @@
+<pre><code>
+callbackCellDblClickJson : {
+	fileName: 'onCellDoubleClick call back',
+    sheets: [{name: 'cell double click', id: 1, color: 'red' }],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,8]" },
+	],
+    cells: [
+        {sheet: 1, row: 8, col: 2, json: {data: "Do cell double click in here to test", onCellDoubleClickFn: "CELL_DOUBLE_CLICK_CALLBACK_FN", fw:"bold"}}
+    ]
+},
+</code></pre>
+
+<pre><code>
+/**
+ * This function will be called on cell double click action.
+ * You need define the following data structure in your json data:
+ * 
+ * {sheet: 1, row: 3, col: 2, json: {data: "call back onCellDoubleClick", onCellDoubleClickFn: "CELL_DOUBLE_CLICK_CALLBACK_FN"}}
+ * 
+ * The callback will return back 3 parameters: 
+ *      cell value, cell row number and cell column number
+ */
+function CELL_DOUBLE_CLICK_CALLBACK_FN(value, row, column) {
+    alert("Cell value: " + value + "; Row: " + row + "; Colum: " + column);
+};
+</code></pre>

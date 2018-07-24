@@ -1,0 +1,32 @@
+<pre><code>
+featureColDataTypeJson : {
+    fileName: "Employee Directory",
+    sheets:[{id:1, name:"Main view", actived:true, color:"orange"}],
+    floatings: [
+        { sheet:1, name:"colGroups", ftype:"colgroup", json: "[{level:1, span:[2,3]}, {level:1, span:[4,6]}]" },
+        { sheet:1, name:"validation1", ftype:"cdt", json: "{name:\"vd\",rng:[{span:[1,0,1,0,1],type:1}],opt:{dt:0,op:0,min:1,max:20000,hint:\"Between 1 and 20000\",allow:false,ignoreBlank:true},id:\"vd-1\"}"}		       
+    ],
+    cells:[
+	    { sheet: 1, row: 0, col: 1, json: { data: "ID", width: 50, comment: 'Enter number to auto fill if you know employee ID', commentEdit: "hide", ticon:"number" } },
+		{ sheet: 1, row: 0, col: 2, json: { data: "Name", width: 100, ticon:"profile" } },
+		{ sheet: 1, row: 0, col: 3, json: { data: "Dept.", width: 120, drop: {data: ["Software Dept.", "HR Dept.", "QA Dept."]}, ticon:"group" } },
+		{ sheet: 1, row: 0, col: 4, json: { data: "Email", width: 110, dcfg: "{dt:9}", ticon:"email" } },
+		{ sheet: 1, row: 0, col: 5, json: { data: "Phone", width: 100, dcfg: "{dt:8}", ticon:"phone" } },
+		{ sheet: 1, row: 0, col: 6, json: { data: "Gender", width: 80, drop: {data: ["Male", "Female"]}, ticon:"dropdown" } },
+		{ sheet: 1, row: 0, col: 7, json: { data: "Birth date", width: 120, drop: "date", fm: "date", va: "middle", dfm: "F d, Y", ticon:"calendar"  } },			
+		{ sheet: 1, row: 0, col: 8, json: { data: "Contact picker", width: 130, ticon:"contact" } },
+		{ sheet: 1, row: 0, col: 9, json: { data: "Manager?", width: 100, it: "checkbox", itchk: false, ta: "center", ticon:"checkbox" } },
+		{ sheet: 1, row: 0, col: 10, json: { data: "Images", width: 130, dcfg: "{dt:7}", ticon:"image" } },
+		
+		{ sheet: 1, row: 1, col: 1, json: { data: 1 } },
+		{ sheet: 1, row: 1, col: 2, json: { data: 'Dave Smith' } },
+		{ sheet: 1, row: 1, col: 3, json: { data: 'Software Depts.'} },
+		{ sheet: 1, row: 1, col: 4, json: { data: 'dave.smith@abc.com'} },
+		{ sheet: 1, row: 1, col: 5, json: { data: '1 (888) 231-7654'} },
+		{ sheet: 1, row: 1, col: 6, json: { data: 'Male'} },
+		{ sheet: 1, row: 1, col: 7, json: { data: '1980-01-15', fm: "date", dfm: "F d, Y" } },
+		{ sheet: 1, row: 1, col: 8, json: { data: 'Arden Smith' } },
+		{ sheet: 1, row: 1, col: 10, json: { itms: '[{aid: "4gJ4XCtz1AU_", url: "sheetAttach/downloadFile?attachId=4gJ4XCtz1AU_", type: "img", name: "1.jpg"}]' } },
+    ]
+},
+</code></pre>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>EnterpriseSheet REST import xlsx file</title>
+    <link rel="stylesheet" type="text/css" href="../../css/docs.css" />
+</head>
+
+<body>
+
+    <div id="ProjectTitle">EnterpriseSheet APIs</div>
+
+    <h1>Call REST web service to import XLSX file</h1>
+    
+    <hr style="height: 0.5px">
+    <div id="smallSublink"><a href="http://www.enterprisesheet.com/sheet/demo" TARGET=_BLANK>DEMO</a> -> EnterpriseSheet APIs -> Import XLSX file</div>
+    <hr style="height: 0.5px">
+    
+	<form action="http://www.enterpriseSheet.com/sheet/restSheet/initialSheet"
+	      enctype="multipart/form-data" method="post">
+	<p>
+	Enter file name if you like:<br>
+	<input type="text" name="fileName" size="100">
+	</p>
+	<p>
+	Please select one of Excel file (.xlsx or .csv type):<br>
+	<input type="file" name="uploadXlsFile" size="150">
+	</p>
+	<div>
+	<input type="submit" value="Send">
+	</div>
+	</form>
+	
+	<br/>
+	<hr/>
+	<p>
+	After you click Send button, your file will be uploaded to the system through REST web service. See the following information for more detail.:  
+	</p>
+	
+	<pre>
+    /**
+     * This is the method to import a file through REST web service.
+     * You can call this method from your server side code.
+     *
+     * URL: http://yourURL/sheet/restSheet/initialSheet
+     * Method: POST
+     * Request body: fileName (option)
+     *               upload csv, xlsx file (file name should be end with .csv, .xlsx) - name: uploadXlsFile
+     *               folderId (option)
+     *               
+     * Return: JSON string
+     *         [success: 'true', info: 'change saved', code: '200', fileId: 'uniqueId']
+     *         For Code: 200 - ok; 401 - unauthorized; 404 - not found; 406 - Not Acceptable; 500 - internal error
+     *         
+     * @param fileName - option. If you do not pass this, name will be uploaded file name
+     * @param uploadXlsFile
+     * @param folderId - Option. If you pass this folder id. This file will be created under this folder.
+     * @param response
+     * @return
+     * @throws Exception
+     */	
+     @RequestMapping(value = "initialSheet", method = RequestMethod.POST)
+	 public void initialSheet(
+			@RequestParam(required = false) String fileName,
+			@RequestParam MultipartFile uploadXlsFile,
+			@RequestParam(required = false) String folderId,
+            HttpServletRequest request,	HttpServletResponse response) throws Exception {
+       ....
+    }
+	</pre>
+	<br/>
+	Result will be like this:
+	
+	<pre>
+	
+{"success":true, "code": 200, "info":"Change Saved", "fileId":"bFt76-188AQ_", "filename" : "whatever"}
+	</pre>
+
+</body>
+</html>

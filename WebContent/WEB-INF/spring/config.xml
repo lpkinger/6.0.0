@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+           http://www.springframework.org/schema/context   
+           http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+           http://www.springframework.org/schema/mvc  
+           http://www.springframework.org/schema/mvc/spring-mvc.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+           http://www.springframework.org/schema/util 
+           http://www.springframework.org/schema/util/spring-util.xsd"
+	default-autowire="byName">
+	<bean id="baseUtil" class="com.uas.erp.core.BaseUtil"></bean>
+	<util:properties id="about">
+		<prop key="debug">false</prop><!-- debug模式 -->
+		<prop key="version">1.0.0.Standard</prop><!-- 版本 -->
+		<prop key="group">false</prop><!-- 集团版本 -->
+		<prop key="patchPackage">com.uas.erp.core.patch</prop><!-- 附件文件夹 -->
+		<prop key="defaultSob">UAS</prop><!-- 默认帐套名称 --><!-- 集团中心名称 -->
+		<!-- <prop key="saas.domain">saas.test.com</prop> -->
+		<prop key="host.b2b">http://www.ubtob.com</prop>
+		<prop key="host.b2c">http://www.ubtoc.com</prop>
+		<prop key="host.b2ctest">http://localhost:8080/</prop>
+		<prop key="host.manage">http://manage.ubtob.com</prop>
+		<prop key="host.publicProduct">https://api-product.usoftmall.com/</prop>
+		<prop key="task.status">false</prop>
+	</util:properties>
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:default-servlet-handler />
+	<!-- 自动扫描 ,把作了注解的类转换为bean -->
+	<aop:aspectj-autoproxy />
+	<context:property-placeholder location="WEB-INF/spring:*.properties" />
+	<context:component-scan base-package="com.uas" />
+	<!-- 事务 -->
+	<tx:annotation-driven />
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- 国际化 -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>i18n/messages</value><!-- 找src下i18n目录下文件名为messages*的所有properties文件 -->
+			</list>
+		</property>
+		<property name="useCodeAsDefaultMessage" value="true" />
+	</bean>
+	<!-- Configure the multipart resolver -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="104857600" />
+	</bean>
+	
+	<!-- 账户中心配置-->
+	<bean id="accountConfigurer" class="com.uas.sso.web.AccountConfigurer" init-method="init">
+		<property name="configPath" value="classpath:account.properties"/>
+	</bean>
+
+	<!-- 自定义拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/**"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.UniqueRequestInterceptor">
+				<property name="paths">
+					<list>
+						<value>/pm/MPSMain/NeedThrow.action</value>
+					</list>
+				</property>
+			</bean><!-- Unique Request Interceptor -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/**"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.DbSourceInterceptor"></bean><!-- MultiDataSource Interceptor -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/common/tree.action"></mvc:mapping>
+			<mvc:mapping path="/common/lazyTree.action"></mvc:mapping>
+			<mvc:mapping path="/common/searchTree.action"></mvc:mapping>
+			<mvc:mapping path="/common/datalist*"></mvc:mapping>
+			<mvc:mapping path="/common/beforeExport.action"></mvc:mapping>
+			<mvc:mapping path="/common/dbfind.action"></mvc:mapping>
+			<mvc:mapping path="/common/singleFormItems.action"></mvc:mapping>
+			<mvc:mapping path="/common/singleGridPanel.action"></mvc:mapping>
+			<mvc:mapping path="/common/upload.action"></mvc:mapping>
+			<mvc:mapping path="/common/download.action"></mvc:mapping>
+			<mvc:mapping path="/common/setCommonUse.action"></mvc:mapping>
+			<mvc:mapping path="/common/set*"></mvc:mapping>
+			<mvc:mapping path="/common/turn*"></mvc:mapping>
+			<mvc:mapping path="/common/get*"></mvc:mapping>
+			<mvc:mapping path="/common/save*"></mvc:mapping>
+			<mvc:mapping path="/common/update*"></mvc:mapping>
+			<mvc:mapping path="/common/delete*"></mvc:mapping>
+			<mvc:mapping path="/common/audit*"></mvc:mapping>
+			<mvc:mapping path="/common/resAudit*"></mvc:mapping>
+			<mvc:mapping path="/common/submit*"></mvc:mapping>
+			<mvc:mapping path="/common/resSubmit*"></mvc:mapping>
+			<mvc:mapping path="/common/excel*"></mvc:mapping>
+			<mvc:mapping path="/common/desktop/**"></mvc:mapping>
+			<mvc:mapping path="/cost/**"></mvc:mapping>
+			<mvc:mapping path="/crm/**"></mvc:mapping>
+			<mvc:mapping path="/cs/**"></mvc:mapping>
+			<mvc:mapping path="/drp/**"></mvc:mapping>
+			<mvc:mapping path="/fa/**"></mvc:mapping>
+			<mvc:mapping path="/gm/**"></mvc:mapping>
+			<mvc:mapping path="/hr/**"></mvc:mapping>
+			<mvc:mapping path="/ma/**"></mvc:mapping>
+			<mvc:mapping path="/oa/**"></mvc:mapping>
+			<mvc:mapping path="/plm/**"></mvc:mapping>
+			<mvc:mapping path="/pm/**"></mvc:mapping>
+			<mvc:mapping path="/scm/**"></mvc:mapping>
+			<mvc:mapping path="/b2b/**"></mvc:mapping>
+			<mvc:mapping path="/fs/**"></mvc:mapping>
+			<mvc:mapping path="/wisdomPark/**"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.UserInterceptor"></bean><!-- 查看用户是否已登录 -->
+		</mvc:interceptor>
+		<!-- 控制权限 的拦截器 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/common/singleFormItems.action"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.SeeInterceptor"></bean><!-- 查看用户是否有查看(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/common/datalist.action"></mvc:mapping>
+			<mvc:mapping path="/common/datalist/data.action"></mvc:mapping>
+			<mvc:mapping path="/common/datalistCount.action"></mvc:mapping>
+			<mvc:mapping path="/common/excel/create.xls"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.SeeAllInterceptor"></bean><!-- 查看用户是否有查看所有权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/save*"></mvc:mapping>
+			<mvc:mapping path="/*/*/save*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.AddInterceptor"></bean><!-- 查看用户是否有新增权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/update*"></mvc:mapping>
+			<mvc:mapping path="/*/*/update*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.SaveInterceptor"></bean><!-- 查看用户是否有修改(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/delete*"></mvc:mapping>
+			<mvc:mapping path="/*/*/delete*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.DeleteInterceptor"></bean><!-- 查看用户是否有删除(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/audit*"></mvc:mapping>
+			<mvc:mapping path="/*/*/audit*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.AuditInterceptor"></bean><!-- 查看用户是否有审核(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/resAudit*"></mvc:mapping>
+			<mvc:mapping path="/*/*/resAudit*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.ResAuditInterceptor"></bean><!-- 查看用户是否有反审核(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/submit*"></mvc:mapping>
+			<mvc:mapping path="/*/*/submit*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.SubmitInterceptor"></bean><!-- 查看用户是否有提交(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/resSubmit*"></mvc:mapping>
+			<mvc:mapping path="/*/*/resSubmit*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.ResSubmitInterceptor"></bean><!-- 查看用户是否有反提交(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/end*"></mvc:mapping>
+			<mvc:mapping path="/*/*/end*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.EndInterceptor"></bean><!-- 查看用户是否有结案(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/resEnd*"></mvc:mapping>
+			<mvc:mapping path="/*/*/resEnd*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.ResEndInterceptor"></bean><!-- 查看用户是否有反结案(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/banned*"></mvc:mapping>
+			<mvc:mapping path="/*/*/banned*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.BannedInterceptor"></bean><!-- 查看用户是否有禁用(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/resBanned*"></mvc:mapping>
+			<mvc:mapping path="/*/*/resBanned*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.ResBannedInterceptor"></bean><!-- 查看用户是否有反禁用(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/post*"></mvc:mapping>
+			<mvc:mapping path="/*/*/post*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.PostInterceptor"></bean><!-- 查看用户是否有过账(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/resPost*"></mvc:mapping>
+			<mvc:mapping path="/*/*/resPost*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.ResPostInterceptor"></bean><!-- 查看用户是否有反过账(他人)权限 -->
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/*/print*"></mvc:mapping>
+			<mvc:mapping path="/*/*/print*"></mvc:mapping>
+			<mvc:exclude-mapping path="/opensys/**"/>
+			<bean class="com.uas.erp.core.interceptor.PrintInterceptor"></bean><!-- 查看用户是否有打印(他人)权限 -->
+		</mvc:interceptor>
+		<!-- Android Interceptor -->
+		<mvc:interceptor>
+			<mvc:mapping path="/android/**"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.AndroidInterceptor"></bean>
+		</mvc:interceptor>
+		<!-- Android Interceptor -->
+		<mvc:interceptor>
+			<mvc:mapping path="/exam/**"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.ExaminationInterceptor"></bean>
+		</mvc:interceptor>
+		<!-- Android PDA Interceptor -->
+		<mvc:interceptor>
+			<mvc:mapping path="/pda/**"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.PdaMobileInterceptor"></bean>
+		</mvc:interceptor>
+		<!-- opensys interceptor -->
+		<mvc:interceptor>
+			<mvc:mapping path="/opensys/**"></mvc:mapping>
+			<mvc:mapping path="/api/serve/**"></mvc:mapping>
+			<mvc:exclude-mapping path="/api/serve/mainPage/**"/>
+			<bean class="com.uas.erp.core.interceptor.AccessTokenInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/openapi/**"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.SignatureInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/api/interfaces/**"></mvc:mapping>
+			<bean class="com.uas.erp.core.interceptor.PrivacyPolicyInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	<bean id="stringHttpMessageConverter"
+		class="org.springframework.http.converter.StringHttpMessageConverter">
+	</bean>
+	<bean id="jsonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+	</bean>
+	<!-- 对模型视图名称的解析，在请求时模型视图名称添加前后缀 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/jsps/" p:suffix=".jsp"><!-- 指向的页面在jsps目录下，并且为.jsp文件 -->
+	</bean>
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+            <ref bean="stringHttpMessageConverter" />
+            <ref bean="jsonHttpMessageConverter" />
+        </mvc:message-converters>
+        <mvc:async-support default-timeout="3000"/>
+	</mvc:annotation-driven>
+	<import resource="db-config.xml" />
+	<import resource="cache-default.xml" />
+	<import resource="hessian.xml" />
+	<!-- <import resource="cache-redis.xml" /> -->
+	<!-- <import resource="task.xml" /> -->
+</beans>

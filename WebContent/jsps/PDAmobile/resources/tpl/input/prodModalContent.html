@@ -1,0 +1,30 @@
+<style>
+  .modal-header{
+       padding:5px;
+    }
+</style>
+<div class="modal-header" stop-event="touchend">
+	<p>
+		搜索物料：<input type="text" ng-model="search">
+	</p>
+</div>
+<div class="modal-body" stop-event="touchend">
+	<table id='tableResult' cellspacing='0' cellpadding='3' style="width:100%;">
+		<thead>
+			<tr style='background-color: #eee;'>
+				<td width='40px;'>行号</td>
+				<td width='104px;'>单号</td>
+				<td width='97px;'>料号</td>
+			</tr>
+		</thead>
+		<tr ng-repeat='item in items | filter:{PD_PRODCODE:search}'
+			ng-show="search" ng-click="selectPrCode(item)">
+			<td width='40px;'>{{item.PD_PDNO}}</td>
+			<td>{{item.PD_ORDERCODE}}</td>
+			<td>{{item.PD_PRODCODE}}</td>
+		</tr>
+	</table>
+</div>
+<div class="modal-footer">
+	<button class="btn-sm btn-warning col-xs-2 col-xs-offset-7" ng-click="cancel()">取消</button>
+</div>

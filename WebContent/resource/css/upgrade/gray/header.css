@@ -1,0 +1,141 @@
+/** header **/
+.x-body {
+	font-family: "microsoft yahei",sans-serif;
+}
+#erpHeader {
+	border-bottom: 1px solid #d5d5d5;
+}
+#erpHeader-body {
+	background-image: none;
+	background-color: #F2F2F2;
+}
+#erpHeader .x-component{
+	width: 102px !important;
+	top: 0 !important;
+    padding-bottom: 6px;
+    padding-top: 12px;
+    padding-left: 20px;
+}
+.logo-spliter {
+	border-right: 1px solid;
+    width: 1px;
+    height: 20px;
+    margin-top: -1px !important;
+    margin-left: 18px !important;
+}
+#erpHeader .systitle {
+    left: 111px !important;
+    font-weight: bold;
+    padding-left: 13px;
+}
+#erpHeader .systitle font {
+	color: black;
+    font-size: 16px;
+}
+.user_info {
+	left: 250px !important;
+    padding-top: 1px;
+    padding-left: 3px;
+}
+.header-user {
+	padding-left: 53px;
+}
+#erpHeader-body .x-toolbar-text {
+	top: 18px !important;
+}
+.settings9 {
+	background: #bfd7fe !important;
+}
+#erpHeader-body .x-btn {
+	top: 16px !important;
+	height: 22px !important;
+}
+#erpHeader-body .x-btn font {
+	font-size: 13px;
+}
+#erpHeader-body .x-btn .x-btn-icon {
+	height: 18px;
+	width: 18px;
+	margin-bottom: 1px;
+}
+#erpHeader-body .x-btn span {
+	line-height: 18px !important;
+	margin-left: 2px;
+	font-size: 13px;
+}
+#erpHeader-body .x-btn-default-small-icon-text-left .x-btn-inner {
+	/* padding-left: 24px; */
+}
+.main-todo ,.theme-current {
+	background: url(../../../images/upgrade/blue/mainicon/header/selected.png);
+}
+.x-menu-body-contactus div {
+	width: 160px !important;
+}
+.x-menu-body-contactus {
+	color: black;
+	padding: 0;
+    border-width: 0px;
+    border-style: solid;
+}
+.x-menu-body-contactus input {
+	width: 160px !important;
+	background-color: #ffffff;
+	background-image: none;
+	border: none;
+	font-size: 12px !important;
+}
+#erpHeader-body .x-menu-button > em > button > span {
+	line-height: 18px !important;
+	color: blue;
+}
+#erpHeader-body .x-btn-arrow {
+	background-image: url(../../../images/upgrade/gray/mainicon/expanded.png) !important;
+	background-position-y: 7px;
+}
+#message .x-text-info {
+	margin-left: 3px;
+}
+#messageredpoint {
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	background-color: #e62f2d;
+	position: absolute;
+	left: 70px;
+	top: -1px;
+	border-radius: 3px;
+}
+.x-button-quitsys {
+	background-color: #F0F0F0;
+    border: none;
+}
+.x-button-quitsys:hover {
+	background-color: #BCD2EE;
+    border: none;
+}
+.x-button-quitsys .x-btn-inner {
+	color: red;
+}
+/* icon */
+.quick {
+	background-image: url(../../../images/upgrade/gray/mainicon/quick.png) !important;
+}
+.cloud {
+	background-image: url(../../../images/upgrade/gray/mainicon/cloud.png) !important;
+}
+.loop {
+	background-image: url(../../../images/upgrade/gray/mainicon/loop.png) !important;
+}
+.UUHelper {
+	background-image: url(../../../images/upgrade/gray/mainicon/UUHelper.png) !important;
+}
+.about {
+	background-image: url(../../../images/upgrade/gray/mainicon/about.png) !important;
+}
+.info {
+	background-image: url(../../../images/upgrade/gray/mainicon/info.png) !important;
+}
+.quit {
+	background-image: url(../../../images/upgrade/gray/mainicon/quit.png) !important;
+}

@@ -1,0 +1,37 @@
+<pre><code>
+/**
+ * This is the example Json Data for generate column/bar chart
+ * See running example @
+ *     EnterpriseSheet Samples / APIs -> Chart Features/APIs -> Generate column/bar chart
+ */
+featureChartBarJson :  {
+    fileName: 'Column/Bar Chart',
+    sheets: [
+        {name: 'Column/bar', id: 1, color: 'orange' }
+    ],
+    floatings: [
+       { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,8]" },
+       { sheet: 1, name: 'chart1', ftype: 'floor',
+          json: '{"seriesPosition":"row","legendPosition":"right","chartType":"column","floorType":"chart","source":{"series":[["",5,3,5,4],["",6,3,6,4],["",7,3,7,4]], "categories":[["",5,2,5,2],["",6,2,6,2],["",7,2,7,2]], "labels":[["",4,3,4,3],["",4,4,4,4]], "usAbs": true, "cacheFields":[{"name":"category"},{"name":"Monday","title":"Monday"},{"name":"Tuesday","title":"Tuesday"},{"name":"Wenseday","title":"Wenseday"}] },"x":550,"y":60,"width":400,"height":300, id: "chart1"}'},
+       { sheet: 1, name: 'chart2', ftype: 'floor',
+          json: '{"seriesPosition":"row","legendPosition":"right","chartType":"bar","floorType":"chart","source":{"series":[["",5,3,5,4],["",6,3,6,4],["",7,3,7,4]], "categories":[["",5,2,5,2],["",6,2,6,2],["",7,2,7,2]], "labels":[["",4,3,4,3],["",4,4,4,4]], "usAbs": true, "cacheFields":[{"name":"category"},{"name":"Monday","title":"Monday"},{"name":"Tuesday","title":"Tuesday"},{"name":"Wenseday","title":"Wenseday"}] },"x":100,"y":200,"width":400,"height":300, id: "chart2"}'},
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height:30, hoff:0}}, 
+        {sheet: 1, row: 2, col: 2, json: {data: "Generate column/bar chart for cell ranges", fw:"bold", fz:14 }},
+        
+        {sheet: 1, row: 5, col: 2, json: { data: 'Monday', tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}}, 
+        {sheet: 1, row: 6, col: 2, json: { data: 'Tuesday', tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}}, 
+        {sheet: 1, row: 7, col: 2, json: { data: 'Wednesday', tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}}, 
+        {sheet: 1, row: 5, col: 3, json: { data: 2, tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}}, 
+        {sheet: 1, row: 6, col: 3, json: { data: -5, tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 7, col: 3, json: { data: -16, tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 5, col: 4, json: { data: 12, tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 6, col: 4, json: { data: 5, tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 7, col: 4, json: { data: -5, tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 4, col: 2, json: { data: 'Weekday', tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 4, col: 3, json: { data: '1st item', tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 4, col: 4, json: { data: '2nd item', tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}}
+    ]
+},
+</code></pre>

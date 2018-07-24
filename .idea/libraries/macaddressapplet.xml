@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="macaddressapplet">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WebContent/jsps/macaddressapplet.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

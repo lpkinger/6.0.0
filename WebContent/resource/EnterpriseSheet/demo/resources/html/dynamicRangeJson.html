@@ -1,0 +1,44 @@
+<pre><code>
+    /**
+     * This is a sample json data for dynamicRange
+     */
+    dynamicRangeJson : {
+		fileName: 'Dynamic Range',
+           sheets: [{name: 'Dynamic data', id: 1}, {name: 'Static data', id: 2}],
+           /*
+            * here the floating object is not exactly as the document described, I changed a little bit to adopt our current format
+            * notice, the json property need to be a string instead of a json object, also the formula is also put inside the json property.
+            */
+           floatings: [{
+           	   "name":"CODE",
+               "ftype": "dynamicRange",
+               "sheet": 1,
+               "json": Ext.encode({type: "row", span: [1,5,1,5,5], formula: 'getDynamicRange("report1", "dynRangeCODE", null)'})	                
+           }, {
+           	   "name":"currency",
+               "ftype": "dynamicRange",
+               "sheet": 1,
+               "json": Ext.encode({type: "col", span:[1,2,4,5,4], formula: 'getDynamicRange("report1", "dynRangeCODE", null)'})
+           }],
+           cells: [
+               {sheet: 1, row: 2, col: 2, json: {data: 'CODE', bgc: 'darkblue', color: 'white'}},
+               {sheet: 1, row: 2, col: 3, json: {data: '010', bgc: 'green'}},
+               {sheet: 1, row: 2, col: 4, json: {data: '020', bgc: 'green'}},
+               {sheet: 1, row: 2, col: 5, json: {data: '030', bgc: 'green'}},
+               {sheet: 1, row: 3, col: 1, json: {data: 'Currency', bgc: 'orange'}},
+               {sheet: 1, row: 4, col: 1, json: {data: '010', bgc: 'yellow'}},
+               {sheet: 1, row: 5, col: 1, json: {data: '020', bgc: 'yellow'}},
+               {sheet: 1, row: 7, col: 4, json: {data: '=sum(D4:D6)'}},
+               
+               {sheet: 2, row: 2, col: 2, json: {data: 'CODE', bgc: 'darkblue', color: 'white'}},
+               {sheet: 2, row: 2, col: 3, json: {data: '010', bgc: 'green'}},
+               {sheet: 2, row: 2, col: 4, json: {data: '020', bgc: 'green'}},
+               {sheet: 2, row: 2, col: 5, json: {data: '030', bgc: 'green'}},
+               {sheet: 2, row: 3, col: 1, json: {data: 'Currency', bgc: 'orange'}},
+               {sheet: 2, row: 4, col: 1, json: {data: '010', bgc: 'yellow'}},
+               {sheet: 2, row: 5, col: 1, json: {data: '020', bgc: 'yellow'}},
+               {sheet: 2, row: 7, col: 4, json: {data: '=sum(D4:D6)'}}
+           ]
+	},
+
+</code></pre>

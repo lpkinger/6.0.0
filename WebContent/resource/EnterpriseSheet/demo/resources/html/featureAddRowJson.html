@@ -1,0 +1,23 @@
+<pre><code>
+var jsonData = {
+	fileName: 'Add new row',
+    sheets: [ {name: 'First', id: 1, color: 'red' }],
+    floatings: [
+       { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" },
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30, hoff:0}}, 
+        {sheet: 1, row: 0, col: 2, json: {width: 200}},
+        {sheet: 1, row: 2, col: 2, json: {data: "Add 2 new row between 5 and 6", fw:"bold", fz:14 }},
+
+        { sheet: 1, row: 5, col: 2, json: { data: "Row 5" } },
+        { sheet: 1, row: 6, col: 2, json: { data: "Should be in Row 8 if insert new rows success" } }
+    ]
+};
+</code></pre>
+
+<pre><code>
+SHEET_API.loadData(SHEET_API_HD, jsonData, function() {
+   	SHEET_API.insertRow(SHEET_API_HD, 1, 6, 2);
+}, this);
+</code></pre>

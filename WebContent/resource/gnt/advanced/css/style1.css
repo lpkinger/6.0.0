@@ -1,0 +1,76 @@
+/* Style 1 */
+.style1 .sch-gantt-parenttask-bar  
+{
+    -webkit-box-shadow: 1px 1px 3px rgba(100, 100, 100, 0.5);
+    -moz-box-shadow: 1px 1px 3px rgba(100, 100, 100, 0.5); 
+    background:PeachPuff;
+    border-color:GoldenRod;
+    -moz-border-radius: 13px 13px 0 0;
+    -webkit-border-radius: 13px 13px 0 0;
+    border-radius: 13px 13px 0 0;
+}
+
+.style1 .sch-gantt-parenttask-bar .sch-gantt-progress-bar 
+{
+    background:darkorange url(../images/transp-1px.png) repeat-x;
+    -moz-border-radius: 13px 0 0 0;
+    -webkit-border-radius: 13px 0 0 0;
+    border-radius: 13px 0 0 0;
+}
+
+.style1 .sch-gantt-parenttask-arrow
+{   
+    margin-top:2px;
+    width: 10px;
+    border-color:darkorange transparent;
+}
+
+.style1 .sch-gantt-task-bar
+{
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 15px;
+    border-color:Orchid;
+    -webkit-box-shadow: 1px 1px 3px rgba(100, 100, 100, 0.5);
+    -moz-box-shadow: 1px 1px 3px rgba(100, 100, 100, 0.5); 
+    box-shadow: 1px 1px 3px rgba(100, 100, 100, 0.5); 
+}
+
+.style1 .sch-gantt-task-bar .sch-gantt-progress-bar 
+{
+    -moz-border-radius: 13px 0 0 13px;
+    -webkit-border-radius: 13px 0 0 13px;
+    border-radius: 13px 0 0 13px;
+    background: #9CBFEE url(../images/progress.gif) repeat-x 0 -4px;
+}
+
+.style1 .x-grid-unlocked .x-grid-scroller .x-grid-row
+{
+    background:transparent !important;
+}
+
+.style1 .x-grid-unlocked .x-grid-scroller
+{
+    background:whitesmoke;
+}
+
+.style1 .sch-dependency-arrow-left
+{
+    border-color: transparent MediumTurquoise transparent transparent;
+}
+
+.style1 .sch-dependency-arrow-right
+{
+    border-color: transparent transparent transparent MediumTurquoise;
+}
+
+.style1 .sch-dependency-arrow-down
+{
+    border-color: MediumTurquoise transparent;
+}
+
+.style1 .sch-dependency-line {
+    border-color:MediumTurquoise;
+}
+  

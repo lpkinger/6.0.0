@@ -1,0 +1,20 @@
+****************************************************************************
+优软ERP项目->供应链管理模块->业务逻辑层->实现层
+@date 2012-9-12 11:43:26
+@author yingp
+****************************************************************************
+命名规则:
+1.
+****************************************************************************
+说明:
+1.所有sql语句中，旧ERP系统的_code字段不再作为主键使用，
+	例如:String sql = "SELECT pu_statuscode FROM Purchase WHERE pu_code='" + pu_code + "'";
+	修改为:String sql = "SELECT pu_statuscode FROM Purchase WHERE pu_id=" + pu_id;
+2.非必须业务逻辑均写在ScmHandler类中，并且将类和方法以及执行顺序配置在表DocumentSetup和DocumentHandler中
+	例如:
+3.(反)审核、(反)提交等逻辑的方法中，一律只带参数id、language
+	其它判断逻辑过程中需要的参数，一律根据id从数据库取，这样得到的是最有效的数据
+	例如:	打印发货单时，要判断客户状态是否挂起，先根据pi_id得到pi_cardcode，即cu_code	
+		Object pi_cardcode = baseDao.getFieldDataByCondition("ProdInOut", "pi_cardcode", "pi_id=" + pi_id);
+		Object cu_statuscode = baseDao.getFieldDataByCondition("Customer", "cu_statuscode", "cu_code=" + pi_cardcode);
+4.

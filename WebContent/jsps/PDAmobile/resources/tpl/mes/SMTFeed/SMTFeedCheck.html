@@ -1,0 +1,91 @@
+<style>
+  .col-xs-2,.col-xs-3, .col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7{
+     padding-left : 1px;
+     padding-right: 1px;	
+   }
+   .m-l-3{
+	   margin-left: 3px;
+    }
+</style>
+<div ng-controller="SMTFeedIDCtrl" style="min-height: 400px;" class="">
+    <div class="col-xs-12  col-sm-11 col-sm-offset-1">
+	    <div class='m-b-10 row m-t-10'>
+	       <a href="#/SMTFeedContents" class="btn btn-success btn-sm  col-xs-2">返回</a>
+	       <span class="col-xs-7 m-l-3" style="font-size:12px;">校验方式：{{checkType.name}}</span>
+	       <button ng-click="changeCheckType()" class="btn btn-success btn-sm col-xs-2 m-l-3">切换</button>
+	    </div>
+	    <div class="row"> 
+	    <!-- 飞达+站位 -->
+		     <form name="form" class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="form" ng-show="checkType.code=='FeederLocation'"> 
+		       <div class="form-group" >     
+				     <label or="msl_fecode" class="col-xs-3">飞达编号: </label>
+				     <div class="col-xs-6">
+				       <input type="text" class="form-control " id = "msl_fecode" ng-model="msl.msl_fecode"  required reset-field enter-as-tab ng-keyup="enterCheck($event,msl.msl_fecode)">
+				     </div>
+			    </div>		  	
+		       <div class="form-group" > 
+			     <label for="msl_location" class="col-xs-3">站位编号: </label> 
+			     <div class="col-xs-6">
+			       <input type="text" class="form-control " ng-model="msl.msl_location"  required reset-field>
+			     </div>
+			   </div>			   			   	   
+			    <button class="btn btn-success btn-sm col-xs-offset-4 col-xs-2" ng-disabled="form.$invalid" ng-click="check()" >确认</button>
+		     </form>
+		      <!-- 料号+站位 -->
+		     <form name="form2" class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="form2" ng-show="checkType.code=='BarcodeLocation'"> 
+		       <div class="form-group" >     
+				     <label or="msl_barcode" class="col-xs-3">料号: </label>
+				     <div class="col-xs-6">
+				       <input type="text" class="form-control " ng-model="msl.msl_barcode" id="msl_barcode" required reset-field enter-as-tab ng-keyup="enterCheck($event,msl.msl_barcode)">
+				     </div>
+			    </div>		  	
+		       <div class="form-group" > 
+			     <label for="msl_location" class="col-xs-3">站位编号: </label> 
+			     <div class="col-xs-6">
+			       <input type="text" class="form-control " ng-model="msl.msl_location"  required reset-field>
+			     </div>
+			   </div>			   			   	   
+			    <button class="btn btn-success btn-sm col-xs-offset-4 col-xs-2" ng-disabled="form2.$invalid" ng-click="check()" >确认</button>
+		     </form>
+		      <!-- 料号按顺序 -->
+		      <form name="form3" class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="form3" ng-show="checkType.code=='Barcode'"> 
+		       <div class="form-group" >     
+				     <label or="msl_barcode" class="col-xs-3">料号: </label>
+				     <div class="col-xs-6">
+				       <input type="text" class="form-control " ng-model="msl.msl_barcode"  required reset-field>
+				     </div>
+			    </div>		  			   		   			   	   
+			    <button class="btn btn-success btn-sm col-xs-offset-4 col-xs-2" ng-disabled="form3.$invalid" ng-click="check()" >确认</button>
+		     </form>
+		      <!-- 飞达按顺序 -->
+		      <form name="form4" class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="form4" ng-show="checkType.code=='Feeder'"> 
+		       <div class="form-group" >     
+				     <label or="msl_fecode" class="col-xs-3">飞达编号: </label>
+				     <div class="col-xs-6">
+				       <input type="text" class="form-control " ng-model="msl.msl_fecode"  required reset-field>
+				     </div>
+			    </div>			   			   	   
+			    <button class="btn btn-success btn-sm col-xs-offset-4 col-xs-2" ng-disabled="form4.$invalid" ng-click="check()" >确认</button>
+		     </form>
+	     </div>
+	     <div> 
+	        <h4 >消息提示  </h4> 	                 
+	        <div ng-show="tip.message" >
+		         <span style="color:red;">{{tip.message}} </span> 
+		    </div>
+		    <div ng-show="tip.msl_prodcode">
+		         <div class="row"> 
+		             <div class="col-xs-8">物料编号: {{tip.msl_prodcode}}</div>
+		             <div class="col-xs-4">位号：{{tip.msl_location}}</div>
+		         </div>
+		         <div class="row "> 
+		              <div class="col-xs-9">卷号：{{tip.msl_barcode}}</div>
+		              <div class="col-xs-3">数量:{{tip.msl_remainqty}}</div>
+		         </div>
+		         <div class="row ">
+		              <div class="col-xs-8"> 飞达编号:{{tip.msl_fecode}}</div>        
+		         </div>
+	        </div>           
+	     </div> 
+     </div>
+</div>

@@ -1,0 +1,36 @@
+<pre><code>
+callbackCellDataBindingJson : {
+	fileName: 'Cell data binding',
+	sheets: [ {name: 'First', id: 1, color: 'red' } ],
+	floatings: [
+	   { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" },
+	],
+	cells: [
+		{ sheet: 1, row: 9, col: 2, json: {data: "Move mouse over the following name to see more detail information in popup window (binding data from your source)" } }, 
+		{ sheet: 1, row: 11, col: 2, json: {data: "Apple Inc.", onCustomBindingFn: "CUSTOM_BINDING_DATA_FN", id:"1000", color: "blue" } }, 
+		{ sheet: 1, row: 12, col: 2, json: {data: "Google Inc.", onCustomBindingFn: "CUSTOM_BINDING_DATA_FN", id:"2000", color: "blue" } }, 
+		{ sheet: 1, row: 13, col: 2, json: {data: "Taylor Swift", onCustomBindingFn: "CUSTOM_BINDING_DATA_FN", id:"3000", color: "red" } }, 
+	]
+}
+</code></pre>
+
+Custom defined callback function.
+<pre><code>
+/**
+ * This is custom defined function for loading extra data for the custom cell.
+ * The returned result is a html page which will be displayed in the popup window
+ * during mouse move over.
+ * @param {Object} jsonData: the json data in the cell
+ * @param {Integer} row: the row index for the cell
+ * @param {Integer} column: the column index for the cell
+ * @return {String}: the html string to be displayed during mouse move over
+ */
+function CUSTOM_BINDING_DATA_FN(jsonData, row, column) {
+	var html = "Not result found", id = jsonData.id;
+	if (jsonData.data.lastIndexOf("Apple") === 0) html = '<table><tr><td><img src="http://iconizer.net/files/WPZOOM_Social_Networking_Icon_Set/orig/apple.png"></td><td valign="top"><b>Apple Inc.</b><br/>1 Infinite Loop<br/>Cupertino, CA 95014<br/>Id: ' + id + '</td></tr></table>';
+	if (jsonData.data.lastIndexOf("Google") === 0) html = '<table><tr><td><img src="http://www.google.com/homepage/images/google_favicon_64.png"></td><td valign="top"><b>Google Inc.</b><br/>1600 Amphitheatre Parkway<br/>Mountain View, CA 94043<br/>Id: ' + id + '</td></tr></table>';		
+	if (jsonData.data.lastIndexOf("Taylor") === 0) html = '<table><tr><td><img src="http://38.media.tumblr.com/avatar_d4bf27a2bc43_64.png"></td><td valign="top"><b>Tayor Swift</b><br/>December 13, 1989<br/>West Reading, Pennsylvania, USA<br/>Id: ' + id + '</td></tr></table>';
+
+    return html;
+}
+</code></pre>

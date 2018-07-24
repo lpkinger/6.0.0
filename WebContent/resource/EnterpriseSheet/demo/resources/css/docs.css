@@ -1,0 +1,161 @@
+
+body {
+   font-family: 'Segoe UI',Verdana,Arial;
+   font-size: 10pt;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+#PageTitle, h1, h2, h3, h4, 
+.SectionHeading, .SeeAlsoSubHeading {
+    color: #3F529C;
+}
+
+h2 {
+	padding-top: 20px;
+	border-bottom: 1px solid #3F529C;
+}
+
+#ProjectTitle {
+	margin-top: 10px;
+    color: #949494;
+}
+
+#smallSublink{
+    color: #949494;
+    font-size: 9pt;
+}
+
+#FooterContent
+{
+    font-size: 8pt;
+    color: #949494;
+}
+
+table, td, th {
+    border: 1px solid green;
+}
+
+td {
+    padding: 5px;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+
+/*** for pre code *****************************************/
+code, samp, kbd {
+	font-family: "Courier New", Courier, monospace, sans-serif;
+	text-align: left;
+	color: #222222;
+	}
+pre {
+	line-height: 1.6em;
+	font-size: 11px;
+}
+pre {
+	padding: 0.1em 0.5em 0.3em 0.7em;
+	border-left: 11px solid #9ACD32;
+	margin: 1.7em 0 0.7em 0.3em;
+	overflow: auto;
+	width: 95%;
+	background-color: #EBECE4; 
+}
+
+img.top {
+    vertical-align: text-top;
+}
+
+img.bottom {
+    vertical-align: text-bottom;
+}
+
+img.middle {
+    vertical-align: middle;
+}
+
+.icon-enterpriseSheet {
+	background-image:url(../images/favicon.png) !important;
+}
+
+.icon-help {
+	background-image:url(../images/help.png) !important;
+}
+
+.icon-book {
+	background-image:url(../images/book_open.png) !important;
+}
+
+.icon-api {
+	background-image:url(../images/api.png) !important;
+}
+
+.icon-method {
+	background-image:url(../images/method.png) !important;
+}
+
+.icon-property {	
+	background-image:url(../images/property.png) !important;
+}
+
+.icon-tag-green {
+	background-image:url(../images/tag_green.png) !important;
+}
+
+.icon-tag-orange {
+	background-image:url(../images/tag_orange.png) !important;
+}
+
+.icon-tag-red {
+	background-image:url(../images/tag_red.png) !important;
+}
+
+.icon-tag-purple {
+	background-image:url(../images/tag_purple.png) !important;
+}
+
+.icon-tag-pink {
+	background-image:url(../images/tag_pink.png) !important;
+}
+
+.icon-tag-yellow {
+	background-image:url(../images/tag_yellow.png) !important;
+}
+
+.large-font .x-tree-node {	
+	font-size: 11px;
+	font-family: 'Segoe UI',Verdana,Arial;
+}
+
+.large-font .x-tree-node-el {
+		line-height:20px;
+}
+
+.large-font .x-tree-node-collapsed .x-tree-node-icon,.treeFontLarge .x-tree-node-expanded .x-tree-node-icon, .treeFontLarge .x-tree-node-leaf .x-tree-node-icon{
+	vertical-align: middle;
+}
+
+.large-font .x-tree-icon, .large-font .x-tree-ec-icon, .x-tree-elbow-line, .large-font .x-tree-elbow, .x-tree-elbow-end, .large-font .x-tree-elbow-plus, .large-font .x-tree-elbow-minus, .x-tree-elbow-end-plus, .large-font .x-tree-elbow-end-minus{			
+	vertical-align: middle;
+}
+
+/****************************************************************************/
+.members .member.first-child {
+    border-width: 1px 0;
+}
+
+.members .member {
+	position: relative;
+	min-height: 2.5em;
+	border-style: solid;
+	border-color: #e0e0e0;
+	border-width: 0 0 1px 0;
+	padding: 10px 22px;
+}
+
+

@@ -1,0 +1,89 @@
+#VersionTreePanel .x-grid-tree-node-expanded {
+ 	 /* background:url('../images/folder-open.png')
+ 	 !important; */
+ background-image:url('../images/folder.png')
+	!important;
+}
+
+#VersionTreePanel .x-tree-icon-parent{
+	
+	background-image:url('../images/folder.png')
+	!important;
+	 background:url('../images/folder-open.png')
+ 	!important;
+}
+
+#VersionTreePanel .x-tree-icon{
+	
+	background-image:url('../images/folder.png')
+	!important;
+	background-image:url('../images/folder.png')
+	!important;
+}
+#VersionTreePanel .x-tree-icon-leaf{
+	background-image:url('../images/leaf.png')
+	!important;
+	
+	
+}
+
+#VersionTreePanel .x-btn-default-toolbar-small-icon-text-left .x-btn-icon{
+	
+	bottom:-17px;
+	left:20px;
+}
+
+#VersionTreePanel  .x-grid-row .x-grid-cell{
+	border:true;
+	border-width:1px !important;
+	border-color:#ffffff !important;
+	background-color:#efefef !important;
+	border-style:solid !important;
+}
+
+#versionpanelpanel .main{
+	
+            text-align: left;
+            font-size: 13px;
+            width: 100%;
+            color: black;
+            padding: 10px;
+            margin: 3px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+ 			background-color: #efefef;
+       
+ }
+ 
+ #versionpanelpanel .data{
+	
+          text-align: right;  
+       
+ }
+       
+#versionpanelpanel   .upgradetd{
+	
+	color:#000000;
+	  vertical-align:top;
+	 width:94px; 
+	
+  
+	
+} 
+
+#versionpanelpanel .x-panel-header-text-default {
+  font-weight: bold;
+}
+
+#VersionAllTreePanel .x-panel-header-text-default {
+  font-weight: bold;
+}  
+
+#versionpanelpanel-body  {
+	
+	overflow-x:hidden
+	!important;
+	
+}
+        
+

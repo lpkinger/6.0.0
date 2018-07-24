@@ -1,0 +1,220 @@
+html, body {
+    background: white !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.api-pane {
+    float: left;
+    color: white;
+    text-align: center;
+}
+
+.api-title {
+    background: #3e313c;
+    height: 35px;
+    line-height: 35px;
+}
+
+.api-action {
+    background: #5d495b;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    color: rgb(200,200,200);
+}
+
+.api-action:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.api-action-btn {
+    background: #5d495b;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    color: orange;
+}
+
+.api-action-btn:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/*** for pre code *****************************************/
+code, samp, kbd {
+	font-family: "Courier New", Courier, monospace, sans-serif;
+	text-align: left;
+	color: #222222;
+	}
+pre {
+	line-height: 1.6em;
+	font-size: 11px;
+}
+pre {
+	padding: 0.1em 0.5em 0.3em 0.7em;
+	border-left: 11px solid #9ACD32;
+	margin: 1.7em 0 0.7em 0.3em;
+	overflow: auto;
+	width: 95%;
+	background-color: #EBECE4; 
+}
+
+img.top {
+    vertical-align: text-top;
+}
+
+img.bottom {
+    vertical-align: text-bottom;
+}
+
+img.middle {
+    vertical-align: middle;
+}
+
+.icon-enterpriseSheet {
+	background-image:url(../images/favicon.png) !important;
+}
+
+.icon-help {
+	background-image:url(../images/help.png) !important;
+}
+
+.icon-book {
+	background-image:url(../images/book_open.png) !important;
+}
+
+.icon-api {
+	background-image:url(../images/api.png) !important;
+}
+
+.icon-method {
+	background-image:url(../images/method.png) !important;
+}
+
+.icon-property {	
+	background-image:url(../images/property.png) !important;
+}
+
+.icon-tag-green {
+	background-image:url(../images/tag_green.png) !important;
+}
+
+.icon-tag-orange {
+	background-image:url(../images/tag_orange.png) !important;
+}
+
+.icon-tag-red {
+	background-image:url(../images/tag_red.png) !important;
+}
+
+.icon-tag-purple {
+	background-image:url(../images/tag_purple.png) !important;
+}
+
+.icon-tag-pink {
+	background-image:url(../images/tag_pink.png) !important;
+}
+
+.icon-tag-yellow {
+	background-image:url(../images/tag_yellow.png) !important;
+}
+
+.icon-feature {
+	background-image:url(../images/sheet_black.png) !important;
+}
+
+.icon-calendar {
+	background-image:url(../images/calendar_black.png) !important;
+}
+
+.icon-chart {
+	background-image:url(../images/chart_black.png) !important;
+}
+
+.icon-money {
+	background-image:url(../images/money_black.png) !important;
+}
+
+.icon-sun {
+	background-image:url(../images/sun_black.png) !important;
+}
+
+.icon-doc {
+	background-image:url(../images/page_white_text.png) !important;
+}
+
+.icon-help {
+	background-image:url(../images/help.png) !important;
+}
+
+.icon-shape {
+	background-image:url(../images/shape_align_left.png) !important;
+}
+
+.icon-invoice {
+	background-image:url(../images/invoice_black.png) !important;
+}
+
+.icon-survey {
+	background-image:url(../images/form_black.png) !important;
+}
+
+.icon-cake {
+	background-image:url(../images/cake_black.png) !important;
+}
+
+.icon-dataType {
+	background-image:url(../images/pen_black.png) !important;
+}
+
+/*************************************************************************/
+
+.large-font .x-tree-node-text {	
+	font-size: 11px;
+	font-family: 'Segoe UI',Verdana,Arial;
+	line-height: 14px;
+	background-color: transparent;
+}
+
+.large-font {
+	background-color: transparent;
+}
+
+/*************************************************************************/
+
+code, samp, kbd {
+	font-family: "Courier New", Courier, monospace, sans-serif;
+	text-align: left;
+	color: #222222;
+	}
+pre {
+	line-height: 1.6em;
+	font-size: 11px;
+}
+pre {
+	padding: 0.1em 0.5em 0.3em 0.7em;
+	border-left: 11px solid #9ACD32;
+	margin: 1.7em 0 0.7em 0.3em;
+	overflow: auto;
+	width: 95%;
+	background-color: #EBECE4; 
+}
+
+.x-view-emtpytext {
+    margin:10px;
+    padding:15px;
+    background:rgb(249,237,192);
+    border:1px solid rgb(210,160,74);
+    color:black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+
+
+

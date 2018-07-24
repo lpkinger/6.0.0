@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+
+div {
+	border-radius: 5px;
+}
+#container > div {
+	padding: 10px 0 0px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+#sum >div {
+	/*padding: 10px 0 0px 0;
+	border-bottom: 1px solid  #ddd;	*/
+	background-color: #FFFFFF;
+}
+
+.chartpie{
+	height:600px;
+}
+
+.mobilechartpie{
+	height:450px;
+}
+
+.list_div {
+	margin:10px 0 0 0;
+	padding: 10px 0 0 0;
+	background-color: #FFFFFF;
+}
+
+.list_title {
+	position: relative;
+	text-align: center;
+	display: block;
+	padding: 5px 0;
+	font-size: 15px;
+	color: #333333;
+}
+
+/*.sum_info {
+	padding: 5px 0 5px 0px;
+	color: #FFFFFF;
+}
+*/
+.sum_title {
+	padding: 0px 0px 0px 5px;
+	font-size: 15px;
+	color: #030303;
+}
+
+.sum_detail {
+	padding: 0px 0px 0px 8px;
+	font-size: 15px;
+	color: #707070;
+}
+
+/*#main_title{
+ position:relative;
+ text-align:center;
+ background-color:#ddd;
+ font-size: 20px;
+ color: #333333;
+ padding:10px 0 10px 0;
+ }*/
+
+html { overflow-x:hidden; 
+}
+ .external-pager {
+            margin: 10px 0;
+            font-size: 0.75em;
+        }
+
+.external-pager .jsgrid-pager-current-page {
+            background: #c4e2ff;
+            color: #fff;
+        }
+
+.jsgrid-grid-header {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.jsgrid-grid-body {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.jsgrid {
+    font-size: 0.75em;
+}
+
+.jsgrid-table td {
+    word-break:break-all
+}
+
+.jsgrid-nodata-row td {
+    padding: .5em 0 .5em .5em;
+    text-align: left;
+}
+.jsgrid-pager-current-page {
+    font-weight: normal;
+}
+.jsgrid-table th {
+    font-weight: normal;
+}

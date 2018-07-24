@@ -1,0 +1,81 @@
+<style>
+	.m-l-10 {
+		margin-left: 10px;
+	}
+	.selected {
+		border: solid 2px #0099CC;
+	}
+	.order {
+		border-bottom: solid 1px #0066CC;
+	}
+	.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5{
+	    padding-left : 1px;
+	    padding-right: 1px;	
+	}	
+
+</style>
+
+<div ng-controller="LocationTransferCtrl" style="min-height: 400px;">   
+	<div class="row">
+	     <a  ng-href="#/index"  class="btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1 m-b-6 m-t-6" style="
+          margin-left: 5px;">返回</a>		     
+	</div>		
+	<div >
+	  <form class="form-horizontal col-xs-offset-2 col-sm-offset-1 " name="" id="form1">
+	       <div class="form-group">
+             <label for="whcode" class="col-sm-1 col-xs-2 control-label">仓库</label>
+             <div class='col-sm-4 col-xs-5 '>
+             	<input type="text" class="form-control" id="whcode" ng-model='whcode' placeholder="仓库"  enter-As-Tab required focus-me>
+             </div>            		
+           </div>    
+           <div class="form-group">
+             <label for="barcode" class="col-sm-1 col-xs-2 control-label">条码</label>
+             <div class='col-sm-4 col-xs-5 '>
+             	<input type="text" class="form-control" id="barcode" ng-model='barcode' placeholder="条码"  enter-As-Tab>
+             </div>
+           </div> 
+           <div class="form-group">           
+              <label for="outboxcode" class="col-sm-1 col-xs-2 control-label " >外箱号</label>
+             <div class='col-sm-3 col-xs-5'>
+             	<input type="text" class="form-control" id="outboxcode" ng-model='outboxcode'  placeholder="外箱号" >
+             </div>
+             <button class="btn btn-success btn-sm col-sm-2  col-xs-2 m-l-10" ng-click="confirm()" >确认</button>			
+           </div>               
+        </form>
+        <form class="form-horizontal col-xs-offset-2 col-sm-offset-1 "  ng-show="true" name="" >
+           <div class="form-group" >
+              <label for="new_location" class="col-sm-1 col-xs-2 control-label">新储位</label>
+              <div class='col-sm-4 col-xs-5 '>
+             	<input type="text" class="form-control" id="new_location" ng-model='new_location'  placeholder="新储位" required>             
+             </div>
+                <button class="btn btn-success btn-sm col-sm-2 col-xs-2 m-l-10" ng-click="transfer()" ng-disabled="new_location.$invalid" >转移</button>			
+           </div>           
+        </form>   
+	</div>	         
+      <div class="col-sm-11 col-sm-offset-1 m-t-10">
+		<table ng-table="tableParams" 
+			class="table table-bordered table-striped table-fixed ng-table-rowselected col-xs-12" style="font-size:10px;"  >
+			<colgroup>
+				<col width="30%"></col>
+				<col width="35%"></col>
+				<col width="15%"></col>
+				<col width="20%"></col>
+			</colgroup>
+			<tr ng-repeat="item in $data"
+	                ng-click="item.$selected = !item.$selected; changeSelection(item)"
+	                ng-class="{'active': item.$selected} " >
+	            <td data-title="'料号'">
+	                <div class="text-num">
+					    <span >{{item.bar_prodcode}}</span>
+					</div>
+					<div class="text-muted text-overflow">
+						<span >{{item.pr_detail}}</span>
+					</div>
+	            </td>
+	            <td data-title="'条码/外箱号'">{{item.bar_code}}{{item.pa_outboxcode}}</td>
+	            <td data-title="'数量'">{{item.bar_remain}}</td>
+	            <td data-title="'原储位'">{{item.bar_location}}</td>	           
+			</tr>
+		</table>
+	</div>	
+</div>

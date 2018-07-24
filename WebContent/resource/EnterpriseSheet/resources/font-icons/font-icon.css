@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?gh6efz');
+  src:  url('fonts/icomoon.eot?gh6efz#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?gh6efz') format('truetype'),
+    url('fonts/icomoon.woff?gh6efz') format('woff'),
+    url('fonts/icomoon.svg?gh6efz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;  
+}
+
+[class^="fi-"], [class*=" fi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-merge-center:before {
+  content: "\e902";
+}
+.fi-merge-row:before {
+  content: "\e903";
+}
+.fi-cancel-merge:before {
+  content: "\e904";
+}
+.fi-table:before {
+  content: "\e905";
+}
+.fi-table-tpl:before {
+  content: "\e906";
+}
+.fi-sheet-tpl:before {
+  content: "\e907";
+}
+.fi-sheet:before {
+  content: "\e908";
+}
+.fi-attach:before {
+  content: "\e909";
+}
+.fi-flow:before {
+  content: "\e90a";
+}
+.fi-fill:before {
+  content: "\e90b";
+}
+.fi-picture:before {
+  content: "\e90c";
+}
+.fi-doc:before {
+  content: "\e90d";
+}
+.fi-folder:before {
+  content: "\e90e";
+}
+.fi-folder-new:before {
+  content: "\e90f";
+}
+.fi-dot-right:before {
+  content: "\e910";
+}
+.fi-dot-left:before {
+  content: "\e911";
+}
+.fi-wordwrap:before {
+  content: "\e912";
+}
+.fi-roundrect:before {
+  content: "\e901";
+}
+.fi-cube-drive:before {
+  content: "\e900";
+}.fi-sheet-orig:before {
+  content: "\e908";
+}
+.fi-flow-orig:before {
+  content: "\e90a";
+}
+
+.fi-sheet {
+  color: #006200;
+}
+.fi-flow {
+  color: #E18700;
+}
+.fi-table {
+  color: #30a0e5;
+}
+.fa-folder {
+  color: #03a9f4;	
+}
+.fi-attach {
+  color: #808000;	
+}
+.fi-picture {
+	color: #800000;
+}

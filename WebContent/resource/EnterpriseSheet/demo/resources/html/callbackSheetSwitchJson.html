@@ -1,0 +1,31 @@
+<pre><code>
+/**
+ * This is a general event listener function during switch tab
+ */
+var sheet = SHEET_API_HD.sheet;
+sheet.on({
+    scope: this,
+    'switchsheet': function(oldSheetId, sheetId) {
+        alert("Switch from tab: [" + oldSheetId + "] to tab: [" + sheetId + "]");
+    }
+}); 
+</code></pre>
+
+<pre><code>
+
+callbackSheetSwitchJson : {
+    fileName: 'onSheetSwitch call back',
+    sheets: [{name: 'Sheet switch', id: 1, color: 'red' }, {name: 'Tab2', id: 2, color: 'blue' }],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" },
+        { sheet:1, name:"merge2", ftype:"meg", json:"[4,2,4,6]" },
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30}}, 	
+        {sheet: 1, row: 4, col: 0, json: {height: 120}}, 
+        {sheet: 1, row: 2, col: 2, json: {data: "Switch tab event callback fn", fw:"bold", fz:14 }},
+        {sheet: 1, row: 4, col: 2, json: {data: "var sheet = SHEET_API_HD.sheet;  \n sheet.on({\n \u00a0 \u00a0 \u00a0 scope: this, \n \u00a0 \u00a0 \u00a0 'switchsheet': function(oldSheetId, sheetId) { \n \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 alert('ok'); \n \u00a0 \u00a0 \u00a0 } \n });"}}
+    ]
+}
+			
+</code></pre>

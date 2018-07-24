@@ -1,0 +1,32 @@
+.x-tree-lines .x-grid-tree-node-expanded .x-tree-elbow-plus ,.x-tree-lines .x-tree-elbow-plus,.x-tree-lines .x-tree-elbow-end-plus{
+    display: none !important;
+}
+
+.x-tree-lines .x-tree-elbow-line,.x-tree-lines .x-tree-elbow-end,.x-tree-lines .x-tree-elbow {
+    background-image: none !important;
+}
+
+.x-grid-tree-node-expanded .x-tree-icon-parent {
+    background-image: url(../../../images/upgrade/bluegray/mainicon/treeout.png);
+}
+
+.x-tree-icon-parent {
+    background-image: url(../../../images/upgrade/bluegray/mainicon/treein.png);
+}
+.x-tree-icon-leaf {
+    background-image: url(../../../images/upgrade/bluegray/mainicon/leaf.png);
+}
+
+
+.x-button-icon-add {
+    background-image: url(../../../images/upgrade/bluegray/icon/maindetail/tbar/add.png);
+}
+.x-button-icon-modify {
+    background-image: url(../../../images/upgrade/bluegray/icon/maindetail/tbar/refresh.png);
+}
+.x-button-icon-delete {
+    background-image: url(../../../images/upgrade/bluegray/icon/maindetail/tbar/delete.png);
+}
+.icon-fixed {
+    background-image: url(../../../images/upgrade/bluegray/icon/search/fixed.png) !important;
+}

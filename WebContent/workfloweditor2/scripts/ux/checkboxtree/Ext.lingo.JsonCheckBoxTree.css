@@ -1,0 +1,43 @@
+
+.x-tree-node-checkbox-all {
+    padding:0px;
+    margin:0px;
+    width:16px;
+    vertical-align:middle;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image:url(checkboxchecked.gif);
+}
+.x-tree-node-checkbox-none {
+    padding:0px;
+    margin:0px;
+    width:16px;
+    vertical-align:middle;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image:url(checkbox.gif);
+}
+.x-tree-node-checkbox-some {
+    padding:0px;
+    margin:0px;
+    width:16px;
+    vertical-align:middle;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image:url(checkboxsomechecked.gif);
+}
+
+/* tree checkbox, height/width needed b/c of IE spacing weirdly, breaks lines */
+input.l-tcb {
+    height:13px;
+    width:13px;
+    margin-left:2px
+}
+
+
+/* fix scrolling issue with treeobj in a contentpanel
+ * and loss of icons when a node is expanded
+*/
+.ext-ie .x-tree {
+    position:static !important;
+}

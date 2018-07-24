@@ -1,0 +1,156 @@
+                {
+                "text":"优软商城",
+    			"leaf":false,
+    			"iconCls":"x-tree-icon-cloud-parent x-tree-icon-usoftmall",
+    			"cls": "x-tree-cls-root",
+    			"navtype":"B2C",
+    			"queryMode": "CLOUD",
+    			"id":2000000000,
+    			"children": [{
+            		"text": "商城官网",
+                	"url":"jsps/b2b/main/main.jsp?url=?type=erp",
+                	"iconCls":"x-tree-icon-cloud-parent",
+                	"navtype":"B2C",
+                	"showMode": 0,
+                	"cls": "x-tree-cls-node",
+                	"leaf": true,
+                	"id":2018000000
+            	},{
+                    "text":"卖家中心",
+                    "leaf":false,
+                    "cls": "x-tree-cls-parent",
+                    "iconCls":"x-tree-icon-cloud-parent",
+                    "navtype":"B2C",
+                    "queryMode": "SYSSETTING",
+                    "children": [{ 
+                       "text":"产品库及上下架",
+                       "url":"jsps/b2b/main/main.jsp?url=/vendor_erp#/vendor_material_erp",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true ,
+                       "id":2017101701
+                    },{
+                       "text":"销售订单",
+                       "url":"jsps/b2b/main/main.jsp?url=/vendor_erp#/order/center",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true,
+                        "id":2017101702
+                    },{ 
+                       "text":"我的店铺",
+                       "url":"jsps/b2b/main/main.jsp?url=/vendor_erp#/store/maintain?type=erp&urlType=myStore",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true ,
+                       "id":2017101703
+                    },{ 
+                       "text":"店铺装修",
+                       "url":"jsps/b2b/main/main.jsp?url=/vendor_erp#/store/maintain",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true ,
+                       "id":2017101704
+                    },{ 
+                       "text":"物流管理",
+                       "url":"jsps/b2b/main/main.jsp?url=/vendor_erp#/vendor_deliveryRule",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true ,
+                       "id":2017101905
+                    },
+                    { 
+                       "text":"销售结算中心",
+                       "url":"jsps/b2b/main/main.jsp?url=/vendor_erp#/payCenter",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true ,
+                       "id":2017101706
+                    },{ 
+                       "text":"发票管理",
+                       "url":"jsps/b2b/main/main.jsp?url=/vendor_erp#/vendor_invoice",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true ,
+                       "id":2017101707
+                    }]	
+            	},{
+                    "text":"买家中心",
+                    "leaf":false,
+                    "cls": "x-tree-cls-parent",
+                    "iconCls":"x-tree-icon-cloud-parent",
+                    "navtype":"B2C",
+                    "queryMode": "SYSSETTING",
+                    "children": [{
+	                    "text":"采购订单",
+	                    "url":"jsps/b2b/main/main.jsp?url=/user_erp#/order",
+	                    "cls": "x-tree-cls-node",
+	                    "navtype":"B2C",
+	                    "leaf": true,
+	                    "id":2017121901
+                    },{
+                       "text":"购物车",
+                       "url":"jsps/b2b/main/main.jsp?url=/user_erp#/cart",
+                       "cls": "x-tree-cls-node",
+                       "leaf":true,
+                        "id":2017121902
+                    },{ 
+                       "text":"采购支付记录",
+                       "url":"jsps/b2b/main/main.jsp?url=/user_erp#/payCenter",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true ,
+                       "id":2017121903
+                    },{ 
+                       "text":"采购收票",
+                       "url":"jsps/b2b/main/main.jsp?url=/user_erp#/invoice",
+                       "cls": "x-tree-cls-node",
+                       "navtype":"B2C",
+                       "leaf":true ,
+                       "id":2017121904
+                    },{
+	                    "text":"供应商资源库",
+	                    "url":"jsps/b2b/main/main.jsp?url=/supplier?type=erp&urlType=sendLocal&erpPath=/jsps/scm/purchase/preVendor.jsp",
+	                    "cls": "x-tree-cls-node",
+	                    "navtype":"B2C",
+	                    "leaf": true,
+	                    "id":2018050201
+                    }]
+                },{
+	            	"text":"帮助手册",
+	            	"leaf":false,
+	            	"iconCls":"x-tree-icon-cloud-parent",
+	            	"cls": "x-tree-cls-parent",
+	            	"navtype":"B2C",
+	            	"queryMode": "SYSSETTING",
+	            	"children": [{
+	                     "text":"怎么进行产品上架",
+	                     "url":"jsps/b2c/main/help/Help.jsp?MAXCARD=3&TITLE=怎么进行产品上架&imgs=Onsale",
+	                     "cls": "x-tree-cls-node",
+	                     "navtype":"B2C",
+	                     "leaf":true,
+	                     "id":2017120803
+	                },{
+	                     "text":"怎么设置配送规则",
+	                     "url":"jsps/b2c/main/help/Help.jsp?MAXCARD=3&TITLE=怎么设置配送规则&imgs=TransConfig",
+	                     "cls": "x-tree-cls-node",
+	                     "navtype":"B2C",
+	                     "leaf":true,
+	                     "id":2017120804
+	                },{
+	                     "text":"怎么进行店铺装修",
+	                     "url":"jsps/b2c/main/help/Help.jsp?MAXCARD=3&TITLE=怎么进行店铺装修&imgs=Decoration",
+	                     "cls": "x-tree-cls-node",
+	                     "navtype":"B2C",
+	                     "leaf":true,
+	                     "id":2017120805
+                  	},{
+	                     "text":"怎么进行采购下单",
+	                     "url":"jsps/b2c/main/help/Help.jsp?MAXCARD=4&TITLE=怎么进行采购下单&imgs=PurchaseOrder",
+	                     "cls": "x-tree-cls-node",
+	                     "navtype":"B2C",
+	                     "leaf":true,
+	                     "id":2017120806
+              		}]	
+            	}
+	                ]
+        	}

@@ -1,0 +1,77 @@
+<style>
+	.m-l-10 {
+		margin-left: 10px;
+	}
+	.selected {
+		border: solid 2px #0099CC;
+	}
+	.order {
+		border-bottom: solid 1px #0066CC;
+	}
+	.error {
+		border: solid 1px #FF6666;
+		border-radius: 4px;
+	}
+	
+	.col-xs-1,.col-xs-2,.col-xs-5 ,.col-xs-3,.col-xs-7{
+	    padding-left : 1px;
+	    padding-right: 1px;	
+	}	
+	.form-group{
+	  margin-left:0px!important;
+	  margin-right:0px!important;
+	}
+</style>
+
+<div ng-controller="CountingMMCtrl" style="min-height: 400px;">
+	  <div class="row col-md-4 col-xs-12 ">
+			<span class="f-16 col-md-2 ">盘点底稿编号：{{stocking.ST_CODE}}</span></span>
+			<span class="f-16 col-md-2 ">仓库：{{stocking.ST_WHCODE}}</span></span>
+			<br/>			       	
+	</div>
+	<div class="col-xs-12 m-b-10 m-t-10">
+	     <button type="button" ng-click="returnCC()" class="btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1"  style="
+          margin-left: 5px;">返回</button>		     
+		 <a href="#/countingMMWaitSub" class="btn btn-success btn-sm col-xs-offset-2" >已采集列表 </a>
+		 <button type="button" class="btn btn-success btn-sm col-xs-offset-2" ng-click='submitGet()' >提交采集</button>
+	</div>
+	
+	<div class="col-xs-12">
+		<form class="form-horizontal" name="scanProductForm">		  
+           <div class="form-group col-xs-12">
+             <label for="bi_barcode" class="col-sm-1 col-xs-2 control-label">条码</label>
+             <div class='col-sm-4 col-xs-7 '>
+             	<input type="text" class="form-control" id="bi_barcode" ng-model='barcodes.stb_barcode' placeholder="条码" ng-keyup="search($event,barcodes.stb_barcode)" focus-me required>
+             </div>                   
+           </div>
+           <div  class="form-group col-xs-12">
+	          <label for="bi_inqty" class="col-sm-1 col-xs-2 control-label">数量</label>
+	          <div class='col-sm-3 col-xs-5 '>
+	             <input type="text" class="form-control" id="bi_inqty" ng-model='barcodes.stb_qty' ng-keyup="search($event,bi_barcode)" ng-pattern="/^\+?[1-9][0-9]*$/"  placeholder="最小包装数" required>
+	          </div>  
+           </div>
+            <div class="form-group col-xs-12">
+             <label for="bi_prodcode" class="col-sm-1 col-xs-2 control-label">料号</label>
+             <div class='col-sm-4 col-xs-5'>
+              	 <input type="text" class="form-control" id="bi_prodcode" placeholder="物料编号" ng-model='barcodes.stb_prodcode'>             
+             </div>
+              <div class='col-sm-4 col-xs-5 text-overflow' ng-show="barcodes.pr_detail" style="height: 25px;">
+             	 {{barcodes.pr_detail}}
+              </div>
+           </div>
+           <div class="form-group col-xs-12">              
+              <label for="pr_fbzs" class="col-sm-1 col-xs-2 control-label"> 供应商  </label>
+              <div class='col-sm-3 col-xs-5'>
+             	<input type="text" class="form-control" id="pr_fbzs" ng-model='barcodes.stb_vendcode' placeholder="" readonly>            	
+              </div>
+              <button class="btn btn-success btn-sm col-sm-1 m-l-10 col-xs-2" ng-click="confirm()" ng-disabled="scanProductForm.$invalid" >确认</button>	
+            </div>       					
+        </form>
+	</div>	
+	  <div ng-show="show" class="messsage col-xs-12">
+     	 <div class="col-xs-3">{{shows.stb_barcode}}</div>
+     	 <div class="col-xs-1">{{shows.stb_qty}} </div>     	     
+     	 <div class="col-xs-5">{{shows.stb_prodcode}}</div>
+     	 <div class="col-xs-3 text-overflow">{{shows.pr_detail}}</div>      
+     </div> 
+</div>

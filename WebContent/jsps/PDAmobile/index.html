@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UAS仓储管理系统</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width">
+<meta name="baidu-site-verification" content="S0kf5fz0uA" />
+<meta name="keywords"
+	content="PDA,优软仓储管理系统,UAS仓储管理系统,优软B2B平台,商务平台,B2B平台,B2B,电子商务,ERP,UAS,UBTOB.COM,USOFTCHINA.COM,优软">
+<meta name="description" content="PDA">
+<meta name="full-screen" content="yes">
+<link href="resources/img/icon/u.png" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="resources/lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="resources/lib/fontawesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/lib/angular/toaster.css" />
+<link rel="stylesheet" href="resources/css/index_mobile.css" />
+</head>
+<body>
+	<style>
+		body {
+			margin-top: 40px;
+			background-color:#DCDCDC;
+		}
+		.status {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			border-bottom: solid 1px #999999;
+			padding: 5px 10px;
+			font-size: 16px;
+			background-color:#BBBBBB;
+			z-index: 20;
+		}
+		.checked {
+			width: 60px;
+		}
+		.mes{
+		   font-size: 12px;
+		}
+		.imgcenter { 
+			clear: both; 
+			display: block; 
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -33px 0 0 -33px;
+		} 
+		
+	</style>
+
+	<div class="container">
+		<div class="status" ng-controller=AuthCtrl >
+			<div class="left mes"  ng-bind="title.pi_inoutno">				 
+			</div>
+			<div class="btn-group right">
+				<label class="btn btn-sm btn-default" ng-class="{'btn-success': status.online, 'checked': status.online}">
+					<input type="radio" class="hidden" name="onlineRadio" ng-model="status.online" ng-value="true" ng-change="reLogin()" />
+					<i ng-show="status.online" class="fa fa-wifi"></i> 在线
+				</label>
+				<label class="btn btn-sm btn-default" ng-class="{'btn-warning': !status.online, 'checked': !status.online}">
+					<input type="radio" class="hidden" name="offlineRadio" ng-model="status.online" ng-value="false"/>
+					离线 <i ng-show="!status.online" class="fa fa-warning"></i>
+				</label>
+				<button type="button" ng-click="logout()" ng-show="status.online" class="btn btn-success btn-sm "/>退出 </button>
+			</div>
+		</div>
+		<div ui-view>
+		    <img ngs-butterbar src="resources/img/all/loading.gif" class="imgcenter">   	   
+		</div>
+		<div class="loading" ng-class="{'in': loading}"><i></i></div>
+	</div>
+<!-- 消息提示框  Start-->
+	<toaster-container
+		toaster-options="{'position-class': 'toast-bottom-left'}">
+	</toaster-container>		
+	<audio src="resources/ring/success.wav" id="successRing"></audio>
+	<audio src="resources/ring/error.wav" id="errorRing"></audio>
+<script type="text/javascript" src="resources/lib/require.js"
+		data-main="resources/js/index/main.js"></script>
+</body>
+</html>

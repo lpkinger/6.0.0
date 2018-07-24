@@ -1,0 +1,20 @@
+<pre><code>
+/**
+* This is the example Json Data for disable cell/row/column
+* See running example @
+*     EnterpriseSheet Samples / APIs -> Disable -> Disable row/column/cell
+*/
+featureDisableJson : {
+	fileName: 'Set cell/row/colum disable',
+	sheets: [
+		{name: 'First', id: 1, color: 'red' }, {  name: 'Second', id: 2 }
+	],
+	cells: [{
+		sheet: 1, row: 0, col: 1, json: {dsd: "ed"}
+	},{
+		sheet: 1, row: 1, col: 0, json: {dsd: "ed"}
+	},{
+		sheet: 1, row: 3,  col: 3, json: {data: "not editable", dsd: "ed"}
+	}]
+},
+</code></pre>

@@ -1,0 +1,117 @@
+body
+{
+    font-family:arial,tahoma,helvetica,sans-serif;
+}
+
+.sch-event 
+{
+	background:url(images/programbg.gif) repeat-x left bottom;
+	border-left-color:#ccc;
+	border-left-color:#ddd;
+	border-top-color:transparent;
+	border-bottom-color:#ccc;
+}
+
+.sch-event-hover
+{
+	border: 1px solid #555;
+}
+
+.startTime
+{
+	color: #777;
+	font-weight:bold;
+}
+
+.taskName
+{
+	font-weight:bold;
+	color:#15428B;
+	padding-left:5px;
+}
+
+.duration
+{
+	color: #aaa;
+	display:block;
+}
+
+.station-cell
+{
+	background: url(images/bg.png) no-repeat left top;
+}
+
+.station-cell .x-grid-cell-inner
+{
+	position:relative;
+}
+
+.station-cell span
+{
+	display:block;
+	font-weight:bold;
+	font-size:12px;
+	text-align:right;
+	color:#15428B;
+	float:right;
+	width:50%;
+}
+
+.station-cell img
+{
+	position:relative;
+	
+}
+
+.sch-timeline
+{
+	border-left:2px dotted red;
+}
+
+.listen
+{
+	height:24px;
+	width:24px;
+	display:block;
+	background: url(images/volume.png) no-repeat left top;
+	position:absolute;
+	right:3px;
+	top:40px;
+}
+
+a.listen:hover
+{
+	background-position: 0 -24px;
+}
+
+.start
+{
+    border-left:2px dotted red;    
+}
+
+.line-text
+{
+    background-color: rgba(83,13,134,0.7); 
+    bottom: 0;
+    color: #FFEEEE;
+    display: block;
+    font-size: 0.8em;
+    height: 13px;
+    position: absolute;
+    width: inherit;
+}
+
+.line-text
+{
+    border-right-top-radius:9px;
+    border-right-bottom-radius:5px; 
+    box-shadow:1px 1px 2px #ccc;
+    white-space:nowrap;
+    width:auto;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-left:3px;
+    padding-right:3px;
+    bottom: -62px;
+    left:-20px;
+}

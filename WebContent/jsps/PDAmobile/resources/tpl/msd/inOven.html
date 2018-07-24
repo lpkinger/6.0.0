@@ -1,0 +1,33 @@
+<style>
+	.col-xs-3, .col-xs-8{
+        padding-left:1px;
+        padding-right:1px;
+	}
+</style>
+         
+<div ng-controller="MsdCtrl" style="min-height: 400px;" class="col-xs-12">	
+    <div class="m-t-10 m-b-10 row"><a ng-href="#/msdContents" class="btn btn-success btn-sm  col-xs-2" > 返回 </a></div>	
+	<form name='form' id="form" class="block">	
+	    <div class="form-group m-t-5">
+		    <label for="bar_code" class="col-xs-3">条码</label>
+		    <div class="col-xs-8"> 
+		       <input type="text" id="bar_code" ng-model="ml.bar_code" class="form-control " focus-me enter-As-Tab required>
+			</div>			 					 
+	    </div>
+	    <div class="form-group">
+		    <label for="temp" class="col-xs-3">烘烤温度(℃)</label>
+		    <div class="col-xs-8"> 
+		       <input type="text" id="temp" ng-model="ml.temp" class="form-control" enter-As-Tab required>
+			</div>			 					 
+	    </div> 
+	    <div class="form-group">
+		    <label for="location" class="col-xs-3">储位</label>
+		    <div class="col-xs-8"> 
+		       <input type="text" id="location" ng-model="ml.location" class="form-control " enter-As-Tab >
+			</div>			 					 
+	    </div>     
+	    <div class="form-group"> 
+	        <button class="btn btn-success btn-sm col-xs-offset-3 col-xs-2" ng-click="confirmInOven()" ng-disabled="form.$invalid && btnInvalid" >确定</button>
+	    </div>
+	</form>
+</div>

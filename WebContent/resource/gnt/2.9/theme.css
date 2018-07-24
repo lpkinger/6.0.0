@@ -1,0 +1,126 @@
+/* Left tree styles */
+.sch-ganttpanel .x-grid-cell {
+    height : 26px;
+}
+
+.sch-ganttpanel .x-tree-icon-parent {
+    display : none;
+}
+
+.x-tree-icon-leaf {
+    display : none;
+}
+
+.x-grid-inner-locked .x-panel-body {
+    background : #f7f7f7;
+}
+
+.x-grid-inner-locked .x-grid-cell {
+    border-left-color   : transparent;
+    border-bottom-color : transparent;
+    border-top-color    : transparent;
+    color               : #555;
+}
+
+.x-grid-inner-locked .x-grid-cell,
+.sch-gantt-label {
+    transition : color 0.5s;
+}
+
+.x-grid-inner-locked .x-grid-row-selected .x-grid-cell {
+    color : #222;
+}
+
+.x-grid-inner-locked tr:not(.x-grid-row-selected) .x-grid-cell {
+    background-color : transparent;
+}
+
+.x-grid-inner-locked .x-grid-cell-inner,
+.x-grid-inner-locked .x-tree-node-text {
+    line-height : 20px;
+}
+
+.root-row .x-grid-cell-inner {
+    padding-left : 10px;
+    font-size    : 120%;
+}
+
+.root-row .x-grid-cell {
+    border-bottom : 1px solid #bbb;
+}
+
+/* EOF Left tree styles */
+
+.sch-gantt-task {
+    top    : 10%;
+    height : 80%;
+}
+
+.sch-gantt-task-bar {
+    border-radius : 1px;
+    background    : #f6f6f6;
+    border-color  : rgb(71, 151, 231);
+}
+
+.sch-gantt-progress-bar {
+    color            : #fff;
+    background-image : none;
+    background-color : #3790ef;
+    line-height      : 16px;
+    text-align       : right;
+    text-indent      : 3px;
+    font-size        : 0.9em;
+}
+
+.sch-gantt-parenttask-bar {
+    background-color : #43b48f;
+    border-color     : #43b48f;
+}
+
+.sch-gantt-parenttask-bar .sch-gantt-progress-bar {
+    background-color : #86f7d2;
+}
+
+.sch-gantt-parenttask-arrow {
+    border-color : #43b48f;
+}
+
+.sch-gantt-progress-bar span {
+    margin-right : 2px;
+}
+
+.sch-gantt-milestone-diamond {
+    border-color : #bfa448;
+    background : #ffca2a;
+}
+
+.Important .sch-gantt-progress-bar{
+    background-image  : url(images/pattern.png);
+    background-repeat : repeat;
+}
+
+.x-strict div.sch-event-fixed {
+    background : #8b0000;
+}
+
+.CustomerApproval {
+    border           : 2px solid #ddd;
+    background-color : #222;
+}
+
+.sch-gantt-task .sch-gantt-labelct {
+    line-height : 19px;
+}
+
+.sch-gantt-label {
+    color:#bbb;
+}
+
+.sch-dependency,
+.sch-dependency-arrow {
+    border-color : #43b48f;
+}
+
+.sch-column-header {
+	height : 26px;
+}

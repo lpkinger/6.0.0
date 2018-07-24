@@ -1,0 +1,86 @@
+/* 主页顶部各个图片设置 */
+.logo{
+	width: 220px;
+    height: 50px; 
+    background: #ffffff;
+    text-align: center;
+    padding: 16px 30px 12px 30px;
+    position: absolute; 
+}
+.header-time{
+	padding: 18px 0px 20px 0px;
+}
+.header-user{
+	padding: 18px 0px 0px 10px;
+}
+.header-info{
+	padding: 17px 0px 0px 0px;
+}
+.user_info{
+	padding: 18px 0px 0px 0px;
+}
+
+/* 主页顶部背景 */
+.northpanel .x-panel-body-default{
+	background-color: #ffffff;
+	border:none;
+}
+
+/* 主页顶部按钮、按钮图标以及分割线设置 */
+.headbtn {
+	margin: 16px 0 0 0;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	border: none;
+	background-image: #ffffff;
+}
+.northpanel .header-split{
+	margin:18px 8px 0px 2px;
+}
+.northpanel .x-btn-default-small-icon-text-left .x-btn-icon {
+    width: 18px;
+    height: 18px;
+    top: 2;
+    left: 0;
+    bottom: 0;
+    right: auto;
+}
+.northpanel .x-btn-default-small,.northpanel .x-panel-body{
+	background-image: none;
+	background-color: #ffffff;
+	border: none;
+}
+.x-menu-item .x-form-text {
+	background-image: none;
+    border-style: none;
+    user-select: text;
+    -webkit-user-select: text;
+    -o-user-select: text;
+    -ie-user-select: text;
+    -moz-user-select: text;
+    -ie-user-select: text;
+}
+.x-menu-item .x-form-text:HOVER{
+	background-color: #e3e3e3;
+} 
+.x-btn-arrow {
+	margin-right: 0px;
+    background-image: none;
+    display: block;
+}
+
+/* 主页顶部图标导入 */
+.home,.home,.quit{
+	background-position-y: -2px !important;
+}
+.home{
+	background-image: url(../images/images/button/home.png) !important;
+}
+.about{
+	background-image: url(../images/images/button/about.png) !important;
+}
+.quit{
+	background-image: url(../images/images/button/quit.png) !important;
+}
+ 

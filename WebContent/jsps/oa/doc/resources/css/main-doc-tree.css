@@ -1,0 +1,257 @@
+.main-head .x-panel-body,.doc-tree .x-panel-header{
+	border: none;
+}
+#doctree.x-tree-panel{
+	border-width: 0px;
+    border-top-width: 1px;
+    border-top-color: #4d4a49;
+    border-top-style: solid;
+}
+#doctree,.doc-tree .x-toolbar .menu-tab-bar, .doc-tree .x-toolbar .menu-tab-bar div,
+.tree-body,.tree-body .x-grid-row{
+	background-color: #4d4a49 !important;
+	padding:0;
+	border:none;
+	border-radius: 0px;
+	
+}
+#doctree .x-panel-header{
+	display:none;
+}
+.doc-tree .x-toolbar {
+    border-color: #4d4a49 !important;
+    background-color: #4d4a49 !important;
+    background-image: none;
+    padding:0px;
+    border:none;
+    top:2px !important;
+}
+/* 鎼滅储妗� */
+.doc-tree .search-container{
+	width: 100%;
+	height: 38px;
+	margin: 0 auto;
+	line-height: 40px;
+	background-color: #4d4a49 !important;
+	background: url(../images/images/dot.png) no-repeat bottom;
+	text-align: center;
+    border: none;
+}
+/* 瀵艰埅寮�鍏� */
+/*.doc-tree .x-toolbar .menu-tab-bar .menu-tab-bar .x-tool img {
+	margin-top:-1px;
+	margin-right:3px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background: url(../images/images/tree/treeshrink.png);
+} */
+.doc-tree .x-toolbar .search-box input{
+	padding-left: 10px;
+	padding-right: 30px;
+	width: 175px !important;
+    height: 24px !important;
+    border: none;
+    background: #5a5756;
+    border-radius: 10px;
+    margin-left: 20px;
+    position: relative;
+    top: 6px;
+    color:#ffffff;
+}
+.doc-tree .x-toolbar .search-icon{
+	margin: 0px;
+    width: 0px;
+    height: 14px;
+    top: 10px !important;
+    left: 177px !important;
+}
+.doc-tree .x-toolbar .fa {
+	color: #a9a9a9 !important;
+    font-size: 13px !important;
+    position: absolute;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.doc-tree .x-toolbar .fa.fa-search:before {
+    content: "\f002";
+}
+/* 鎸夐挳 */
+.doc-tree .button-container{
+	width:100%;
+	height: 58px;
+	margin: 0 auto;
+    padding: 15px 20px 15px 20px !important;
+	background-color: #4d4a49 !important;
+	background: url(../images/images/dot.png) no-repeat bottom;
+	text-align: center;
+    border: none;
+}
+.doc-tree .button-container div{
+	height: 27px !important;
+}
+.doc-tree .button-container .x-box-inner{
+	width:182px !important; 
+}
+.doc-tree .button-container .doctreebtn{
+	margin-right:13px !important;
+    height: 26px!important;
+	border-radius: 4px !important;
+	/* top: -1px !important; */
+}
+.doc-tree .button-container .doctreebtn button{
+	background-color: #4d4a49 !important;
+	border:solid 1px #d7d7d7;
+	border-radius:4px;
+}
+.doc-tree .button-container .doctreebtn button span{
+	color:#d7d7d7 !important;
+	font-size:13px !important;
+    font-weight: normal;
+    font-family: tahoma, arial, verdana, sans-serif;
+}
+.doc-tree .button-container  .doctreebtn.over button span{
+	background-color: rgb(117, 115, 115);
+    color: white !important;
+}
+
+ #doctree-body.x-grid-body{
+	border:none !important;
+    top: 98px !important;
+}
+/* 鏍戜綋 */
+.tree-body .x-grid-table{
+	border-collapse: collapse;
+}
+.tree-body .x-grid-row{
+	height: 40px;
+	vertical-align: middle;
+}
+
+.tree-body .x-grid-tree-node-expanded td,.tree-body td{
+	background-color: #4d4a49 !important;
+	background: url(../images/images/dot.png) no-repeat bottom;
+}
+.tree-body td{
+	color: #d7d7d7;
+}
+.tree-body td :hover{
+	font-size: 14px;
+    color: white;
+}
+.tree-body .x-grid-row-selected td{
+	color: white;
+	background-color: rgba(153, 153, 153, 0.52)  !important;
+}
+.x-grid-row .x-grid-cell,.x-grid-row-over .x-grid-cell {
+   font: normal 14px tahoma, arial, verdana, sans-serif;
+}
+.x-panel-header-body .x-tool img {
+	margin-right: 1px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+	background: url(../images/images/tree/treeshrink.png);
+}
+.x-panel-header {
+    padding: 0px 0px 0px 0px;
+}
+/**鏍戝浘鏍� icon**/
+.x-tree-icon{
+	margin-left: 20px;
+    margin-right: 10px;
+}
+/* .tree-collapseall-icon{
+    left: 203px !important;
+    top: 9px !important;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.38) !important;
+    background-image:url('../images/images/tree/treeshrink.png');
+}
+.tree-collapseall-ico.x-btn-over{
+	background-color: rgba(251, 249, 248, 0.26) !important;
+}
+
+#collapseall.x-btn-default-small.tree-collapseall-icon{
+	background-color: rgba(251, 249, 248, 0.26) !important;
+}
+#collapseall.x-btn-default-small.tree-collapseall-icon:hover{
+	background-color: rgba(251, 249, 248, 0.26) !important;
+} */
+/* 闅愯棌涓夎鍥炬爣 */
+.tree-body .x-tree-elbow-line, .tree-body .x-tree-elbow,
+.tree-body .x-tree-elbow-end{
+	opacity: 0;
+}
+.x-tree-elbow,
+.x-tree-elbow-plus,
+.x-tree-elbow-end,
+.x-tree-elbow-end-plus {
+	display: none !important;
+}
+ .x-tree-icon.x-tree-icon-parent {
+	background: url(../images/images/tree/treein.png);
+}
+.x-grid-tree-node-expanded .x-tree-icon.x-tree-icon-parent {
+	background: url(../images/images/tree/treeout.png);
+}
+.x-tree-icon-leaf{
+	background: url(../images/images/tree/treein.png);
+}
+.x-tree-icon-trash{
+	background: url(../images/images/tree/trash.png) !important;
+}
+/* 涓婚〉鏍戣彍鍗曟爣棰樻爮 */
+ .x-panel-header-default {
+    background-color: #4d4a49 !important;
+    line-height: 0px;
+    background-image: none;
+} 
+
+/*涓婚〉鑿滃崟鏀剁缉鍚庤竟妗嗚鐩� */
+.x-panel-header-default-left {
+    -moz-box-shadow: #efeded 0px 0 0px 0 inset;
+    -webkit-box-shadow: #efeded 0px 0 0px 0 inset;
+    -o-box-shadow: #efeded 0px 0 0px 0 inset;
+    box-shadow: #efeded 0px 0 0px 0 inset;
+}
+
+.x-panel-header-horizontal .x-panel-header-body{
+	border-top:2px solid #4d4a49;
+	height: 19px;
+	border:none;
+}
+.menu-tab-bar .x-btn-default-toolbar-small .x-btn-inner{
+padding:0px !important;
+}
+.menu-tab-bar .x-tab-bar-top .x-tab-bar-body {
+    border-width: 1px 1px 0;
+    padding: 0px 0 3px;
+}
+
+.treebtn,.treebtn:hover{
+	background-color: #4d4a49;	
+}
+
+.x-btn-default-toolbar-small-over{
+	background-image: none;
+}
+
+.headtitle{
+	background-color: #ffffff;
+}
+#foldertree-body .x-grid-tree-node-expanded.x-grid-row-focused .x-grid-cell-inner,
+#foldertree-body .x-grid-row-selected .x-grid-cell, .x-grid-row-selected .x-grid-rowwrap-div {
+	    background-color: #eee !important;
+}
+
+#powerwindow .x-grid-row.x-grid-row-focused.x-grid-row-selected .x-tree-icon.x-tree-icon-parent,
+#powerwindow .x-grid-row.x-grid-tree-node-expanded.x-grid-row-focused .x-tree-icon.x-tree-icon-parent{
+	background-color: #fff; 
+    border-radius: 4px; 
+}

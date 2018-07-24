@@ -1,0 +1,315 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<bean id="signedProxyFactory" class="com.uas.api.crypto.hessian.SignedProxyFactory"></bean>
+	<!-- 商城销售订单接口 -->
+	<bean id="api.orderService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				 <entry key="test" value="http://192.168.253.12:23400/api/service/seller/order" />  
+				 <entry key="prod" value="https://www.usoftmall.com/api/service/seller/order" /> 
+			</map>
+		</property>	
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.seller.service.OrderService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="600000" />
+	</bean>
+	
+	<!-- 商城采购单接口 -->
+	<bean id="api.B2cOrderService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test" value="http://192.168.253.12:23400/api/service/b2cOrder" />
+				<entry key="prod" value="https://www.usoftmall.com/api/service/b2cOrder" /> 
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.buyer.service.B2cOrderService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 商城物料接口 -->
+	<bean id="api.ProdService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/seller/prod" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/seller/prod" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.seller.service.ProdService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="60000" />
+	</bean>
+	
+	<!-- 商城初始化物料资料以及更新库存接口 -->
+	<bean id="api.ProductDetailERPService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test" value="http://192.168.253.12:23400/api/service/seller/productdetail" />
+				<entry key="prod" value="https://www.usoftmall.com/api/service/seller/productdetail" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.seller.service.ProductDetailERPService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="60000" />
+	</bean>
+
+	<bean id="api.purchaseService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/buyer/purchase" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/buyer/purchase" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.buyer.service.PurchaseService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<bean id="api.invoiceService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/seller/invoice" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/seller/invoice" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.seller.service.InvoiceService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="100000" />
+	</bean>
+
+	<bean id="api.invoiceNotifyService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/buyer/invoiceNotify" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/buyer/invoiceNotify" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.buyer.service.InvoiceNotifyService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!--上下架，变更接口 -->
+	<bean id="api.goodsUpAndDownService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/seller/goodsUpAndDown" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/seller/goodsUpAndDown" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.seller.service.GoodsUpAndDownService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 器件查询接口 -->
+	<bean id="api.componentService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/baisc/component" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/baisc/component" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.baisc.service.ComponentService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 类目查询接口 -->
+	<bean id="api.kindService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/baisc/kind" />
+				<entry key="prod" value="https://www.usoftmall.com/api/service/baisc/kind" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.baisc.service.KindService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 品牌申请接口 -->
+	<bean id="api.brandSubmitService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/baisc/brandSubmit" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/baisc/brandSubmit" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.baisc.service.BrandSubmitUasService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 器件申请接口 -->
+	<bean id="api.componentSubmitService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/baisc/componentSubmit" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/baisc/componentSubmit" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.baisc.service.ComponentSubmitUasService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 图片上传接口 -->
+	<bean id="api.FileUploadService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/basic/image" />
+				<entry key="prod" value="https://www.usoftmall.com/api/service/basic/image" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.baisc.service.FileUploadUasService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 品牌模糊查询 -->
+	<bean id="api.SearchService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/search" />
+				<entry key="prod" value="https://www.usoftmall.com/api/service/search" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.search.service.SearchService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 品牌信息查询接 -->
+	<bean id="api.BrandService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/basic/brand" />
+				<entry key="prod" value="https://www.usoftmall.com/api/service/basic/brand" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.baisc.service.BrandService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+
+	<!-- 价格修改接口 -->
+	<bean id="api.GoodsPriceService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/seller/goodsPrice" />
+				<entry key="prod"
+					value="https://www.usoftmall.com/api/service/seller/goodsPrice" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.seller.service.GoodsPriceService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+
+	<bean id="api.OperationService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test"
+					value="http://192.168.253.12:23400/api/service/operation" />
+				<entry key="prod" value="https://www.usoftmall.com/api/service/operation" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.operation.service.OperationInfoUasService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean>
+	
+	<!-- 卖家收款账户操作信息 -->
+	 <bean id="api.BankInfoService" class="com.uas.remoting.hessian.MultiProxyFactoryBean">
+		<property name="proxyFactory" ref="signedProxyFactory" />
+		<property name="serviceUrls">
+			<map>
+				<entry key="test" value="http://192.168.253.12:23400/api/service/bankInfo" />
+				<entry key="prod" value="https://www.usoftmall.com/api/service/bankInfo" />
+			</map>
+		</property>
+		<property name="serviceInterface"
+			value="com.uas.api.b2c_erp.seller.service.BankInfoService" />
+		<property name="overloadEnabled" value="true" />
+		<property name="hessian2" value="true" />
+		<property name="readTimeout" value="30000" />
+	</bean> 
+</beans>

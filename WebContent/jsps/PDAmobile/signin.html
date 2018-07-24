@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UAS仓储管理系统</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width">
+<meta name="baidu-site-verification" content="S0kf5fz0uA" />
+<meta name="keywords"
+	content="PDA,优软商务平台,优软B2B平台,商务平台,B2B平台,B2B,电子商务,ERP,UAS,UBTOB.COM,USOFTCHINA.COM,优软">
+<meta name="description" content="优软商务平台，企业供销信息交流平台。">
+<link href="resources/img/icon/u.png" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="resources/lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="resources/lib/fontawesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/lib/angular/toaster.css" />
+<link rel="stylesheet" href="resources/css/signin.css" />
+</head>
+
+<body>
+	<div class="container" style="background-color: #BBBBBB; min-height: 400px">	
+		<div id="login-wrap-mobile" class="" ng-controller="AuthCtrl">
+		   <h3>登录</h3>
+			<h2 class="text-center" style="font-family: Microsoft Yahei; font-weight: bold;">UAS仓储管理系统</h2>			
+			<form ng-submit="login(user)" name="myform" novalidate>
+			  <div class="form-group">
+					<div class="has-feedback-left">
+						<span class="fa form-control-feedback-left"></span> 
+						  <select class="form-control" ng-model="user.master" name="master" ng-options="a.ma_name as a.ma_function for a in masters" ></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="has-feedback-left">
+						<span class="fa fa-user form-control-feedback-left"></span> <input
+							type="text" class="form-control" placeholder="账号"
+							ng-model="user.j_username" name="j_username" required ng-keyup="enter($event)" autofocus="autofocus">
+					</div>
+				</div>				
+				<div class="form-group">
+					<div class="has-feedback-left">
+						<span class="fa fa-lock form-control-feedback-left"></span> <input
+							type="password" class="form-control" placeholder="密码" id="j_password"
+							ng-model="user.j_password" name="j_password" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="checkbox" checked="checked" id="rem" ng-model="user.remember_me" />
+	                <label for="rem" style="margin-left:10px;">记住账号</label>						
+				</div>
+				<div class="form-group">
+					<div>
+						<button class="btn btn-inverse" type="submit" ng-disabled="myform.$invalid">登录</button>
+						<a href="#" class="pull-right">无法登录？</a>
+					</div>
+				</div>
+			</form>
+			<div class="loading" ng-class="{'in': loading}"><i></i></div>
+		</div>
+		<div class="footer text-center f12" style="font-size: 12px; color: #FFFFFF; margin-top: 35px; padding-top: 5px; border-top: solid 1px #666666;">
+			<div>深圳市优软科技有限公司</div>
+			<div>Copyright @ 2015 All Rights Reserved</div>
+		</div>
+		
+	</div>
+	<!-- 消息提示框  Start-->
+	<toaster-container
+		toaster-options="{'position-class': 'toast-top-center'}"></toaster-container>
+	<!-- 消息提示框 End -->
+
+<script type="text/javascript" src="resources/lib/require.js"
+		data-main="resources/js/signin/main.js"></script>
+</body>
+</html>

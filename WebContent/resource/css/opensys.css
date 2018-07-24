@@ -1,0 +1,121 @@
+/**ICON*/
+.x-button-icon-showall {
+	background-image: url('../images/customer/show_all.png')
+}
+.x-button-icon-showcomplete {
+	background-image: url('../images/customer/show_complete.png')
+}
+.x-button-icon-showuncomplete {
+	background-image: url('../images/customer/show_uncomplete.png')
+}
+.x-button-icon-save {
+	background-image: url('../images/drink.png')
+}
+
+.x-button-icon-query {
+	background-image: url('../images/query.png')
+}
+
+.x-button-icon-submit {
+	background-image: url('../images/basket_put.png')
+}
+
+.x-button-icon-power {
+	background-image: url('../images/power.png')
+}
+
+.x-button-icon-delete {
+	background-image: url('../images/basket_remove.png')
+}
+.x-button-icon-delete2 {
+	background-image: url('../images/delete.png')
+}
+.x-button-icon-excel {
+	background-image: url('../images/excel.png')
+}
+
+.x-button-icon-close {
+	background-image: url('../images/icon/trash.png')
+}
+.x-button-icon-check {
+	background-image: url('../images/hourglass.png')
+}
+.x-button-icon-add {
+	background-image: url('../images/add.png')
+}
+.x-button-icon-excel {
+	background-image: url('../images/excel.png')
+}
+
+/**FORM*/
+ .x-form-group {
+    display: block;
+    padding-bottom: 4px;
+}
+ .x-form-group-label {
+    width: 30%;
+    padding-left: 10px;
+    height: 20px;
+    line-height: 20px;
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    color: gray;
+    border: 1px solid #8b8970;
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .2); 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    background: #f1f1f1 !important;
+}
+.x-form-group-label-close {
+	width: 20%;
+	float: left;
+	padding: 0 20 0;
+	z-index: 2;
+	position: relative;
+	cursor: pointer;
+	background-color: #bebebe;
+	font-size: 15px;
+	color: green;
+	border: 1px solid #8b8970;
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.x-form-item-label-top{
+	padding-bottom:2px;
+	 background: #D5D5D5;
+	width:25%;
+}
+.x-form-item-label{
+	font-size: 13px!important;
+}
+.x-field-label-cell {
+    background: #D5D5D5;
+    padding-left:3px;
+}
+.x-btn-gray {
+	background: #d5d5d5;
+	background: -moz-linear-gradient(top, #fff 0, #efefef 38%, #d5d5d5 88%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff),
+		color-stop(38%, #efefef), color-stop(88%, #d5d5d5));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff',
+		endColorstr='#d5d5d5', GradientType=0);
+	border-color: #bfbfbf;
+	border-radius: 2px;
+	vertical-align: bottom;
+	text-align: center;
+}
+
+.x-btn-gray:hover {
+	opacity: .75;
+	-ms-filter: "alpha(opacity=75)";
+	filter: alpha(opacity = 75);
+}

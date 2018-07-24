@@ -1,0 +1,43 @@
+<pre><code>
+var json = {
+	fileName: 'Empty Sheet',
+       sheets: [
+              {name: 'One tab', id: 1, color: 'orange' }
+          ]
+};
+	
+SHEET_API.loadData(SHEET_API_HD, json, function() {
+	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 2, 2, 4, 5]], {position: "all", color:"red", width:2} );
+	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 6, 2, 8, 5]], {position:"topbottom", color:"blue", width:3, lineType:"dashed"} );
+	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 10, 2, 12, 5]], {position:"outside", color:"orange", width:2, lineType:"dotted"} );
+	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 14, 2, 16, 5]], {position:"bottom", color:"red", width:2, lineType:"solid"} );
+	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 18, 2, 20, 2]], {position:"left", color:"purple"} );
+}, this);	
+
+</code></pre>
+
+<pre><code>
+     /**
+     * this method will be used to apply border condition to the cells
+     * @param {Object} hd: the sheet app handle
+     * @param {Array} cood
+     * @param {Object} conf
+     *     position: 'outside', 'all', 'top', 'bottom', 'left', 'right', 'topbottom'
+     *     color: red, blue etc 
+     *     width: 1 or 2, default is 1
+     *     lineType: dotted, dashed or solid (default is solid)
+     */
+    applyCellsBorder : function(hd, coord, conf) {  
+    	var sheet = hd.sheet;  		
+		var range = new EnterpriseSheet.sheet.range.Range({
+    		sheet: sheet,
+    		coord: coord
+    	});
+		
+		var width = conf.width, lineType = conf.lineType, color = conf.color;
+		if (!width) width = 1;
+		if (!lineType) lineType = 'solid';
+		if (!color) color = 'black';
+		range.setRangeBorder(conf.position, color, width, lineType);
+    },
+</code></pre>

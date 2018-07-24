@@ -1,0 +1,219 @@
+/** content-panel **/
+#content-panel .x-tab-bar-body {
+	border-top: #d0d0d0 1px solid;
+    height: 32px;
+}
+#content-panel .x-box-scroller-left .x-tabbar-scroll-left {
+    border-radius: 4px;
+    width: 18px;
+    height: 31px;
+    background: url(../../../images/upgrade/blue/mainicon/tabheader/left_scroll.png) no-repeat 0px 0;
+    background-position: center;
+}
+#content-panel .x-box-scroller-left {
+    top: 3px;
+    float: left;
+    height: 100%;
+}
+#content-panel .x-box-scroller-right {
+    top: 3px;
+    float: right;
+    height: 100%;
+}
+#content-panel .x-box-scroller-right .x-tabbar-scroll-right {
+    border-radius: 4px;
+    width: 18px;
+    height: 31px;
+    background: url(../../../images/upgrade/blue/mainicon/tabheader/right_scroll.png) no-repeat 0px 0;
+    background-position: center;
+}
+
+#content-panel .x-tab-bar-body {
+    background-color: #eff3fc !important;
+    background-image: linear-gradient(transparent 30px, rgba(176, 173, 166, 1));
+}
+/** tab **/
+#content-panel .x-tab {
+	border-width: 1px 1px 0 1px;
+}
+#content-panel .x-tab-bench {
+	background-color: #0a5b8c !important;
+}
+#content-panel .x-tab-default-top {
+	border-color: #d0d0d0;
+    margin: 2px 0 4px 1px !important;
+    padding: 5px 3px 0 5px !important;
+    width: 128px !important;
+    height: 30px;
+    background-color: #268acb;
+    background-image: none;
+    box-shadow: none;
+    border-radius: 6px 6px 0 0;
+}
+#content-panel .x-tab-default-top:FIRST-CHILD {
+	margin-left: 1px !important;
+	margin-right: 0px !important;
+	width: 80px !important;
+	position: relative !important;
+}
+#content-panel .x-tab-default-top:FIRST-CHILD button {
+	margin-left: 8px;
+}
+#content-panel .x-tab-default-top:FIRST-CHILD button .x-tab-inner {
+	width: auto !important;
+}
+#content-panel .x-tab-top-active {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #ffffff !important;
+    color: #000000;
+}
+#content-panel .x-tab em {
+    display: block;
+    padding: 0;
+    line-height: 1px;
+}
+#content-panel .x-tab button {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #6f6f6f;
+    outline: 0 none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#content-panel .x-tab button .x-tab-inner {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    width: 102px;
+    font-weight: normal;
+    color: white;
+    padding-left: 18px;
+    font-size: 14px;
+}
+#content-panel .x-tab-active button .x-tab-inner {
+	color: #009cff;
+	font-weight: bold;
+}
+#content-panel .x-tab-active button .x-tree-icon-tab-main {
+	background-image: url(../../../images/upgrade/blue/mainicon/tabheader/home-selected.png) !important;
+}
+#content-panel .x-tab button .x-tab-icon {
+    position: absolute;
+    background-repeat: no-repeat;
+	background-position: center;
+    top: -1px;
+    right: auto;
+    bottom: 2px;
+    width: 18px;
+    height: 18px;
+    padding-bottom: 2px;
+    margin-top: 0;
+}
+#content-panel .x-tab:FIRST-CHILD button .x-tab-icon {
+	display: block;
+	top: -1px;
+}
+#content-panel .x-tab-close-btn {
+    position: absolute !important;
+    margin-right: 2px;
+    top: 5.5px;
+    width: 14px;
+    height: 14px;
+    font-size: 0;
+    line-height: 10px;
+    text-indent: -999px;
+    background: no-repeat;
+    background-image: url(../../../images/upgrade/blue/mainicon/tabheader/tab-close-white.png);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60 );
+    opacity: 0.3;
+    background-position: 1px 1px;
+    background-size: 12px;
+}
+#content-panel .x-tab-top-active .x-tab-close-btn {
+	background-image: url(../../../images/upgrade/blue/mainicon/tabheader/tab-close-blue.png);
+}
+#content-panel .x-tab-menu-body .x-menu-item-icon {
+	background-image: none !important;
+}
+#content-panel .x-tree-icon-tab-main {
+    background-image: url(../../../images/upgrade/blue/mainicon/tabheader/home.png) !important;
+}
+#content-panel .x-tab-tabmenu-right {
+	margin-top: 10px;
+	background-color: transparent;
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/down_scroll.png) no-repeat 0px 0;
+	background-repeat: no-repeat;
+    background-position: 0 0;
+	width: 18px;
+	height: 28px;
+	cursor: pointer;
+	zoom: 1;
+	z-index: 6;
+	float: right
+}
+
+#content-panel .x-tab-tabmenu-over {
+	background-position: 0 0;
+}
+
+#content-panel .x-tab-tabmenu-disabled {
+	background-position: 0 0;
+	opacity: .5;
+	-moz-opacity: .5;
+	filter: alpha(opacity = 50);
+	cursor: default
+}
+
+#content-panel .x-tab-filter {
+	padding: 1px
+}
+
+#content-panel .x-tab-filter-empty {
+	color: #aaa;
+	font-style: italic
+}
+
+#content-panel .icon-add {
+	background-image: url(../../../images/add16.gif)
+}
+
+/** tab icon normal**/
+#content-panel .x-tab-default-top .x-tab-icon {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/default-tab.png);
+}
+#content-panel .x-tab-default-top .x-tree-icon-tab-tab {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/add.png);
+}
+#content-panel .x-tab-default-top .x-tab-icon-datalist {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/datalist.png);
+}
+#content-panel .x-tab-default-top .x-tab-icon-search {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/query.png);
+}
+#content-panel .x-tab-default-top .x-tab-icon-batchDeal {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/batchDeal.png);
+}
+
+/** tab icon selected**/
+#content-panel .x-tab-top-active .x-tab-icon {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/default-tab-selected.png);
+}
+#content-panel .x-tab-top-active .x-tree-icon-tab-tab {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/add-selected.png);
+}
+#content-panel .x-tab-top-active .x-tab-icon-datalist {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/datalist-selected.png);
+}
+#content-panel .x-tab-top-active .x-tab-icon-search {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/query-selected.png);
+}
+#content-panel .x-tab-top-active .x-tab-icon-batchDeal {
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/batchDeal-selected.png);
+}

@@ -1,0 +1,14 @@
+<pre>
+var pictureJson = {
+	ftype: 'picture',
+	url: 'http://www.google.com/images/srpr/logo11w.png',
+	width: 300,
+	height: 80
+};
+var store = SHEET_API_HD.store;
+SHEET_API.insertFloatingItem(SHEET_API_HD, store.getActivedSheetId(), pictureJson);
+
+// add icp for inner image ...
+var cells = [{row: 4, col: 2, json: {icp:"http://www.google.com/images/srpr/logo11w.png", imgStyle: "position:absolute;left:0px;top:0px;width:50%;height:50%;", data:""}} ];
+SHEET_API.updateCells(SHEET_API_HD, cells);
+</pre>

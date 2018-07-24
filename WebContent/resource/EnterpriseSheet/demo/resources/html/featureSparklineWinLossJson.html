@@ -1,0 +1,39 @@
+<pre><code>
+/**
+ * This is the chart json example to show how to create sparkline by calling EnterpiseSheet API.
+ */
+featureSparklineWinLossJson : {
+	fileName: 'Sparkline win/loss chart',
+    sheets: [
+        {name: 'Column', id: 1, color: 'orange' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,10]" },
+        { sheet:1, name:"merge2", ftype:"meg", json:"[4,4,9,5]" },
+        { sheet:1, name:"merge3", ftype:"meg", json:"[4,9,9,10]" },
+        { sheet:1, name: 'sparklineChart1', ftype: 'cdt',
+          json: '{"name": "minichart", "rng":[{"span":[1,4,4,4,4],"type":1}], "opt":{"base":{"span":[1,4,2,9,2],"type":1},"type":"gainloss","pc":"rgb(248,105,107)","nc":"rgb(0,0,128)"}, "id": "sparklineChart1"}' },
+        { sheet:1, name: 'sparklineChart2', ftype: 'cdt',
+          json: '{"name": "minichart", "rng":[{"span":[1,4,9,4,9],"type":1}], "opt":{"base":{"span":[1,4,7,9,7],"type":1},"type":"gainloss","pc":"orange","nc":"gray"}, "id": "sparklineChart2"}' }
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height:30, hoff:0}}, 
+        {sheet: 1, row: 2, col: 2, json: {data: "Generate sparkline column chart", fw:"bold", fz:14 }},
+        
+        {sheet: 1, row: 4, col: 4, json: { data: "Win/loss"}}, 
+        {sheet: 1, row: 4, col: 2, json: { data: -2}}, 
+        {sheet: 1, row: 5, col: 2, json: { data: 2}}, 
+        {sheet: 1, row: 6, col: 2, json: { data: 5}},
+        {sheet: 1, row: 7, col: 2, json: { data: -3}},
+        {sheet: 1, row: 8, col: 2, json: { data: 10}},
+        {sheet: 1, row: 9, col: 2, json: { data: 3}},
+        {sheet: 1, row: 4, col: 9, json: { data: "Win/loss"}}, 
+        {sheet: 1, row: 4, col: 7, json: { data: -2}}, 
+        {sheet: 1, row: 5, col: 7, json: { data: 2}}, 
+        {sheet: 1, row: 6, col: 7, json: { data: 5}},
+        {sheet: 1, row: 7, col: 7, json: { data: -3}},
+        {sheet: 1, row: 8, col: 7, json: { data: 10}},
+        {sheet: 1, row: 9, col: 7, json: { data: 3}}
+    ]
+},
+</code></pre>

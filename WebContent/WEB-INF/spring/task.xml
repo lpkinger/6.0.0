@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<context:component-scan base-package="com.uas"></context:component-scan>
+	<!-- 任务 -->
+	<task:scheduled-tasks>
+		<!-- ERP系统消息推送任务 -->
+		<task:scheduled ref="pusherTask" method="execute"
+			fixed-rate="20000" />
+			
+		<!-- B2B数据交互任务 -->
+		 <task:scheduled ref="inquiryTask" method="execute"
+			fixed-rate="20000" />
+		<task:scheduled ref="purchaseAPBillTask" method="execute"
+			fixed-rate="20000" />
+		<task:scheduled ref="purchaseChangeTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="purchaseForecastTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="purchaseMRBTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="purchaseNotifyTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="purchaseProdInOutTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="purchaseSampleTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="purchaseTask" method="execute"
+			fixed-rate="20000" />
+		<task:scheduled ref="quotationDownTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleAPBillDownTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleDownChangeTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleDownTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleForecastDownTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleNotifyDownTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleProdInOutDownTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleQuaMRBTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleSampleDownTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="makeTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="outSourceTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="makeChangeTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="outsourceChangeTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="makeProdInOutTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="outSourceProdInOutDownTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="barcodeSetTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleARCheckTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="packageTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="barAcceptNotifyTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="saleAPCheckTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="inquiryMouldTask" method="execute"
+			fixed-rate="60000" />
+		<task:scheduled ref="deputyOrderTask" method="execute"
+			fixed-rate="60000" />
+		<!-- 定时任务 -->
+		<task:scheduled ref="productTask" method="execute" cron = "0 30 12 * * ?"/>
+		<task:scheduled ref="vendorPerformanceAssessTask" method="execute"
+			fixed-rate="60000"/>
+					
+		<!-- B2C数据交互任务 -->
+		<!--  <task:scheduled ref="b2cTask" method="execute"
+			fixed-rate="60000" /> -->
+		<!-- <task:scheduled ref="b2ccomponenttask" method="execute"
+			fixed-rate="60000" /> -->
+		<!-- <task:scheduled ref="b2cgoodstask" method="execute"
+			fixed-rate="60000" />  -->
+			
+		<!-- B2C初始化+物料信息、交易信息、库存信息更新 -->
+	  	<task:scheduled ref="b2cProdReserveInitTask" method="execute" fixed-rate="300000" /> 
+	  	<!-- 销售互通 -->
+		<task:scheduled ref="b2cSaleTask" method="execute" fixed-rate="300000" />   
+		<!-- 商城上下架轮询 -->
+
+	</task:scheduled-tasks>
+</beans>

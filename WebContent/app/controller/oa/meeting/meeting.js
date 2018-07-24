@@ -1,0 +1,127 @@
+Ext.QuickTips.init();
+Ext.define('erp.controller.oa.meeting.meeting', {
+    extend: 'Ext.app.Controller',
+    FormUtil: Ext.create('erp.util.FormUtil'),
+    GridUtil: Ext.create('erp.util.GridUtil'),
+    BaseUtil: Ext.create('erp.util.BaseUtil'),
+    views:[
+    		'oa.meeting.meeting','core.form.Panel','core.grid.Panel2','core.toolbar.Toolbar','core.grid.YnColumn','core.button.Scan',
+    		'core.button.Add','core.button.Submit','core.button.Audit','core.button.Save','core.button.Close','core.button.Print',
+    			'core.button.Upload','core.button.Update','core.button.Delete','core.button.ResAudit','core.button.ResSubmit',
+    			'core.trigger.DbfindTrigger','core.form.YnField','core.button.DeleteDetail','core.button.Upload','core.form.FileField',
+    			'core.trigger.MultiDbfindTrigger','core.trigger.SchedulerTrigger'
+    	],
+    init:function(){
+    	var me = this;
+    	this.control({ 
+    		'erpGridPanel2': { 
+    			itemclick: this.onGridItemClick
+    		},
+    		'erpSaveButton': {
+    			click: function(btn){
+    				var grid = Ext.getCmp('grid');
+					Ext.Array.each(grid.store.data.items, function(item){
+						item.set('md_name',Ext.getCmp('me_name').value);
+					});
+    				var form = me.getForm(btn);
+    				if(Ext.getCmp(form.codeField).value == null || Ext.getCmp(form.codeField).value == ''){
+    					me.BaseUtil.getRandomNumber();//自动添加编号
+    				}			
+    				this.FormUtil.beforeSave(this);
+    			}
+    		},
+    		'erpAddButton': {
+    			click: function(btn){
+    				me.FormUtil.onAdd('addMeeting', '新增会议申请', 'jsps/oa/meeting/meeting.jsp');
+    			}
+    		},
+    		'erpCloseButton': {
+    			click: function(btn){
+    				this.FormUtil.beforeClose(this);
+    			}
+    		},
+    		'erpUpdateButton': {
+    			click: function(btn){
+    				this.FormUtil.onUpdate(this);
+    				//me.beforeUpdate();
+    			}
+    		},
+    		'SchedulerTrigger':{
+    		   afterrender:function(t){
+    			   t.setFields=[{field:'me_mrcode',mappingfield:'ID'},{field:'me_mrname',mappingfield:'MR_NAME'}];
+    		   }	
+    		 },
+    		'erpDeleteButton': {
+    			click: function(btn){
+    				//this.FormUtil.onDelete([]);
+    				me.FormUtil.onDelete((Ext.getCmp('me_id').value));
+    			}
+    		},
+    		'erpAuditButton': {
+    			afterrender: function(btn){
+    				var status = Ext.getCmp('me_statuscode');
+    				if(status && status.value != 'COMMITED'){
+    					btn.hide();
+    				}
+    			},    			
+    			click: function(btn){
+    				this.FormUtil.onAudit(Ext.getCmp('me_id').value);
+    			}
+    		},
+    		'erpResAuditButton': {
+    			afterrender: function(btn){
+    				var status = Ext.getCmp('me_statuscode');
+    				if(status && status.value != 'AUDITED'){
+    					btn.hide();
+    				}
+    			},    			
+    			click: function(btn){
+    				this.FormUtil.onResAudit(Ext.getCmp('me_id').value);
+    			}
+    		},
+    		'erpSubmitButton': {
+    			afterrender: function(btn){
+    				var status = Ext.getCmp('me_statuscode');
+    				if(status && status.value != 'ENTERING'){
+    					btn.hide();
+    				}
+    			},    			
+    			click: function(btn){
+    				this.FormUtil.onSubmit(Ext.getCmp('me_id').value);
+    			}
+    		},
+    		'erpResSubmitButton': {
+    			afterrender: function(btn){
+    				var status = Ext.getCmp('me_statuscode');
+    				if(status && status.value != 'COMMITED'){
+    					btn.hide();
+    				}
+    			},     			
+    			click: function(btn){
+    				this.FormUtil.onResSubmit(Ext.getCmp('me_id').value);
+    			}
+    		},
+    		'erpYnField[name=me_isusedroom]': {
+    			change: function(f){
+    				if(f.value == 0){
+    					var d = Ext.getCmp('me_customplace');
+    					if(d){
+    						d.show();
+    					}
+    				} else {
+    					var d = Ext.getCmp('me_customplace');
+    					if(d){
+    						d.hide();
+    					}
+    				}
+    			}
+    		}
+    	});
+    },
+	onGridItemClick: function(selModel, record){//grid行选择
+		this.GridUtil.onGridItemClick(selModel, record);
+	},
+    getForm: function(btn){
+		return btn.ownerCt.ownerCt;
+	}
+});

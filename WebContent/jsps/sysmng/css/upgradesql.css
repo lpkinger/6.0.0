@@ -1,0 +1,9 @@
+.x-box-inner {
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: #F2F2F2;
+    border-color:#F2F2F2;
+}
