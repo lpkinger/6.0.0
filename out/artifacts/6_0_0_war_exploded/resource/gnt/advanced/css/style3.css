@@ -1,0 +1,98 @@
+/* Style 3 */
+.style3 .x-grid-view *
+{
+    color:#fff;
+}
+
+.style3 .sch-gantt-parenttask-bar  
+{
+    background:#eee;
+    -webkit-box-shadow: 2px 1px 4px rgba(20,20, 20, 0.3);
+    -moz-box-shadow: 2px 1px 4px rgba(20,20, 20, 0.3);
+    box-shadow: 2px 1px 4px rgba(20,20, 20, 0.3);
+    border: 1px solid #555;
+}
+
+.style3 .sch-gantt-parenttask-bar .sch-gantt-progress-bar 
+{
+    background:#0A246A url(../images/transp-1px.png) repeat-x;
+}
+
+.style3 .sch-gantt-task-bar
+{
+    box-shadow: 2px 1px 4px rgba(20,20, 20, 0.3);
+    -webkit-box-shadow: 2px 1px 4px rgba(20,20, 20, 0.3);
+    -moz-box-shadow: 2px 1px 4px rgba(20,20, 20, 0.3);
+    border: 1px solid #333333;
+    opacity:0.85;
+    filter:alpha(opacity=85);
+    background:#ddd;
+}
+
+.style3 .sch-gantt-milestone-diamond
+{
+    background-position:0 -48px;
+}
+
+.style3 .sch-dependency-line 
+{
+    border: 1px solid #222222;
+}
+  
+.style3 .sch-gantt-task-bar .sch-gantt-progress-bar 
+{
+    background:#666 url(../images/transp-1px.png) repeat-x;
+}
+
+.style3 .x-grid-inner-locked .x-grid-cell
+{
+    border-bottom: 1px dashed #ccc !important;
+    border-top-color: transparent !important;
+}
+
+.style3 .x-grid-inner-locked .x-grid-view
+{
+    background: #757575;
+}
+
+.style3 .x-grid-row .x-grid-cell
+{
+    background: transparent;
+}
+
+.style3 .sch-ganttview
+{
+    background:url(../images/bg-lines.gif) repeat;
+}
+
+.style3 .sch-gantt-parenttask-leftarrow,
+.style3 .sch-gantt-parenttask-rightarrow 
+{
+    height:5px;
+    width:12px;
+    border-width:1px;
+    background: url("../images/halfcircle.png") no-repeat scroll 0 0 transparent;
+}
+
+.style3 .sch-dependency-arrow-left
+{
+    border-color: transparent #ccc transparent transparent;
+}
+
+.style3 .sch-dependency-arrow-right
+{
+    border-color: transparent transparent transparent #ccc;
+}
+
+.style3 .sch-dependency-arrow-down
+{
+    border-color: #ccc transparent;
+}
+
+.style3 .sch-dependency-line {
+    border-color:#ddd;
+}
+
+.style3 .x-grid-inner-locked .x-grid-row-selected .x-grid-cell {
+    background-color: #333 !important;
+}

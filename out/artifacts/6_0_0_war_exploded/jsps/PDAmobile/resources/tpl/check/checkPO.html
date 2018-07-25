@@ -1,0 +1,46 @@
+<style>
+	.m-l-10 {
+		margin-left: 10px;
+	}
+	.col-xs-4 {
+        padding-left:2px;
+        padding-right:2px;
+	}
+</style>
+         
+<div ng-controller="CheckCtrl" style="min-height: 400px;">	
+    <div><a ng-href="#/checkContents" class="m-l-15 btn btn-success btn-sm m-t-10 m-b-10" > 返回 </a></div>	
+	<div class="m-b-10">
+	    <input type="text" class="col-xs-4 m-l-15 " id="barcode" ng-model="barcode" placeholder="条码号" ng-keyup="searchBarcode($event)" focus-me required>
+	    <input type="text" class="col-xs-4 m-l-10" id="whcode" ng-model="whcode" placeholder="仓库"  ng-keyup="searchBarcode($event)" >	  	 
+	    <button class="btn btn-success btn-sm m-l-10 " ng-click="checkBarcode(barcode,whcode)" >查找</button>
+	</div>	
+	<div class="m-b-6">{{bar_code}}</div>    
+	<div  class="col-xs-12  col-sm-11 col-sm-offset-1">
+		<table ng-table="tableParams" 
+			class="table table-bordered table-striped table-fixed ng-table-rowselected"  >
+			<colgroup>
+				<col width="20%"></col>
+				<col width="20%"></col>
+				<col width="20%"></col>
+				<col width="20%"></col>
+				<col width="20%"></col>
+			</colgroup>
+			<tr >
+				<th width="20%">供应商</th>
+				<th width="20%">料号</th>
+				<th width="20%">仓库</th>
+				<th width="20%">储位</th>
+				<th width="20%">数量</th>
+			</tr>
+			<tr ng-repeat="item in $data"
+	                ng-class="{'active': item.$selected}" ng-click="item.$selected = !item.$selected; showBarcodeDetail(s)">
+	            <td data-title="'供应商'">{{item.bar_whcode}}</td>
+	            <td data-title="'料号'" class="text-overflow">{{item.bar_prodcode}}</td>
+	            <td data-title="'仓库'">{{item.bar_whcode}}</td>	
+	            <td data-title="'储位'">{{item.bar_location}}</td>
+	            <td data-title="'数量'">{{item.bar_remain}}</td>	                     
+			</tr>			
+		</table>
+	</div>
+</div>

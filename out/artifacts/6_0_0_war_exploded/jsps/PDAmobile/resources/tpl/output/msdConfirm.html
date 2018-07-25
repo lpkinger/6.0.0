@@ -1,0 +1,39 @@
+<div class="modal-header"  stop-event="touchend">
+	<button class="btn btn-success btn-sm col-xs-offset-1 col-xs-2" ng-click="msdConfirm()"
+		type="button">确认</button>
+	<button class="btn btn-default btn-sm col-xs-offset-1 col-xs-2" ng-click="cancel()"
+		type="button">取消</button>
+</div>
+<div class="modal-body" stop-event="touchend">
+	<div style="font-size:13px;">
+		<span>等级：{{items.ms_level}}</span>
+		<span>状态：{{items.status}}</span>
+		<span ng-show="items.ms_resttime">剩余寿命(h)：{{items.ms_resttime}}</span>
+	</div>
+	<table class="block table table-default table-striped table-hover">
+	   <thead>
+	       <tr class="header">
+			   <th width="80">日期</th>
+			   <th width="50">操作</th>
+			   <th width="80">操作人</th>
+			   <th width="120">剩余寿命(h)</th>			    
+		   </tr>
+	  </thead>
+	  <tbody style="font-size:12px;">
+		<tr ng-repeat="item in items.log track by $index">
+			<td class="text-num text-bold f-16 text-success br-r">
+				<span ng-bind="::item.ms_date|date:'yy-MM-dd'"></span>
+			</td>
+			<td class="text-num text-bold br-r">
+				 <span ng-bind="::item.ms_action"></span>
+			</td>
+			<td class="text-num text-bold br-r">
+			    <span ng-bind="::item.ms_man"></span>						
+			</td>
+			<td class="text-num text-bold br-r">
+				<span  ng-bind="::item.ms_lifetime"></div>
+			</td>
+		</tr>
+	 </tbody>
+   </table>
+</div>

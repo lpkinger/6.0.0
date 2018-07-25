@@ -1,0 +1,37 @@
+<pre><code>
+/**
+* This is the example Json Data for show auto scroll function
+* See running example @
+*     EnterpriseSheet Samples / APIs -> Auto scroll
+*/
+ featureAutoScroll : {
+    fileName: 'Auto scroll',
+    sheets: [
+        {name: 'auto scroll', id: 1, color: 'red' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" },
+        { sheet:1, name:"merge2", ftype:"meg", json:"[4,2,4,6]" }
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30, hoff:0}}, 
+        {sheet: 1, row: 0, col: 2, json: {width: 200}},
+        {sheet: 1, row: 0, col: 4, json: {width: 200}},
+        {sheet: 1, row: 4, col: 0, json: {height: 30, hoff:0}}, 
+        {sheet: 1, row: 2, col: 2, json: {data: "Auto scroll using mouse wheel and drag/drop", fw:"bold", fz:14 }},
+        
+        {sheet: 1, row: 4, col: 2, json: { data: "Using mouse wheel to achieve vertical navigate to different cell, and use drag and drop to achieve horizontal level cell navigate.", ws: "normal", ww: "break-word" } },
+        {sheet: 1, row: 5, col: 2, json: { data: "EnterpriseSheet allow your scroll up to 1024 columns and up to 1048576 rows." } },
+        {sheet: 1, row: 7, col: 2, json: { data: "Max allowed columns" } },
+        {sheet: 1, row: 7, col: 3, json: { data: "1024", fw: "bold", color: "orange" } },
+        {sheet: 1, row: 8, col: 2, json: { data: "Max allowed rows" } },
+        {sheet: 1, row: 8, col: 3, json: { data: "1048576", fw: "bold", color: "orange" } },
+        {sheet: 1, row: 10, col: 2, json: { data: "link to cell ALL1 (Column 1000)", link: "=ALL7", fm: "link"} },
+        {sheet: 1, row: 12, col: 2, json: { data: "link to cell B100000 (Row 100000)", link: "=B100000", fm: "link"} },
+        {sheet: 1, row: 14, col: 2, json: { data: "link to cell ALL100000 (Row 100000 and column 1000)", link: "=ALL100000", fm: "link"} },
+        {sheet: 1, row: 100000, col: 2, json: { data: "I am in row 100000" } },
+        {sheet: 1, row: 7, col: 1000, json: { data: "I am in column 1000" } },
+        {sheet: 1, row: 100000, col: 1000, json: { data: "I am in column 1000 and row 100000" } },
+    ]
+},
+</code></pre>

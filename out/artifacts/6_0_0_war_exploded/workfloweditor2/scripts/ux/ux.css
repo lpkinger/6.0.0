@@ -1,0 +1,95 @@
+
+/** tab-panel */
+.x-border-layout-ct .x-tab-panel {
+    background-color: #DFE8F6;
+}
+
+/** west-menu */
+.west-menu .x-panel-header x-unselectable .x-panel-header-text {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.west-menu .x-panel-ml {
+    padding-left: 1px;
+}
+
+.west-menu .x-panel-mr {
+    padding-right: 1px;
+}
+
+.west-menu .x-panel-mc {
+    padding: 0px 0pt 0pt;
+}
+
+.west-menu .x-panel-nofooter .x-panel-bc {
+    height: 1px;
+}
+
+/** login-window */
+.login-username {
+    background:url("user.gif") no-repeat 1px 2px;
+}
+
+.login-password {
+    background:url("key.gif") no-repeat 1px 2px;
+}
+
+.login-username, .login-password {
+    background-color: #FFFFFF;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #000033;
+}
+
+.login-password.x-form-invalid, .login-username.x-form-invalid{
+    border:2px solid #dd7870;
+}
+
+/** logout */
+.x-btn-text.logout-btn {
+    background: url('user_delete.gif') no-repeat;
+}
+
+/** welcome */
+.x-tab-with-icon span.welcome {
+    background-image: url('home16.png');
+    background-repeat: no-repeat;
+}
+
+/** grid */
+.add, .x-btn .add {
+    background: url('add.gif');
+}
+
+.go, .x-btn .go {
+    background: url('application_go.png');
+}
+
+.delete, .x-btn .delete {
+    background: url('delete.gif');
+}
+
+.edit, .x-btn .edit {
+    background: url('cog_edit.png');
+}
+
+.refresh, .x-btn .refresh {
+    background: url('table_refresh.png');
+}
+
+.expand, .x-btn .expand {
+    background: url('folder_go.png');
+}
+
+.collapse, .x-btn .collapse {
+    background: url('folder_wrench.png');
+}
+
+.config, .x-btn .config {
+    background: url('plugin.gif');
+}
+
+.save, .x-btn .save {
+    background: url('save.gif');
+}

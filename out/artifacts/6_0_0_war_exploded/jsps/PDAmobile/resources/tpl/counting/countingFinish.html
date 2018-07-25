@@ -1,0 +1,94 @@
+<style>
+	.selected {
+		border: solid 2px #0099CC;
+	}
+	.order {
+		border-bottom: solid 1px #0066CC;
+	}
+	.error {
+		border: solid 1px #FF6666;
+		border-radius: 4px;
+	}
+	.col-xs-1,.col-xs-2,.col-xs-5 ,.col-xs-3,.col-xs-7{
+	    padding-left : 1px;
+	    padding-right: 1px;	
+	}
+      .messsage{
+       color:blue;
+    }
+    .form-group{
+	  margin-left:0px!important;
+	  margin-right:0px!important;
+	}
+	.type{
+	    background: rgba(216, 201, 222, 0.29);
+	    border-radius: 7px;
+	    margin: 4px;
+	    padding: 5px;
+	}
+	.p-5{
+	   padding:5px 0px;
+	}
+</style>
+
+<div ng-controller="CountingFinishCtrl" style="min-height: 400px;">
+	  <div class="row col-md-8 col-xs-12 ">
+			<span class="f-16 col-md-4 ">盘点底稿编号：{{stocking.ST_CODE}}</span>
+			<span class="f-16 col-md-4 ">仓库：{{stocking.ST_WHCODE}}</span>
+			<br/>			       	
+	</div>
+	<div class="row m-b-10 m-t-10 col-xs-12">
+	     <button type="button" ng-click="returnCC()" class="btn btn-success btn-sm col-md-2 col-xs-2" >返回</button>		     
+		 <a href="#/countingFinWaitSub"  class="btn btn-success btn-sm col-xs-offset-2" >已采集列表 </a>
+		 <button type="button"  class="btn btn-success btn-sm col-xs-offset-2" ng-click='submitGet()' >提交采集</button>
+	</div>
+	<div class="col-xs-12 ">
+		<form class="form-horizontal block col-sm-offset-1 p-5" name="scanProductForm" id="scanProductForm">
+		<div class="type">
+			  <div class="form-group">  	   
+			   <div class='col-sm-1 col-xs-3'>
+			     <label for="serial">
+			        <input name=serial type="radio" value="serial" ng-model="serial" required/>序列号
+			     </label>
+			    </div>		     			   		      
+			    <div class='col-sm-4 col-xs-7'>
+			      <input type="text" class="form-control" id="serial_code" ng-model="serial_code" ng-keyup="serialSearch($event,serial_code)"/>
+			    </div>		      
+	         </div>   
+	         <div class="form-group">
+	            <label for="makeCode" class="col-sm-1 col-xs-3 control-label">归属工单</label>
+			    <div class='col-sm-4 col-xs-7 '>
+			      <input type="text" class="form-control" id="makeCode" ng-model="makeCode" />    
+			    </div>
+	         </div>   
+	     </div>
+	     <div class="type">
+	          <div class="form-group">           
+	             <div class='col-sm-1 col-xs-3'>
+	              <label for="serial">
+			        <input name=serial type="radio" value="outbox" ng-model="serial" required/>箱号
+			     </label>
+			     </div>		     
+			     <div class='col-sm-4 col-xs-7 '>
+			       <input type="text" class="form-control" id="boxcode" ng-model="boxcode" ng-keyup="outboxSearch($event,boxcode)"/>
+			     </div>	                    
+	          </div> 
+	          <div class="form-group">
+	              <label for="totalqty" class="col-sm-1 col-xs-3 control-label">箱内总数</label>
+			      <div class='col-sm-4 col-xs-7 '>
+			      	<input type="text" class="form-control" id="totalqty" ng-model="totalqty"/>    
+			      </div>
+	          </div> 
+	      </div>
+          <div class="form-group">
+              <button class="btn btn-success btn-sm col-sm-1 col-xs-offset-4 col-xs-2" ng-click="confirm()" ng-disabled="scanProductForm.$invalid" >确认</button>	
+          </div>    					
+        </form>
+	</div>	    
+	<div ng-show="shows" class="messsage col-xs-12">
+     	 <div class="col-xs-3">{{shows.stb_barcode}}</div>
+     	 <div class="col-xs-1">{{shows.stb_outboxcode}} </div>     	     
+     	 <div class="col-xs-5">{{shows.stb_qty}}</div>
+     	 <div class="col-xs-3 text-overflow">{{shows.stb_prodcode}}</div>      
+     </div>   	
+</div>

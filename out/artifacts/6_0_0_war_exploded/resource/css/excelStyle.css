@@ -1,0 +1,40 @@
+table,tr,td,th{  
+        border:1px solid black;  
+        border-collapse:collapse;  
+    }  
+    table{  
+        width:100%;  
+        table-layout: fixed;
+        text-align:center
+    }  
+    td{  
+        height:24px;  
+        width:200px;/** 固定单元格宽度，防止分离表头后，表头与数据行错位（缺点） */  
+        line-height:24px;  
+        padding:3px 5px;   
+        word-break:break-all;/** 设置当文本过长时换行 */
+        /*white-space:nowrap;  /*文本显示不自动换行*/
+       /* overflow: hidden;*/
+
+    }  
+      
+    th{  
+        height:24px;  
+        width:200px;/** 不管是固定像素或是百分比，应与对应数据列的宽度一致 */  
+        line-height:24px;   
+        white-space:nowrap;
+        overflow:hidden;
+    }
+    
+div{
+	position:absolute;
+	left:0px;
+	top:30px;
+	overflow:auto;
+	width:100%;
+	height:100%
+}
+input{
+	left:0px;
+	top:0px
+}

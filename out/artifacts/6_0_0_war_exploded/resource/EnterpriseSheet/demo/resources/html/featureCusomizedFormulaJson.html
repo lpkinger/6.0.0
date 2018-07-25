@@ -1,0 +1,19 @@
+<pre><code>
+var json = {
+    fileName: 'Customized formula',
+    sheets: [ {name: 'First', id: 1, color: 'red' }, {  name: 'Second', id: 2 }],
+    cells: [
+         { sheet: 1, row: 2, col: 2, json: { data: "central" } },
+         { sheet: 1, row: 3, col: 2, json: { data: "intelligence" } },
+         { sheet: 1, row: 4, col: 2, json: { data: "agency" } },
+    ]
+},
+
+SHEET_API.loadData(SHEET_API_HD, json);
+
+// add defined formula ...
+SHEET_API.addCalculates(JSON_DATA.featureCusomizedFormula);
+
+var cells = [{ sheet: 1, row: 6, col: 2, json: { data: "=customerCal1(B2,B3,B4)", cal:true }}];
+SHEET_API.updateCells(SHEET_API_HD, cells);	
+</code></pre>

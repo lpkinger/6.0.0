@@ -1,0 +1,91 @@
+<style>
+	.m-l-10 {
+		margin-left: 10px;
+	}
+	.selected {
+		border: solid 2px #0099CC;
+	}
+	.order {
+		border-bottom: solid 1px #0066CC;
+	}
+	.error {
+		border: solid 1px #FF6666;
+		border-radius: 4px;
+	}
+	.col-xs-1,.col-xs-2,.col-xs-5 ,.col-xs-3,.col-xs-12{
+	    padding-left : 1px;
+	    padding-right: 1px;	
+	}
+</style>
+<script type="text/ng-template" id="myModalContent.html">       
+         <div class="modal-body row" stop-event="touchend"> 
+               <div>新条码号：{{items.bar_code}}</div>
+               <div>数量：{{items.bar_remain}}</div>
+         </div>  
+         <div class="modal-footer">  
+			 <button class="btn-sm btn-success  col-xs-2" ng-click="print()">打印</button> 
+             <button class="btn-sm btn-warning col-xs-offset-3 col-xs-2" ng-click="cancel()">关闭</button>  
+         </div>  
+</script>  
+
+<div ng-controller="CombineBatchCtrl" style="min-height: 360px;">	
+	<div class="row m-b-10 m-t-10">
+	     <a href= "#/batchContents" class="btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1" style="
+          margin-left: 5px;">返回</a>		     
+	</div>
+	<div>
+		<form class="form-horizontal col-xs-offset-1 col-sm-offset-1 " name="scanProductForm">
+           <div class="form-group">
+             <label for="or_barcode" class="col-sm-1 col-xs-2 control-label">条码</label>
+             <div class='col-sm-4 col-xs-5 '>
+             	<input type="text" class="form-control" id="or_barcode" ng-model='barcode.or_barcode' placeholder="条码" required focus-me>
+             </div>
+             <button class="btn btn-success btn-sm col-sm-1  col-xs-2" ng-click="confirm(barcode.or_barcode)" ng-disabled="scanProductForm.$invalid" >确认</button>	  					  
+           </div>                     
+        </form>
+	</div>	 
+	<div class="col-sm-11 col-sm-offset-1 m-t-10">	
+	    <div class="col-xs-12">
+           <button class="btn btn-success btn-sm col-sm-1  col-xs-2" ng-click="combine()" >合并</button>	  	              
+             <div class='col-sm-3 col-xs-5 col-xs-offset-2'>
+                                 总数量  : {{GetTotalRemain()}}
+             </div>                               				     
+         </div>       
+		<table ng-table="tableParams" 
+			class="table table-bordered table-striped ng-table-rowselected col-xs-12 m-t-6 " >
+			<tr>
+			  <th width="33%">料号名称</th>
+			  <th width="50%">条码</th>			 
+			  <th width="17%">仓库</th>
+			</tr>
+			<tr ng-repeat="item in $data"
+	                ng-click="item.$selected = !item.$selected; changeSelection(item)"
+	                ng-class="{'active': item.$selected} " >
+	            <td>
+	                <div class="text-num">
+						<span ng-bind="::item.bar_prodcode"></span>
+					</div>
+					<div class="text-muted">
+						<span ng-bind="::item.pr_detail"></span>
+					</div>
+	            </td>
+	            <td >
+	                <div class="text-num">
+						<span ng-bind="::item.bar_code"></span>
+					</div>
+					<div class="text-num">
+						数量:<span ng-bind="::item.bar_remain"></span>
+					</div>
+				</td>
+	            <td >
+	                <div class="text-num">
+						<span ng-bind="::item.bar_whcode"></span>
+					</div>
+					<div class="text-muted">
+						<span ng-bind="::item.bar_location"></span>
+					</div>
+	            </td>     
+			</tr>
+		</table>
+	</div>	        
+</div>

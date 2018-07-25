@@ -1,0 +1,42 @@
+<pre><code>
+/**
+ * add group example to the sheet
+ */
+featureGroup : {
+    fileName: 'Group range',
+    sheets: [
+        {name: 'First', id: 1, color: 'red' }
+    ],
+    floatings: [
+       { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" },
+       { sheet:1, name:"rowGroups", ftype:"rowgroup", json: "[{level:3, span:[3,20]},{level:2, span:[7,17]},{level:1, span:[11,15]}]" },
+       { sheet:1, name:"colGroups", ftype:"colgroup", json: "[{level:3, span:[1,9]},{level:2, span:[2,7]},{level:1, span:[3,5]}]" },
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30, hoff:0}}, 
+        {sheet: 1, row: 0, col: 2, json: {width: 300}},
+        {sheet: 1, row: 2, col: 2, json: {data: "Add group to the sheet", fw:"bold", fz:14 }},
+        
+        {sheet: 1, row: 4, col: 2, json: { data: "CATEGORY", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}', trigger: false }},
+        {sheet: 1, row: 4, col: 3, json: { data: "ESTIMATED", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}', trigger: false }},
+        {sheet: 1, row: 4, col: 4, json: { data: "ACTUAL", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}', trigger: false }},
+        {sheet: 1, row: 5, col: 2, json: { data: "Bouquets", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 5, col: 3, json: { data: "500", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 5, col: 4, json: { data: "450", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}' }},
+        {sheet: 1, row: 6, col: 2, json: { data: "Boutonnires", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}' } },
+        {sheet: 1, row: 6, col: 3, json: { data: "200", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}' }},
+        {sheet: 1, row: 6, col: 4, json: { data: "150", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}' }},
+        {sheet: 1, row: 7, col: 2, json: { data: "Corsages", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 7, col: 3, json: { data: "100", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}'}},
+        {sheet: 1, row: 7, col: 4, json: { data: "80", tpl: '{id: "tpl_27", span: [1,4,2,7,4]}' }},
+    ]
+},
+</code></pre>
+
+<pre>
+<code>	
+ 	SHEET_API.updateGroups(SHEET_API_HD, 
+ 		[{dir: 'row', start: 2, end: 10}, {dir: 'row', start: 5, end: 7}]
+ 	);	
+</code>
+</pre>

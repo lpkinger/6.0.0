@@ -1,0 +1,90 @@
+<pre><Code>
+dataBindingVariableJson : {
+    fileName: 'Invoice',
+    sheets: [ {name: 'Invoice', id: 1, color: 'red' } ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,5,3,5]" },
+        { sheet:1, name:"merge2", ftype:"meg", json:"[13,2,13,4]" },
+        { sheet:1, name:"merge3", ftype:"meg", json:"[14,2,14,4]" },
+        { sheet:1, name:"merge4", ftype:"meg", json:"[15,2,15,4]" },
+        { sheet:1, name:"merge5", ftype:"meg", json:"[16,2,16,4]" },
+        { sheet:1, name:"merge6", ftype:"meg", json:"[17,2,17,4]" },
+        { sheet:1, name:"merge7", ftype:"meg", json:"[18,2,18,4]" },
+        { sheet:1, name:"merge8", ftype:"meg", json:"[19,2,19,4]" },
+        { sheet:1, name:"merge9", ftype:"meg", json:"[20,2,20,4]" },
+        { sheet:1, name:"merge10", ftype:"meg", json:"[21,2,21,3]" },
+        { sheet:1, name:"merge11", ftype:"meg", json:"[23,2,23,5]" },
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30}}, 
+        {sheet: 1, row: 23, col: 0, json: {height: 30}}, 
+        {sheet: 1, row: 0, col: 1, json: {width: 30}},
+        {sheet: 1, row: 0, col: 2, json: {width: 250}},
+        {sheet: 1, row: 0, col: 4, json: {width: 150}},
+        {sheet: 1, row: 0, col: 5, json: {width: 150}},    
+        {sheet: 1, row: 2, col: 2, json: { data: '[Company Name]', vname:'company_name', fz: 14}},
+        {sheet: 1, row: 3, col: 2, json: { data: '[Street Address]', vname:'street_address'}},
+        {sheet: 1, row: 4, col: 2, json: { data: '[City, ST ZIP]', vname:'city_state_zip'}},
+        {sheet: 1, row: 5, col: 2, json: { data: '[Phone]', vname:'phone'}},           
+        {sheet: 1, row: 2, col: 5, json: { data: 'INVOICE', fz: 24, color:'teal', fw:'bold', ta:'right'}},
+        {sheet: 1, row: 4, col: 4, json: { data: 'INVOICE #', ta: 'center'}},
+        {sheet: 1, row: 4, col: 5, json: { data: 'DATE', ta: 'center'}},
+        {sheet: 1, row: 5, col: 4, json: { data: '[Invoice No]', vname:'invoice_no', ta: 'center'}},
+        {sheet: 1, row: 5, col: 5, json: { data: '=today()', cal: true, ta: 'center'}},
+        
+        {sheet: 1, row: 7, col: 2, json: { data: 'BILL TO'}},
+        {sheet: 1, row: 8, col: 2, json: { data: '[Name]', vname:'bill_to.name'}},
+        {sheet: 1, row: 9, col: 2, json: { data: '[Company Name]', vname:'bill_to.company_name'}},
+        {sheet: 1, row: 10, col: 2, json: { data: '[Phone]', vname:'bill_to.phone'}},
+        {sheet: 1, row: 11, col: 2, json: { data: '[Email]', vname:'bill_to.email'}},
+        
+        {sheet: 1, row: 13, col: 2, json: { data: 'DESRIPTION'}},
+        {sheet: 1, row: 13, col: 5, json: { data: 'AMOUNT'}},
+        {sheet: 1, row: 14, col: 2, json: { data: "[Description]", vname:'list.description'}},
+        {sheet: 1, row: 14, col: 5, json: { data: "[Amount]", vname:'list.amount'}},
+        {sheet: 1, row: 21, col: 4, json: { data: 'TOTAL', ta:'right', fw:'bold'}},
+        {sheet: 1, row: 21, col: 5, json: { data: '=sum(E14:E20)', cal: true, fm: "money|$|2|none"}},
+        {sheet: 1, row: 21, col: 2, json: { data: 'Thank you for your business!'}},
+        {sheet: 1, row: 23, col: 2, json: { data: "Click here to load binding data from server", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 125%;", onBtnClickFn: "BTN_LOAD_INVOICE_DATA_CALLBACK_FN" }, }           
+    ]
+},
+</Code></pre>
+
+<pre><Code>
+
+SHEET_API.loadData(SHEET_API_HD, json, function() {
+   	SHEET_API.applyTableTpl(SHEET_API_HD, 1, 4, 4, 5, 5, "tpl_29", false);
+   	SHEET_API.applyTableTpl(SHEET_API_HD, 1, 7, 2, 7, 2, "tpl_29", false);
+   	SHEET_API.applyTableTpl(SHEET_API_HD, 1, 13, 2, 20, 5, "tpl_29", false);
+   	SHEET_API.toggleGridLine(SHEET_API_HD, true);
+}, this);
+
+</Code></pre>
+
+<pre><Code>
+// simulation and get data from binding and load in here ...
+function BTN_LOAD_INVOICE_DATA_CALLBACK_FN(value, row, column, sheetId, cellObj, store) {
+    var listVariables = SHEET_API.getCellVariables(SHEET_API_HD);
+    alert("All variable are: " + Ext.encode(listVariables));
+	
+    SHEET_API.setValueToVariable(SHEET_API_HD, {
+        'company_name': 'Apple Inc.',
+        'street_address': '1 Infinite Loop',
+        'city_state_zip': 'Cupertino, CA 95014',
+        'city_state_zip': 'Cupertino, CA 95014',
+        'phone': '1 800-692-7753',
+        'bill_to.name': 'John Doe',
+        'bill_to.company_name': 'ABC Company',
+        'bill_to.phone': '1 613 2222 222',
+        'bill_to.email': 'info@abc.com',
+        'invoice_no': '20150515001',
+        'list.description': ['Service Fee', 'Labor: 5 hours @ $75/hr', 'Tax(10%)'],
+        'list.amount': [200.00, 375.00, 57.50]
+    });
+	
+    // clean the defined variable
+    SHEET_API.clearAllVariables(SHEET_API_HD);
+}
+
+</Code></pre>
+

@@ -1,0 +1,31 @@
+.taskTip
+{
+	font-size:11px;
+}
+
+.taskTip td
+{
+	width:70px;
+}
+
+.icon-add
+{
+    background:url(images/add.png) no-repeat left center !important;
+}
+
+/* Since scheduler does not render zero-duration events, we need to do the custom styling ourselves */
+div.sch-event-milestone
+{
+    background: transparent url("gntresources/images/milestone.png");
+    margin-left:-8px;
+    margin-top:2px;
+    width:16px !important;
+    height:16px !important;
+    border:0 none;
+    text-indent:-10000px;
+    box-shadow: none;
+}
+
+div.sch-event-milestone .sch-resizable-handle{
+    display:none;
+}

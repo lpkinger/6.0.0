@@ -1,0 +1,31 @@
+<pre><code>
+featureCellAlignJson : {
+    fileName: 'Set cell align and indent',
+    sheets: [
+        {name: 'First', id: 1, color: 'red' }
+    ],
+    floatings: [
+       { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" }
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30, hoff:0}}, 
+        {sheet: 1, row: 9, col: 0, json: {height: 50, hoff:0}}, 
+        {sheet: 1, row: 0, col: 2, json: {width: 200}},
+        {sheet: 1, row: 0, col: 3, json: {width: 200}},
+        {sheet: 1, row: 0, col: 4, json: {width: 200}},
+        {sheet: 1, row: 11, col: 0, json: {autoHeight: 30}},
+        {sheet: 1, row: 2, col: 2, json: {data: "Cell align and indent", fw:"bold", fz:14 }},
+        
+        { sheet: 1, row: 4, col: 2, json: { data: "align right", ta: "right" } },
+        { sheet: 1, row: 5, col: 2, json: { data: "align center", ta: "center"} },
+        { sheet: 1, row: 6, col: 2, json: { data: "align left", ta: "left"} },
+        { sheet: 1, row: 7, col: 2, json: { data: "indent 10 px", ti: "10"} },
+        { sheet: 1, row: 8, col: 2, json: { data: "indent 20 px", ti: "20"} },
+        { sheet: 1, row: 9, col: 2, json: { data: "vertical align bottom", va: "bottom" } },
+        { sheet: 1, row: 9, col: 3, json: { data: "vertical align middle", va: "middle" } },
+        { sheet: 1, row: 9, col: 4, json: { data: "vertical align top", va: "top" } },
+        { sheet: 1, row: 9, col: 5, json: { data: "middle", va: "middle", ta: "center" } },
+        { sheet: 1, row: 11, col: 2, json: { data: "This used to prove long text WRAP method", ws: "normal", ww: "break-word" } },
+    ]
+},
+</code></pre>

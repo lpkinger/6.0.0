@@ -1,0 +1,32 @@
+<style>
+	.m-l-10 {
+		margin-left: 10px;
+	}
+	.col-xs-5 {
+        padding-left:2px;
+        padding-right:2px;
+	}
+</style>
+         
+<div ng-controller="CheckCtrl" style="min-height: 400px;">	
+    <div><a ng-href="#/checkContents" class="m-l-15 btn btn-success btn-sm m-t-10 m-b-10" > 返回 </a></div>	
+	<div class='m-b-10 col-xs-12'>
+	    <input type="text" class="col-xs-5 col-xs-offset-1" id="outboxCode" ng-model="outboxCode" placeholder="外箱编号" ng-keyup="searchPackage($event)" focus-me required> 
+	    <button class="btn btn-success btn-sm m-l-10 " ng-click="checkOutboxCode(outboxCode)" >查找</button>
+	</div>	
+	<div ng-show="outBoxData" class='col-xs-12 m-t-10'>
+	  <div>包装箱号:{{outBoxData.pa_outboxcode}}</div>
+	  <div > 
+	     <div> 料号: {{outBoxData.bar_prodcode}}</div>
+	     <div> 名称规格:{{outBoxData.pr_detail}}{{outBoxData.pr_spec}}</div>
+	  </div> 
+	  <div>
+	     <div> 工单号:{{outBoxData.pa_makecode}}</div>
+	     <div> 箱内总数:{{outBoxData.pa_totalqty}}</div>
+	  </div> 
+	  <div>
+	     <div> 销售单号:{{outBoxData.ma_salecode}}</div>
+	     <div> 委外商号:{{outBoxData.ma_vendcode}} </div>	     
+	  </div>              	  		
+	</div>			
+</div>

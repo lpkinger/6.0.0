@@ -1,0 +1,51 @@
+<pre><code>
+/**
+ * This is the checkbox/Radio json example to show how to create them by calling EnterpiseSheet API.
+ * See running example @
+ *     EnterpriseSheet Samples / APIs -> Cell type -> Checkbox/Radio cell
+ */
+featureCheckboxJson : {
+    fileName: 'Checkbox file',
+    sheets: [
+        {name: 'checkbox', id: 1, color: 'orange' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,8]" }
+    ],
+    cells: [
+        {sheet: 1, row: 0, col: 2, json: {width: 100}}, 
+        {sheet: 1, row: 0, col: 5, json: {width: 100}}, 
+        {sheet: 1, row: 0, col: 9, json: {width: 100}}, 
+        {sheet: 1, row: 2, col: 0, json: {height:30, hoff:0}}, 
+        {sheet: 1, row: 2, col: 2, json: {data: "Dispaly your data with Checkbox / Radio button", fw:"bold", fz:14 }}, 
+        
+        { sheet: 1, row: 4, col: 2, json: { data: "Favorite fruit:" } },
+        { sheet: 1, row: 5, col: 2,  json: { data: "Banana", it: "checkbox",  itn: "fruit", itchk: false, itchkpos: "right" }},
+        { sheet: 1, row: 6, col: 2, json: { data: "Apple", it: "checkbox", itn: "fruit", itchk: true }},
+        { sheet: 1, row: 7, col: 2, json: { data: "Orange", it: "checkbox", itn: "fruit", itchk: false } },
+        
+        { sheet: 1, row: 4, col: 4, json: { data: "Check only" } },
+        { sheet: 1, row: 5, col: 4, json: { data: "Align centre" } },
+        { sheet: 1, row: 6, col: 4, json: { data: "Align right" } },
+        { sheet: 1, row: 4, col: 5, json: { it: "checkbox", itn: "checkonly", itchk: true } },
+        { sheet: 1, row: 5, col: 5, json: { it: "checkbox", itn: "checkonly", itchk: false, ta: "center" } },
+        { sheet: 1, row: 6, col: 5, json: { it: "checkbox", itn: "checkonly", itchk: false, ta: "right" } },
+        { sheet: 1, row: 7, col: 5, json: { data: "Middle", it: "checkbox", itn: "checkonly", itchk: false, ta: "center" } },
+        { sheet: 1, row: 8, col: 5, json: { data: "Indent", it: "checkbox", itn: "checkonly", itchk: false, ti: "10" } },
+        
+        { sheet: 1, row: 4, col: 7, json: { data: "Most favorite sport:" } },
+        { sheet: 1, row: 5, col: 7, json: { data: "Soccer", it: "radio", itn: "sports", itchk: true, itchkpos: "right" }},
+        { sheet: 1, row: 6, col: 7, json: { data: "Basketball", it: "radio", itn: "sports", itchk: false}},
+        { sheet: 1, row: 7, col: 7, json: { data: "Ski", it: "radio", itn: "sports", itchk: false}},
+        
+        { sheet: 1, row: 4, col: 9, json: { data: "Check only" } },
+        { sheet: 1, row: 5, col: 9, json: { data: "Align centre" } },
+        { sheet: 1, row: 6, col: 9, json: { data: "Align right" } },
+        { sheet: 1, row: 4, col: 10, json: { it: "radio", itn: "radioOnly", itchk: true } },
+        { sheet: 1, row: 5, col: 10, json: { it: "radio", itn: "radioOnly", itchk: false, ta: "center" } },
+        { sheet: 1, row: 6, col: 10, json: { it: "radio", itn: "radioOnly", itchk: false, ta: "right" } },
+        { sheet: 1, row: 7, col: 10, json: { data: "Middle", it: "radio", itn: "radioOnly", itchk: false, ta: "center" } },
+        { sheet: 1, row: 8, col: 10, json: { data: "Indent", it: "radio", itn: "radioOnly", itchk: false, ti: "10" } },
+    ]
+},
+</code></pre>

@@ -1,0 +1,63 @@
+<style>
+.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-8,.col-xs-9,.col-xs-10
+	{
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+</style>
+
+<div ng-controller="InFinCheckOpCtrl">
+    <div class="row m-b-10">
+	     <button type="button"  class="btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1" ng-click="returnCheck()">返回</button>		     
+    </div>
+	<div class="m-b-10 m-t-10" >
+	 <form  class=" form-horizontal col-xs-offset-1 col-sm-offset-1 " name="confirmForm" id="confirmForm">
+	   <div class="form-group">
+	        <label for="bi_barcode" class="col-sm-1 col-xs-2 control-label" name="required-label">序列号</label>
+	        <div class='col-sm-4 col-xs-5 '>
+	            <input type="text" class="form-control" id="bi_barcode" ng-model='order.bi_barcode' placeholder="序列号" focus-me>
+	        </div>
+       </div>  
+       <div class="form-group">
+	        <label for="bi_outboxcode" class="col-sm-1 col-xs-2 control-label" name="required-label">箱号</label>
+	        <div class='col-sm-4 col-xs-5 '>
+	            <input type="text" class="form-control" id="bi_outboxcode" ng-model='order.bi_outboxcode' placeholder="箱号">
+	        </div>	     
+       </div>   
+         <button  class="btn btn-success btn-sm col-md-2 col-xs-2 col-xs-offset-5" ng-click="confirmCheck()" ng-disabled="confirmForm.$invalid" >确认</button>	  						
+	 </form>  
+	</div>	
+	<div  class="col-xs-12 col-sm-11 col-sm-offset-1 m-t-10">
+	    <table ng-table="tableParams" class="table ng-table-responsive table-bordered table-fixed table-striped ng-table-rowselected ">	      
+	       <colgroup>
+				<col width="10%"></col>
+				<col width="35%"></col>
+				<col width="30%"></col>
+				<col width="15%"></col>
+		   </colgroup>
+	       <tr >
+			    <th width="10%">行</th>
+				<th width="35%">条码号</th>
+				<th width="30%">批号</th>
+				<th width="15%">数量</th>
+			 </tr>
+	        <tbody ng-repeat="group in $groups">	        
+	        <tr class="ng-table-group" ng-show="group.value!=null">
+	            <td colspan="4">
+	                <a href="" ng-click="group.$hideRows = !group.$hideRows">
+	                    <span class="glyphicon" ng-class="{ 'glyphicon-chevron-right': group.$hideRows, 'glyphicon-chevron-down': !group.$hideRows }"></span>
+	                    <strong >箱号：{{group.value}}  箱内总数：{{group.data[0].v_total}}</strong>
+	                </a>
+	            </td>
+	        </tr>	       
+	        <tr ng-hide="group.$hideRows" ng-repeat="item in group.data">
+	            <td >{{item.bi_pdno}}</td>
+		        <td >{{item.bi_barcode}}</td>
+		        <td class="text-overflow">{{item.bi_batchcode}}</td>    
+		        <td> {{item.bi_inqty}}{{item.pd_innerqty}}</td>	 
+	        </tr>
+	        </tbody>
+	    </table>
+	</div>
+</div>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>EnterpriseSheet parse xlsx file</title>
+    <link rel="stylesheet" type="text/css" href="../../css/docs.css" />
+</head>
+
+<body>
+
+    <div id="ProjectTitle">EnterpriseSheet APIs</div>
+
+    <h1>Call parse function to parse XLSX file</h1>
+    
+    <hr style="height: 0.5px">
+    <div id="smallSublink"><a href="http://www.enterprisesheet.com/sheet/demo" TARGET=_BLANK>DEMO</a> -> EnterpriseSheet APIs -> Parse XLSX file</div>
+    <hr style="height: 0.5px">
+    
+	<form action="http://www.enterprisesheet.com/sheet/sheetParse/parseExcel"
+	      enctype="multipart/form-data" method="post">
+	<p>
+	Please select one of Excel file (.xlsx or .csv type):<br>
+	<input type="file" name="xlsxFilePath" size="150">
+	</p>
+	<div>
+	<input type="submit" value="Send">
+	</div>
+	</form>
+	
+	<br/>
+	<hr/>
+	<p>
+	After you click Send button, your file will be uploaded to the system by call SheetParseController -> parseExcel. See the following information for more detail.:  
+	</p>
+	
+	<pre>
+    /**
+     * This is the method to import an Excel file and parse to generate JSON data.
+     * You can call this method from your server side code.
+     *
+     * URL: http://localhost:8080/sheet/sheetParse/parseExcel
+     * Method: POST
+     * Request body: upload csv, xlsx file (file name should be end with .csv, .xlsx) - name: xlsxFilePath
+     *               
+     * Return: JSON string
+     *         [success: 'true', info: 'change saved', code: '200', fileId: 'uniqueId']
+     *         For Code: 200 - ok; 401 - unauthorized; 404 - not found; 406 - Not Acceptable; 500 - internal error
+     *         
+	 * @param xlsxFilePath
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+    @RequestMapping(value = "parseExcel", method = RequestMethod.POST)
+    public void parseExcel(@RequestParam MultipartFile xlsxFilePath,
+    		HttpServletRequest request, HttpServletResponse response)
+            throws Exception {        
+        File xlsxFile = new File(BaseFileUtil.createTempDir(String.valueOf(System.currentTimeMillis())),xlsxFilePath.getOriginalFilename());
+        xlsxFilePath.transferTo(xlsxFile);
+        String extension = FilenameUtils.getExtension(xlsxFile.getName()).toLowerCase();
+        
+        if (!extension.equals("csv") && !extension.equals("xlsx")) {
+        	Map<String, Object> results = new HashMap<>();
+			results.put("success", false);
+			results.put("info", "Currently only .CSV and .XLSX file is allowed to import.");
+			outputJson(results, request, response);
+			return;
+		}
+        
+        Map<String,Object> result = sheetParseService.parseXlsx(xlsxFile, request.getLocale());
+        outputJson(result, request, response);
+    }    
+	</pre>
+	<br/>
+	Result will be like this:
+	
+	<pre>
+{
+	"cells":[{
+	    "sheet":1,
+	    "row":0,
+	    "col":0,
+	    "json":"{\"dw\":72,\"dh\":20,\"config\":\"{\\\"focusCell\\\":{\\\"col\\\":13,\\\"row\\\":9}}\"}"
+	}],
+	"sheets":[{
+	    "name":"Sheet1",
+	    "id":1,
+	    "actived":true,
+	    "hidden":false,
+	    "color":null,
+	    "width":null,
+	    "maxRow":null,
+	    "maxCol":null,
+	    "totalCellNum":null,
+	    "extraInfo":"{\"printSetting\":{\"pageMargins\":{\"footer\":0.75,\"bottom\":1.88,\"left\":1.75,\"right\":1.75,\"header\":0.75,\"top\":1.88},\"view\":\"normal\",\"sheet\":{}}}",
+	    "allCellDataLoaded":null
+	}],
+	"floatings":[],
+	"fileConfig":[],
+	"filename":"StandardEmpty.xlsx"
+}   
+	</pre>
+	
+	<pre>
+	
+	com.cubedrive.sheet.web.sheet.SheetParseController.java
+	</pre>
+
+</body>
+</html>

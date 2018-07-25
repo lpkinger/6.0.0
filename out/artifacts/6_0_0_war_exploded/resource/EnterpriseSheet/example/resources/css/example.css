@@ -1,0 +1,45 @@
+html, body {
+    background: #4d394b !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.api-pane {
+    float: left;
+    color: white;
+    text-align: center;
+}
+
+.api-title {
+    background: #3e313c;
+    height: 35px;
+    line-height: 35px;
+}
+
+.api-action {
+    background: #5d495b;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    color: rgb(200,200,200);
+}
+
+.api-action:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.api-action-btn {
+    background: #5d495b;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    color: orange;
+}
+
+.api-action-btn:hover {
+    color: white;
+    text-decoration: underline;
+}

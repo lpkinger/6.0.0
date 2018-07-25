@@ -1,0 +1,78 @@
+<pre><code>
+dataBindingSubmitJson : {
+    fileName: 'Compelx cell data binding and retrieve',
+    sheets: [ {name: 'First', id: 1, color: 'red' } ],
+    floatings: [
+           { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" }
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30}}, 
+        {sheet: 1, row: 0, col: 2, json: {width: 235}},
+        {sheet: 1, row: 0, col: 3, json: {width: 250}},
+        {sheet: 1, row: 0, col: 4, json: {width: 250}},
+        {sheet: 1, row: 2, col: 2, json: {data: "Complex example to show data binding from server and submit data to server", fw:"bold", fz:14 }},
+        {sheet: 1, row: 4, col: 2, json: {data: "This example to show how to binding data and retrieve data."}},        
+        {sheet: 1, row: 16, col: 0, json: {height: 28}},
+        
+        {sheet: 1, row: 15, col: 2, json: {data: "1) Step 1 - add comments"}},
+        {sheet: 1, row: 15, col: 3, json: {data: "2) Step 2 - binding data from client server"}},
+        {sheet: 1, row: 15, col: 4, json: {data: "3) Step 3 - change data and submit to client server"}},
+        {sheet: 1, row: 16, col: 2, json: { data: "Click here to add comments", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 125%;", onBtnClickFn: "BTN_ADD_COMMENT_CALLBACK_FN" }, },
+        {sheet: 1, row: 16, col: 3, json: { data: "Bind server data to comments", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 125%;", onBtnClickFn: "BTN_BINDING_DATA_CALLBACK_FN" } },
+        {sheet: 1, row: 16, col: 4, json: { data: "Change and submit to server", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 125%;", onBtnClickFn: "BTN_SUBMIT_DATA_CALLBACK_FN" } },
+        {sheet: 1, row: 17, col: 2, json: {data: "1.1) Update cell and add comments"}}, 
+        {sheet: 1, row: 17, col: 3, json: {data: "2.1) Get all cell data with comments"}}, 
+        {sheet: 1, row: 18, col: 3, json: {data: "2.2) Call server to get data"}}, 
+        {sheet: 1, row: 19, col: 3, json: {data: "2.2) Render data to the cell"}}, 
+        {sheet: 1, row: 17, col: 4, json: {data: "3.1) Get all cell data with comments"}},
+        {sheet: 1, row: 18, col: 4, json: {data: "3.2) Call server API to submit data"}},
+    ]
+}
+</code></pre>
+
+<pre><code>
+function BTN_ADD_COMMENT_CALLBACK_FN(value, row, column, sheetId, cellObj, store) {
+	var cells = [
+	    {sheet: sheetId, row: 7, col: 2, json: {comment: '7-2', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 7, col: 3, json: {comment: '7-3', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 7, col: 4, json: {comment: '7-4', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 8, col: 2, json: {comment: '8-2', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 8, col: 3, json: {comment: '8-3', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 8, col: 4, json: {comment: '8-4', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 9, col: 2, json: {comment: '9-2', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 9, col: 3, json: {comment: '9-3', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 9, col: 4, json: {comment: '9-4', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 10, col: 2, json: {comment: '10-2', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 10, col: 3, json: {comment: '10-3', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 10, col: 4, json: {comment: '10-4', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 11, col: 2, json: {comment: '11-2', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 11, col: 3, json: {comment: '11-3', commentEdit: "hide"}},
+	    {sheet: sheetId, row: 11, col: 4, json: {comment: '11-4', commentEdit: "hide"}},
+	]; 
+	SHEET_API.updateCells(SHEET_API_HD, cells);
+}
+
+function BTN_BINDING_DATA_CALLBACK_FN(value, row, column, sheetId, cellObj, store) {
+	// get all cells with comments - call API	
+	var allCommentCells = SHEET_API.getCellsComment(SHEET_API_HD);
+	
+	// we can send those data to the server through Ajax call and get data back, we just assume this work.
+	var cells = [];
+	for (var i=0; i&lt;allCommentCells.length; i++) {
+		var temp = allCommentCells[i];
+		cells.push({sheet: sheetId, row: temp.x, col: temp.y, json: {data: temp.comment}, applyWay: "apply"});
+	}
+	
+	SHEET_API.updateCells(SHEET_API_HD, cells);
+}
+
+function BTN_SUBMIT_DATA_CALLBACK_FN(value, row, column, sheetId, cellObj, store) {
+	var allCommentCells = SHEET_API.getCellsComment(SHEET_API_HD);
+	var result = null;
+	for (var i=0; i&lt;allCommentCells.length; i++) {
+		var temp = allCommentCells[i];
+		result = result + temp.x + "|" + temp.y + "|" + temp.data + ";"
+	}
+	alert(result);
+}
+</code></pre>

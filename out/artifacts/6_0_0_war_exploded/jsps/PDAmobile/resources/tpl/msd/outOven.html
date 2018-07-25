@@ -1,0 +1,39 @@
+<style>
+	.col-xs-2,.col-xs-3, .col-xs-8{
+        padding-left:1px;
+        padding-right:1px;
+	}
+</style>
+         
+<div ng-controller="MsdCtrl" style="min-height: 400px;" class="col-xs-12">	
+    <div class="m-t-10 m-b-10 row"><a ng-href="#/msdContents" class="btn btn-success btn-sm col-xs-2" > 返回 </a></div>	
+	<form name='form' id="form" class="block">	
+	    <div class="form-group m-t-5">
+		    <label for="bar_code" class="col-xs-3">条码</label>
+		    <div class="col-xs-8"> 
+		       <input type="text" id="bar_code" ng-model="ml.bar_code" class="form-control " ng-keyup="getOvenTime($event)" enter-As-Tab focus-me required>
+			</div>			 					 
+	    </div>	  
+	    <div class="form-group"> 
+	        <button class="btn btn-success btn-sm col-xs-offset-3 col-xs-2 " ng-click="confirmOutOven()" ng-disabled="form.$invalid && btnInvalid" >确定</button>
+	    </div>
+	</form>
+	 <div class="form-group" ng-show="message.pr_code">
+		    <label for="pr_code" class="col-xs-3">料号</label>
+		    <div class="col-xs-8" > 
+		       <input type="text" id="pr_code" ng-model="message.pr_code" class="form-control" >
+			</div>			 					 
+	    </div> 
+	    <div class="form-group" ng-show="message.pr_detail">
+		    <label for="pr_detail" class="col-xs-3">名称</label>
+		    <div class="col-xs-8"> 
+		        <span ng-bind="::message.pr_detail"></span>
+			</div>			 					 
+	    </div>  
+	     <div class="form-group" ng-show="message.ovenTime">
+		    <label for="ovenTime" class="col-xs-3">烘烤时长</label>
+		    <div class="col-xs-8"> 
+		        <span ng-bind="::message.ovenTime">小时</span>
+			</div>			 					 
+	    </div>        -
+</div>

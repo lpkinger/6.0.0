@@ -1,0 +1,131 @@
+.main-tab-bar .x-tab-bar-body{
+	background-color: #e4e4e4 !important;
+}
+.main-tab-bar .x-tab em {
+    display: block;
+    padding: 0 14px;
+    line-height: 1px;
+}
+.main-tab-bar  .x-tab button {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #6f6f6f;
+    outline: 0 none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main-tab-bar .x-tab-default-top{	
+	border-bottom: #dadada 4.5px solid !important;
+	margin:2px 0 4px 4px !important;
+	padding: 5px 3px 0 5px !important;
+	width: 128px !important;	
+	height: 30px;
+	background: #e3e3e3 !important;
+	box-shadow: none;
+	border-radius: 6px 6px 0 0;
+}
+.x-border-box .x-tab-bar-top .x-tab-bar-body-default-plain{
+	border-top: #c0c0c0 1.5px solid !important;
+	box-shadow: inset 0px 0px 1px 1px #c0c0c0;
+	height:32px;
+} 
+.main-tab-bar .x-tab-top-active{
+	overflow: hidden;
+    text-overflow: ellipsis;
+	background-color: #ffffff !important;
+	color: #000000;
+	border-bottom: #ffffff 3.5px solid !important;
+}
+
+.main-tab-bar .x-tab button .x-tab-inner{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	text-align: left;
+    width: 90px;
+	font-weight: normal;
+	color: #333;
+}
+
+.main-tab-bar .x-tab-active button .x-tab-inner{
+	 background-color: #ffffff !important;
+	 color: #333;
+	 width: 90px;
+}
+
+.x-tab-close-btn {
+    position: absolute !important;
+    margin-right: 4px;
+    top: 5.5px;
+    width: 14px;
+    height: 14px;
+    font-size: 0;
+    line-height: 10px;
+    text-indent: -999px;
+    background: no-repeat;
+    background-image: url(../../images/button/tabclose.png);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60 );
+    opacity: 0.3;
+}
+
+.x-panel-body-default {
+    background: white !important;
+    color: black;
+    border-width: 0px;
+    border-style: solid;
+}
+
+.main-tab-bar .x-box-scroller-left {
+	top: 3px;
+    float: left;
+    height: 100%;  
+}
+
+.main-tab-bar .x-box-scroller-right {
+	top: 3px;
+    float: right;
+    height: 100%; 
+}
+
+.main-tab-bar .x-box-scroller-right .x-tabbar-scroll-right{
+	background-image: url(../../images/tabpanel/scroll-right.png);
+	border-radius : 4px;
+	width: 18px;
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+}
+
+.main-tab-bar .x-box-scroller-left .x-tabbar-scroll-left{
+	background-image: url(../../images/tabpanel/scroll-left.png);
+	border-radius : 4px;
+	width: 18px;
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+}
+
+.x-tab-icon-text-left .x-tab-inner {
+    padding-left: 40px !important;
+}
+
+.x-tab button .x-tab-icon, .x-tab a .x-tab-icon {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: -1px;
+    left: 22px;
+    right: auto;
+    bottom: 2px;
+    width: 18px;
+    height: 18px;
+    padding-bottom: 2px;
+}
+
+.html{
+	background-image: url(../../images/tabpanel/html.png) !important;
+}

@@ -1,0 +1,58 @@
+<style>
+	.m-l-18 {
+		margin-left: 18px;
+	}
+	.selected {
+		border-color: #0099CC;
+	}	
+	.col-xs-4 {
+        padding-left:2px;
+        padding-right:2px;
+	}
+</style>
+
+<div ng-controller="OutputCtrl" style="min-height: 400px;" class="">
+    <script type="text/ng-template" id="myModalContent.html">  
+         <div class="modal-header">  
+             <h4>请选择仓库!</h4>  
+         </div>  
+         <div class="modal-body" stop-event="touchend"> 
+           <table>
+           <tr ng-repeat="item in items" >
+           <td>   
+                          仓库编号: {{item.PD_WHCODE}} 
+           </td>
+           </tr>
+           </table>
+         </div>  
+         <div class="modal-footer">  
+             <button class="btn-sm btn-warning col-xs-2" ng-click="cancel()">取消</button>  
+         </div>  
+ </script>  
+	<div class='m-b-10 m-t-10 row'><a href="#/outContents" class="btn btn-success btn-sm col-xs-2 m-l-15">返回</a></div>
+	<div class="col-xs-12 m-b-10 col-sm-11 col-sm-offset-1">
+		<input type="text" class="col-xs-4 nec" placeholder="入库单号" ng-model="batchCode" id="batchCode" ng-keyup="search($event,batchCode,whcode)"
+			  focus-me typeahead="state for state in suggestions($viewValue)" ></input>
+		<input type="text" class="col-xs-4 m-l-18 " placeholder="仓库" ng-model="whcode" id="whcode" ng-keyup="search($event,batchCode,whcode)"> 
+		<button ng-click="getOrder(batchCode,whcode)"  type="button" class="btn btn-success btn-sm  m-l-18 col-xs-2" >确认</button> 
+	</div>
+	<div ng-show ="orders" class="col-xs-12  col-sm-11 col-sm-offset-1">
+		<table ng-table="tableParams" 
+			class="table table-bordered table-striped ng-table-rowselected"  >
+			<tr ng-repeat="s in $data"  ng-click="item.$selected = !item.$selected; operate(s)"
+	                ng-class="{'active': item.$selected} ">
+				<!--<td data-title="'单据类型'" width="33%">{{s.PI_CLASS}}</td> filter="{ 'name': 'text' }" -->
+				<td data-title="'单号'" width="42%">{{s.PI_INOUTNO}}({{s.PI_WHCODE}})</td>
+				<td data-title="'状态'" width="18%">{{s.ENAUDITSTATUS|status}}</td>
+				<td data-title="'操作'" width="25%">
+				 <div class="btn-group btn-group-xs">
+					<button type="button" class="btn btn-sm btn-warning" ng-click="getAgain(s)">重新采集</button>
+				 </div>
+				</td>
+				<td data-title="'操作'" width="20%">	
+					<button type="button" class="btn btn-sm btn-warning" ng-click="deleteDe(s)">删除</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,349 @@
+body {
+	line-height: 1.6;
+	font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei",
+		"\9ED1\4F53", Arial, sans-serif;
+	color: #222;
+	font-size: 14px !important;
+	-webkit-text-size-adjust: none;
+}
+
+h1,h2,h3 {
+	font-size: 18px;
+	font-weight: 400;
+	font-style: normal;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.f12 {
+	font-size: 12px !important;
+}
+
+.f14 {
+	font-size: 14px !important;
+}
+
+.f16 {
+	font-size: 16px !important;
+}
+
+[ng-click] {
+	cursor: pointer;
+}
+
+.br-r {
+	border-right: 1px solid #e6e6e6;
+}
+
+.br-l {
+	border-left: 1px solid #e6e6e6;
+}
+
+.br-b {
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.padding5 {
+	padding: 0px 5px;
+}
+
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.ellipsis {
+	width: 80px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+
+@media ( min-width : 320px) {
+	.ellipsis {
+		width: 100px;
+	}
+}
+
+@media ( min-width : 400px) {
+	.ellipsis {
+		width: 150px;
+	}
+}
+
+@media ( min-width : 560px) {
+	.ellipsis {
+		width: 160px;
+	}
+}
+
+.input-sm,.form-group-sm {
+	padding: 2px 5px;
+	border-radius: 1px;
+}
+
+.form-control {
+	border-radius: 1px;
+	padding: 1px 1px;
+}
+
+.btn-sm,.btn-group-sm>.btn {
+	padding: 4px 5px;
+}
+
+.text-num {
+	font-style: normal;
+	font-family: verdana;
+}
+
+.text-muted {
+	color: #888 !important;
+	font-size: 13px;
+}
+
+.text-inverse {
+	color: #f40 !important;
+}
+
+.text-black {
+	color: #333;
+}
+
+.expand {
+	border-top: solid 2px #339999;
+	border-left: solid 2px #339999;
+	border-right: solid 2px #339999;
+}
+
+.reply {
+	background-color: #339999;
+}
+
+/* top */
+.top {
+	height: 30px;
+	font-family: Microsoft Yahei;
+	border-bottom: solid 1px #999999;
+	line-height: 30px;
+}
+
+.orderInfo {
+	background-color: #339999;
+	color: #FFFFFF;
+	border-bottom: solid 1px #999999;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* footer */
+.footer {
+	padding-top: 5px;
+	background-color: #EEEEEE;
+	border-top: solid 1px #C6C6C6;
+}
+
+/*loading*/
+.loading {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	top: 0;
+	left: 0;
+}
+
+.loading.in {
+	display: block;
+}
+
+.loading.in>i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -33px 0 0 -33px;
+	background: url("../img/all/loading.gif") no-repeat center center;
+	width: 66px;
+	height: 66px;
+}
+
+th,td {
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+	padding-left: 4px !important;
+	padding-right: 4px !important;
+}
+
+th {
+	text-align: center
+}
+
+tr strong,tr td {
+	WORD-WRAP: break-word;
+	overflow: hidden;
+}
+
+table {
+	background-color: #FFFFFF;
+}
+.form-control{
+	font-size: 14px;
+	height: 32px;
+}
+.form-group {
+	font-size: 12px;
+	height: 32px;
+}
+
+.ng-table-counts {
+	display: none;
+}
+
+.red {
+	color: #F00;
+}
+
+/*全屏状态的CSS*/
+:-webkit-full-screen { /* properties */
+	
+}
+
+:-moz-full-screen { /* properties */
+	
+}
+
+:-ms-fullscreen { /* properties */
+	
+}
+
+:full-screen { /*pre-spec */
+	/* properties */
+	
+}
+
+:fullscreen { /* spec */
+	/* properties */
+	
+}
+
+/* deeper elements */
+:-webkit-full-screen video {
+	width: 100%;
+	height: 100%;
+}
+
+/* prevent text from appearing underneath the icon */
+input[reset-field] {
+	padding-right: 19px;
+}
+
+/* hide the built-in IE10+ clear field icon */
+input[reset-field]::-ms-clear {
+	display: none;
+}
+/* hide cancel icon for search type */
+input[reset-field]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+/* icon styles */
+input[reset-field]+.fa {
+	position: absolute;
+	right: 19px;
+	top: 10px;
+	color: #C0C0C0;
+	cursor: default;
+}
+
+/* animations for ngAnimate */
+input[reset-field]+.fa.ng-hide-add {
+	display: inline !important;
+	-webkit-animation: 0.3s fadeOut;
+	-moz-animation: 0.3s fadeOut;
+	-ms-animation: 0.3s fadeOut;
+	animation: 0.3s fadeOut;
+}
+
+input[reset-field]+.fa.ng-hide-remove {
+	-webkit-animation: 0.5s fadeIn;
+	-moz-animation: 0.5s fadeIn;
+	-ms-animation: 0.5s fadeIn;
+	animation: 0.5s fadeIn;
+}
+
+input {
+	line-height: 32px;
+}
+
+.success,.message {
+	color: blue;
+	font-size: 13px;
+}
+
+.error {
+	color: red;
+	font-size: 13px;
+}
+
+.m-t-5 {
+	margin-top: 5px;
+}
+
+.block {
+	background: white;
+	border: solid 1px #d9dde2;
+	border-radius: 7px;
+}
+
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-b-10 {
+	margin-bottom: 10px;
+}
+
+.border {
+	border: 1px solid #d9dde2;
+	border-radius: 4px;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.m-l-15 {
+	margin-left: 15px;
+}
+
+.form-group {
+	margin-bottom: 5px;
+}
+
+.text-overflow {
+	word-break: keep-all; /* 不换行 */
+	white-space: nowrap; /* 不换行 */
+	overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow: ellipsis;
+	/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+
+.table-fixed {
+	table-layout: fixed;
+}

@@ -1,0 +1,35 @@
+<pre><code>
+/**
+ * This is the example Json Data for generate pie chart
+ * See running example @
+ *        EnterpriseSheet Samples / APIs -> Chart Features/APIs -> Generate pie chart
+ */
+featureChartPieJson : {
+	fileName: 'Pie Chart',
+    sheets: [
+        {name: 'Pie', id: 1, color: 'orange' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,8]" },
+        { sheet: 1, name: 'chart12', ftype: 'floor',
+         json: '{"seriesPosition":"col","legendPosition":"right","chartType":"pie","floorType":"chart","source":{"series":[[1,5,3,10,3]], "labels":[[1,5,2,5,2],[1,6,2,6,2],[1,7,2,7,2],[1,8,2,8,2],[1,9,2,9,2],[1,10,2,10,2]], "usAbs": true },"x":300,"y":80,"width":400,"height":300, id: "chart12"}' }
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height:30, hoff:0}}, 
+        {sheet: 1, row: 2, col: 2, json: {data: "Generate pie chart for cell ranges", fw:"bold", fz:14 }}, 
+        
+        {sheet: 1, row: 5, col: 2, json: { data: 'Hybrid'}}, 
+        {sheet: 1, row: 6, col: 2, json: { data: 'SUV'}}, 
+        {sheet: 1, row: 7, col: 2, json: { data: 'Sedan'}}, 
+        {sheet: 1, row: 8, col: 2, json: { data: 'Sports'}}, 
+        {sheet: 1, row: 9, col: 2, json: { data: 'Truck'}}, 
+        {sheet: 1, row: 10, col: 2, json: { data: 'Wagon' }}, 
+        {sheet: 1, row: 5, col: 3, json: { data: 120}},
+        {sheet: 1, row: 6, col: 3, json: { data: 350}},
+        {sheet: 1, row: 7, col: 3, json: { data: 1050}},
+        {sheet: 1, row: 8, col: 3, json: { data: 200}},
+        {sheet: 1, row: 9, col: 3, json: { data: 500}},
+        {sheet: 1, row: 10, col: 3, json: { data: 600}},
+    ]
+},
+</code></pre>

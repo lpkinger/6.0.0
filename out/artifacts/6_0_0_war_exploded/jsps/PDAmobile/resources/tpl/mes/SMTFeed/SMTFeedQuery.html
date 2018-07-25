@@ -1,0 +1,30 @@
+<style>
+  .col-xs-2,.col-xs-3, .col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7{
+     padding-left : 1px;
+     padding-right: 1px;	
+   }
+</style>
+<div ng-controller="SMTFeedIDCtrl" style="min-height: 400px;">
+   <div class="col-xs-12  col-sm-11 col-sm-offset-1">
+    <div class='m-b-10 row'><a href="#/SMTFeedContents" class="btn btn-success btn-sm m-t-10 col-xs-2 ">返回</a></div>
+    <div class="input-group pull-right global-search m-b-10">
+	  <label class="input-group-addon">全局搜索</label>
+	  <input type="text" class="form-control" ng-model="vm.filter.$"/>
+	</div>
+	<table ng-table="tableParams" show-filter="true" class="table table-bordered table-striped ng-table-rowselected " >
+        <tr ng-repeat="item in $data| filter:vm.filter">
+            <td width="20%" data-title ="'站位'" filter="{ 'msl_location': 'text' }" >{{item.msl_location}}</td>
+		    <td width="20%" data-title ="'飞达编号'" filter="{ 'msl_fecode': 'text' }">{{item.msl_fecode}}</td>
+		    <td width="30%" data-title ="'料号'" filter="{ 'msl_prodcode': 'text' }">{{item.msl_prodcode}}</td>
+		    <td width="30%" data-title ="'料卷号'" filter="{ 'msl_barcode': 'text' }">
+		        <div class="text-num">
+				   <span ng-bind="::item.msl_barcode"></span>
+				</div>
+				<div class="text-muted text-center">
+				   <span ng-bind="::item.msl_remainqty"></span>
+				</div>		  
+		    </td>   
+        </tr>
+    </table>  
+   </div> 
+</div>

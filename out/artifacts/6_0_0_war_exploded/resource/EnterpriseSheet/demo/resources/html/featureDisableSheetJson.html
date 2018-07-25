@@ -1,0 +1,18 @@
+<pre><code>
+/**
+* This is the example Json Data for disbale sheet
+* See running example @
+*     EnterpriseSheet Samples / APIs -> Disable -> Disable sheet
+*/
+featureDisableSheetJson : {
+	fileName: 'Set sheet disable',
+	sheets: [
+		{name: 'First', id: 1, color: 'red' }, {  name: 'Second', id: 2 }
+	],
+	cells: [{
+		sheet: 1, row: 2, col: 2, json: {data: "This is read only"}
+	},{
+		sheet: 1, row: 2, col: 3, json: {data: "OK 123"}
+	}]
+},
+</code></pre>

@@ -1,0 +1,131 @@
+<pre>
+surveyCaseJson : {
+    fileName: 'EnterpriseSheet Survey',
+    sheets: [{name: 'General', id: 1, color: 'orange' }, 
+             {name: 'Rate level', id: 2, color: 'green' },
+             {name: 'Comments', id: 3, color: 'blue' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[1,2,1,8]" },
+        { sheet:1, name:"merge2", ftype:"meg", json:"[3,2,3,8]" },
+        { sheet:1, name:"merge2", ftype:"meg", json:"[4,2,4,10]" },
+        { sheet:1, name:"merge3", ftype:"meg", json:"[9,4,9,8]" },
+        { sheet:1, name:"merge4", ftype:"meg", json:"[12,2,12,6]" },
+        { sheet:1, name:"merge5", ftype:"meg", json:"[15,2,15,6]" },
+        { sheet:2, name:"merge20", ftype:"meg", json:"[1,2,1,8]" },
+        { sheet:2, name:"merge21", ftype:"meg", json:"[5,2,5,3]" },
+        { sheet:2, name:"merge22", ftype:"meg", json:"[6,2,6,3]" },
+        { sheet:2, name:"merge23", ftype:"meg", json:"[7,2,7,3]" },
+        { sheet:2, name:"merge24", ftype:"meg", json:"[8,2,8,3]" },
+        { sheet:2, name:"merge25", ftype:"meg", json:"[9,2,9,3]" },
+        { sheet:3, name:"merge30", ftype:"meg", json:"[1,2,1,8]" },
+        { sheet:3, name:"merge31", ftype:"meg", json:"[5,2,12,12]" },
+    ],
+    cells: [
+        {sheet: 1, row: 1, col: 0, json: {height: 55, bgc: "#000000"}}, 
+        {sheet: 1, row: 3, col: 0, json: {height: 40 }}, 
+        {sheet: 1, row: 4, col: 0, json: {height: 55 }},
+        {sheet: 1, row: 15, col: 0, json: {height: 30 }},
+        {sheet: 1, row: 5, col: 0, json: {height: 25 }},
+        {sheet: 1, row: 1, col: 2, json: {icp:"http://enterprisesheet.com/resources/images/enterpriseLogo.png", imgStyle: "position:absolute;left:0px;top:0px;", data:""}}, 
+        {sheet: 1, row: 3, col: 2, json: {data: "EnterpriseSheet General Survey", fz:16, fw:"bold"}},
+        {sheet: 1, row: 4, col: 2, json: {data: "It's our goal, as the customer service team, to assist you quickly and to the best of our ability. To help us improve our service and quality of support for you, please take a few minutes to evaluate our product. Your responses will help us focus on specific areas of improvement as we work to provide the best possible support.", ws: "normal", ww: "break-word"}},
+       
+        { sheet: 1, row: 5, col: 2, json: { data: "1: How did you first learn of EnterpriseSheet?", fz:12 }},
+        { sheet: 1, row: 6, col: 2, json: { data: "Search Engine", it: "radio", itn: "whereLearnES", itchk: true }},
+        { sheet: 1, row: 7, col: 2, json: { data: "Email or Newsletter", it: "radio", itn: "whereLearnES", itchk: false}},
+        { sheet: 1, row: 8, col: 2, json: { data: "Word of Mouth", it: "radio", itn: "whereLearnES", itchk: false}},
+        { sheet: 1, row: 9, col: 2, json: { data: "Others", it: "radio", itn: "whereLearnES", itchk: false}},
+        { sheet: 1, row: 9, col: 4, json: { comment: 'If other, please specify', commentEdit: "hide" } },
+        
+        { sheet: 1, row: 11, col: 0, json: {height: 25 }},
+        { sheet: 1, row: 12, col: 0, json: {height: 20 }},
+        { sheet: 1, row: 11, col: 2, json: { data: "2: Which of the following most accurately describes your occupational title in your organization?", fz:12 }},
+        { sheet: 1, row: 12, col: 2, json: { data: "Staff", drop: Ext.encode({data: ["CEO/Owner/Partner", "Director/VP/Department Header", "Manager", "Team leader", "Developer", "Staff", "Other"]}) }},
+        
+        { sheet: 1, row: 14, col: 0, json: {height: 25 }},
+        { sheet: 1, row: 15, col: 0, json: {height: 20 }},
+        { sheet: 1, row: 14, col: 2, json: { data: "3: What is best description of your organization?", fz:12 }},
+        { sheet: 1, row: 15, col: 2, json: { data: "Software company", drop: Ext.encode({data: ["Software company", "Bank/Financial organization", "Hardware company", "Education organization", "Consultant", "Government", "Other"]}) }},
+        
+        { sheet: 1, row: 17, col: 0, json: {height: 30 }},
+        { sheet: 1, row: 17, col: 10, json: { icp:"http://enterprisesheet.com/sheet/js/EnterpriseSheet/demo/resources/images/next.png", imgStyle: "position:absolute;left:0px;top:0px;width:95%;height:95%;", link: "='Rate level'!$A$2", fm: "link"}},
+        
+        {sheet: 2, row: 0, col: 4, json: {width: 120 }},
+        {sheet: 2, row: 0, col: 5, json: {width: 120 }},
+        {sheet: 2, row: 0, col: 6, json: {width: 120 }},
+        {sheet: 2, row: 0, col: 7, json: {width: 120 }}, 
+        {sheet: 2, row: 1, col: 0, json: {height: 55, bgc: "#000000"}}, 
+        {sheet: 2, row: 4, col: 0, json: {height: 55 }}, 
+        {sheet: 2, row: 5, col: 0, json: {height: 25 }},
+        {sheet: 2, row: 1, col: 2, json: {icp:"http://enterprisesheet.com/resources/images/enterpriseLogo.png", imgStyle: "position:absolute;left:0px;top:0px;", data:""}}, 
+       
+        { sheet: 2, row: 4, col: 0, json: {height: 25 }},			        
+        { sheet: 2, row: 4, col: 2, json: { data: "3: Please rate your level of agreement with the following statements.", fz:12 }},
+        { sheet: 2, row: 5, col: 2, json: { data: "Opinion"}},
+        { sheet: 2, row: 5, col: 4, json: { data: "Strong disagree", ta: "center"}},				        
+        { sheet: 2, row: 5, col: 5, json: { data: "Disagree", ta: "center" }},
+        { sheet: 2, row: 5, col: 6, json: { data: "Agree", ta: "center" }},
+        { sheet: 2, row: 5, col: 7, json: { data: "Strong agree", ta: "center" }},
+        { sheet: 2, row: 6, col: 0, json: { height: 40 }},
+        { sheet: 2, row: 6, col: 2, json: { data: "EnterpriseSheet are priced fairly.", ws: "normal", ww: "break-word"}},
+        { sheet: 2, row: 7, col: 0, json: { height: 40 }},
+        { sheet: 2, row: 7, col: 2, json: { data: "EnterpriseSheet are high quality.", ws: "normal", ww: "break-word"}},
+        { sheet: 2, row: 8, col: 0, json: { height: 45 }},
+        { sheet: 2, row: 8, col: 2, json: { data: "You would recommend EnterpriseSheet to a friend.", ws: "normal", ww: "break-word"}},
+        { sheet: 2, row: 9, col: 0, json: { height: 45 }},
+        { sheet: 2, row: 9, col: 2, json: { data: "Overall, our customer service are satisfied.", ws: "normal", ww: "break-word"}},
+        { sheet: 2, row: 12, col: 0, json: {height: 30 }},
+        { sheet: 2, row: 12, col: 8, json: { icp:"http://enterprisesheet.com/sheet/js/EnterpriseSheet/demo/resources/images/next.png", imgStyle: "position:absolute;left:0px;top:0px;width:95%;height:95%;", link: "='Comments'!$A$2", fm: "link"}},
+        { sheet: 2, row: 12, col: 2, json: { icp:"http://enterprisesheet.com/sheet/js/EnterpriseSheet/demo/resources/images/pre.png", imgStyle: "position:absolute;left:0px;top:0px;width:95%;height:95%;", link: "='General'!$A$2", fm: "link"}},		        
+           
+        { sheet: 2, row: 6, col: 4, json: { data: "1", it: "radio", itn: "priceOK", ta: "center" , va: 'middle', itchk: false }},
+        { sheet: 2, row: 6, col: 5, json: { data: "2", it: "radio", itn: "priceOK", ta: "center" , va: 'middle', itchk: false}},
+        { sheet: 2, row: 6, col: 6, json: { data: "3", it: "radio", itn: "priceOK", ta: "center" , va: 'middle', itchk: true}},
+        { sheet: 2, row: 6, col: 7, json: { data: "4", it: "radio", itn: "priceOK", ta: "center" , va: 'middle', itchk: false}},
+        
+        { sheet: 2, row: 7, col: 4, json: { data: "1", it: "radio", itn: "qualityOK", ta: "center" , va: 'middle', itchk: false }},
+        { sheet: 2, row: 7, col: 5, json: { data: "2", it: "radio", itn: "qualityOK", ta: "center" , va: 'middle', itchk: false}},
+        { sheet: 2, row: 7, col: 6, json: { data: "3", it: "radio", itn: "qualityOK", ta: "center" , va: 'middle', itchk: true}},
+        { sheet: 2, row: 7, col: 7, json: { data: "4", it: "radio", itn: "qualityOK", ta: "center" , va: 'middle', itchk: false}},
+        
+        { sheet: 2, row: 8, col: 4, json: { data: "1", it: "radio", itn: "recommandFriend", ta: "center" , va: 'middle', itchk: false }},
+        { sheet: 2, row: 8, col: 5, json: { data: "2", it: "radio", itn: "recommandFriend", ta: "center" , va: 'middle', itchk: false}},
+        { sheet: 2, row: 8, col: 6, json: { data: "3", it: "radio", itn: "recommandFriend", ta: "center" , va: 'middle', itchk: true}},
+        { sheet: 2, row: 8, col: 7, json: { data: "4", it: "radio", itn: "recommandFriend", ta: "center" , va: 'middle', itchk: false}},
+        
+        { sheet: 2, row: 9, col: 4, json: { data: "1", it: "radio", itn: "customerService", ta: "center" , va: 'middle', itchk: false }},
+        { sheet: 2, row: 9, col: 5, json: { data: "2", it: "radio", itn: "customerService", ta: "center" , va: 'middle', itchk: false}},
+        { sheet: 2, row: 9, col: 6, json: { data: "3", it: "radio", itn: "customerService", ta: "center" , va: 'middle', itchk: true}},
+        { sheet: 2, row: 9, col: 7, json: { data: "4", it: "radio", itn: "customerService", ta: "center" , va: 'middle', itchk: false}},
+        
+        {sheet: 3, row: 1, col: 0, json: {height: 55, bgc: "#000000"}}, 
+        {sheet: 3, row: 4, col: 0, json: {height: 55 }}, 
+        {sheet: 3, row: 5, col: 0, json: {height: 25 }},
+        {sheet: 3, row: 1, col: 2, json: {icp:"http://enterprisesheet.com/resources/images/enterpriseLogo.png", imgStyle: "position:absolute;left:0px;top:0px;", data:""}}, 
+        { sheet: 3, row: 4, col: 0, json: {height: 25 }},			        
+        { sheet: 3, row: 4, col: 2, json: { data: "4: Please enter additional comment/suggestions for EnterpriseSheet. Your comments are really important for us. Thanks", fz:12 }},
+        { sheet: 3, row: 5, col: 2, json: { ws: "normal", ww: "break-word", vname:'customerComments', vnameEdit: "hide"}},
+        { sheet: 3, row: 18, col: 0, json: {height: 30 }},
+        { sheet: 3, row: 18, col: 2, json: { icp:"http://enterprisesheet.com/sheet/js/EnterpriseSheet/demo/resources/images/pre.png", imgStyle: "position:absolute;left:0px;top:0px;width:95%;height:95%;", link: "='Rate level'!$A$2", fm: "link"}},		        
+        { sheet: 3, row: 18, col: 7, json: { data: "Submit", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 115%;padding:5px 25px;border-radius:19px;-moz-border-radius:19px;-webkit-border-radius:19px;", onBtnClickFn: "SURVEY_SUBMIT_DATA_CALLBACK_FN" } }	
+    ]
+ }
+  
+ </pre>
+ 
+ <pre>
+    var json = surveyCaseJson;		
+    SHEET_API.loadData(SHEET_API_HD, json, function() {
+    	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 3, 2, 3, 10]], {position:"bottom", color:"grey", width:2, lineType:"solid"} );
+    	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 9, 4, 9, 8]], {position:"outside", color:"green", width:1, lineType:"solid"} );
+    	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 12, 2, 12, 6]], {position:"outside", color:"green", width:1, lineType:"solid"} );
+    	SHEET_API.applyCellsBorder(SHEET_API_HD, [[1, 15, 2, 15, 6]], {position:"outside", color:"green", width:1, lineType:"solid"} );
+    	SHEET_API.toggleGridLine(SHEET_API_HD, true, 1);
+    	SHEET_API.toggleGridLine(SHEET_API_HD, true, 2);
+    	SHEET_API.toggleGridLine(SHEET_API_HD, true, 3);
+    	SHEET_API.freezeSheet(SHEET_API_HD, 4, 0);
+    	SHEET_API.applyTableTpl(SHEET_API_HD, 2, 5, 2, 9, 7, "tpl_26", false);
+    	SHEET_API.applyCellsBorder(SHEET_API_HD, [[3, 5, 2, 12, 12]], {position:"outside", color:"green", width:1, lineType:"solid"} );
+    }, this);
+ </pre>

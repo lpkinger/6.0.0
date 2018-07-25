@@ -1,0 +1,76 @@
+<pre><code>
+groupToggleEventListenerJson : {
+    fileName: 'Group listener',
+    sheets: [
+        {name: 'First', id: 1, color: 'red' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" },
+        { sheet:1, name:"rowGroups", ftype:"rowgroup", json: "[{level:3, span:[3,20]},{level:2, span:[7,17]},{level:1, span:[11,15]}]" },
+        { sheet:1, name:"colGroups", ftype:"colgroup", json: "[{level:3, span:[1,9]},{level:2, span:[2,7]},{level:1, span:[3,5]}]" },
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30, hoff:0}}, 
+        {sheet: 1, row: 0, col: 2, json: {width: 300}},
+        {sheet: 1, row: 2, col: 2, json: {data: "Add group toggle listener - toggle and see result", fw:"bold", fz:14 }},   
+    ]
+},
+</code></pre>
+
+<pre><code>
+And add the following function code into your existing JavaScript code.
+
+    var sheet = SHEET_API_HD.sheet;
+    sheet.on({
+        scope: this,
+        /*
+         * @param {String} name: the name of the group
+         * @param {Boolean} expand: true means this group level is expanded, or it's collapsed
+         * @param {Integer} sheetId: the sheet id
+         * @param {Array} rows: the row index array of this row group level
+         * @param {Array} oldRowGroups: the old row group array before this action
+         * @param {Array} rowGroups: the row group array after this action
+         */
+        'togglerowgroup': function(name, expand, sheetId, rows, oldRowGroups, rowGroups){
+            alert((expand ? 'Expand' : 'Collapse')+(' row '+rows[0]+' to row '+rows[rows.length-1]))
+        },
+        /*
+         * @param {String} name: the name of the group
+         * @param {Boolean} expand: true means this group level is expanded, or it's collapsed
+         * @param {Integer} sheetId: the sheet id
+         * @param {Array} cols: the col index array of this col group level
+         * @param {Array} oldColGroups: the old col group array before this action
+         * @param {Array} colGroups: the col group array after this action
+         */
+        'togglecolgroup': function(name, expand, sheetId, cols, oldColGroups, colGroups){
+            var store = SHEET_API_HD.store;
+            alert((expand ? 'Expand' : 'Collapse')+(' column '+store.getColName(cols[0])+' to column '+store.getColName(cols[cols.length-1])))
+        },
+        
+     	/*
+         * @param {Boolean} state: true for expand, false for collapse
+         * @param {Integer} sheetId: the sheet id
+         * @param {Array} showns: the row index array to show
+         * @param {Array} hiddens: the row index array to hide
+         * @param {Array} oldGroups: the old row group array before this action
+         * @param {Array} groups: the row group array after this action
+         * @param {Array} newLevels: the row group level array after this action
+         */
+        'togglerowgrouplevel': function(state, sheetId, showns, hiddens, oldGroups, newGroups, oldLevels, newLevels){
+            alert((state ? 'Expand' : 'Collapse')+' row group level');
+        },
+        /*
+         * @param {Boolean} state: true for expand, false for collapse
+         * @param {Integer} sheetId: the sheet id
+         * @param {Array} showns: the column index array to show
+         * @param {Array} hiddens: the column index array to hide
+         * @param {Array} oldGroups: the old col group array before this action
+         * @param {Array} groups: the col group array after this action
+         * @param {Array} newLevels: the col group level array after this action                  
+         */
+        'togglecolgrouplevel': function(state, sheetId, showns, hiddens, oldGroups, newGroups, oldLevels, newLevels){
+            alert((state ? 'Expand' : 'Collapse')+' column group level');
+        }
+    });
+
+</code></pre>

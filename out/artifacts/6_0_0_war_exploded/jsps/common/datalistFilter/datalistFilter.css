@@ -1,0 +1,183 @@
+#queryName{
+	margin-top: 10px;
+	
+}
+
+.x-panel-body-default{
+	background: #F1F1F1
+}
+.clearconditionsp{
+	margin-left: 480px !important;
+	border: 0px;
+	background-color: #F1F1F1 !important;
+	background-image: none;
+	color:#428bca !important;
+}
+.clearconditionspico{
+	background-image:url('../../../resource/images/16/brush.png');
+}
+.clearconditionpanel{
+	border: 0px;
+	border-color: #F1F1F1 !important;
+
+}
+.clearCondition{
+	border: 0px;
+	border-color: #F1F1F1 !important;
+	background-image:none;
+}
+.x-panel-body-default{
+	border: 0px;
+	
+}
+.setDefaultButton{
+	margin-left: 40px !important;
+	
+}
+.saveButton{
+	background-color: #EDEDED;
+	padding-top: 4px;
+	margin-left:10px!important;
+	width:55px;
+}
+.saveButtonico{
+	background-image:url('../../../resource/images/application_form.png');
+}
+.saveAsButton{
+	background-color: #EDEDED;
+	padding-top: 4px;
+	width:68px;
+	margin-left:6px!important;
+}
+.saveAsButtonico{
+	background-image:url('../../../resource/images/application_form_add.png'); 	
+}
+.deleteButton{
+	background-color: #EDEDED;
+	padding-top: 4px;
+	width:55px;
+	margin-left:4px!important;
+}
+.deleteButtonico{
+	background-image:url('../../../resource/images/16/delete_3.png'); 	
+}
+.x-grid-row .x-grid-cell{
+	background-color: #F1F1F1;	
+}
+
+.clearformbutton{
+	background-image:url('../../../resource/images/16/delete_2.png') !important; 	
+	background-color: #F1F1F1;
+	border: 0px;
+	margin-top: 3px;
+	margin-left: 2px;
+} 
+
+.newaddpanel{
+	background-color:#F1F1F1 !important;
+	background-image:none;
+	border:0px;
+	padding-top:5px;
+	color:red;
+	width: 20px;
+	margin-left: 5px !important;
+}
+.newaddpanelico{
+	background-image:url('../../../resource/images/16/add.png');
+}
+.sureIcon{
+	background-image:url('../../../resource/images/accept.png');
+}
+.cancelIcon{
+	background-image:url('../../../resource/images/x.png');
+}
+.TreePanel{
+	background-color: #F1F1F1;
+	background:#F1F1F1;
+}
+.x-panel .x-grid-body{
+	background: #F1F1F1 !important;
+	background-color: :#F1F1F1 !important;
+}
+
+.sureButton{
+	border-width: 1px;
+	border-color:gray;
+	height: 22px;
+	
+}
+#clearconditionsp-btnInnerEl{
+	color: #083D5F!important;
+}
+#newaddpanel-btnInnerEl:hover{
+	color: #083D5F!important;
+}
+#newaddpanel-btnInnerEl{
+    color:#126499;
+}
+#clearconditionsp-btnInnerEl{
+	color:#126499;
+}
+
+.btn-footer{
+	border: 1px solid  #bbbbbb;
+	backgroud-color:#f8f8f8;
+	background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+}
+#win-body{
+	background-color: #eee;
+	
+}
+.saveasdetail{
+	background-color: #eee;
+	background:#eee;
+}
+.x-window-header-default-top{
+	background: #eee;
+	
+}
+
+.certainButton{
+	/* border-width: 0px;  */
+	background-color:#E8E8E8;
+	background-image: none;
+	width: 60px !important; 
+	text-align: center; 
+}
+#certainButton-btnInnerEl {
+	width:40px !important;
+	text-align: center !important;;
+}
+#certainButton-btnEl{
+	width:40px !important;
+}
+.quashButton{
+	/* border-width: 0px; */
+	background-color: #E8E8E8;
+	background-image: none; 
+	width: 60px !important;
+	text-align: center;   
+}
+#quashButton-btnInnerEl{
+	/* padding-left: 5px; */
+	width: 40px !important; 
+	text-align: center !important;
+}
+#quashButton-btnEl{
+	width: 40px !important; 
+}
+.x-tab-active button .x-tab-inner {
+    color: black!important;
+    font-weight: bold;
+    font-family: "microsoft yahei", sans-serif;
+}
+.x-grid-row-selected .x-grid-cell,.x-grid-row-selected .x-grid-rowwrap-div
+	{
+    border-style: dotted;
+	border-color: #bfb8b8;
+	background-color: #d0d0d0 !important
+}
+.x-grid-row .x-grid-cell{
+	height:22px;
+	line-height:22px;
+}

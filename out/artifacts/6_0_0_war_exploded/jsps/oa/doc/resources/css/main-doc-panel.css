@@ -1,0 +1,276 @@
+#docpanel{
+	background:none !important;
+	border:none;
+	border-radius:0px;
+	/* padding:5px 0px 0px 0px ; */ 
+	padding:0px;
+}
+#docpanel .maintoolbar{
+    margin-top: 4px;
+    background-color: #ececec;
+    padding: 5px 0 5px 2px !important;
+}
+#docpanel .maintoolbar .x-mask{
+	display:none !important;
+}
+#docpanel .maintoolbar .x-btn-group-default-framed{
+	border-radius: 4px;
+    border-width: 1px;
+    padding: 0 0;
+}
+#docpanel .maintoolbar .x-btn-group-default-framed .x-btn-group-body{
+	padding:0px;
+	/* width: 409px !important; */
+	/* left: -0.5px; */
+	
+}
+
+#docpanel .maintoolbar .x-toolbar .x-toolbar-text {
+    margin-left: 0px;
+    margin-right: 0px;
+    white-space: nowrap;
+    color: black !important;
+    line-height: 16px;
+    font-family: tahoma, arial, verdana, sans-serif;
+    font-size: 12.5px;
+    font-weight: normal;
+}
+#docpanel .maintoolbar .x-btn-default-small .x-btn-inner, 
+#docpanel .maintoolbar .x-btn-default-medium .x-btn-inner, 
+#docpanel .maintoolbar .x-btn-default-large .x-btn-inner, 
+#docpanel .maintoolbar .x-btn-default-toolbar-small .x-btn-inner, 
+#docpanel .maintoolbar .x-btn-default-toolbar-medium .x-btn-inner, 
+#docpanel .maintoolbar .x-btn-default-toolbar-large .x-btn-inner{
+	font-size: 13px;
+    font-family: "microsoft yahei", sans-serif;
+    color: #333;
+    border: 0px solid #bcd2ee!important;
+}
+#docpanel .x-btn-group.x-btn-group-notitle{
+	background-color: white !important;
+    box-shadow: none;
+}
+#docpanel .maintoolbar .x-btn-gray{
+	background-color: #f3f3f3;
+    display: inline-block;
+    border:none !important;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    border:1px solid #f0f0f0!important;
+}
+
+#docpanel .maintoolbar .x-btn-gray:hover {
+    color: #333 !important;
+    background-color: #bcd2ee;
+    border: 0px solid #bcd2ee!important;
+/*     border-right-width: 3px !important; */
+}
+#docpanel .maintoolbar .x-btn-gray.x-btn-disabled:hover{
+	border: 0px solid #F0F0F0 !important;	
+}
+#docpanel .maintoolbar .x-btn-gray.x-btn-disabled:hover,
+#docpanel .maintoolbar .x-btn-gray.x-btn-disabled em button:hover,
+#docpanel .maintoolbar .x-btn-gray.x-btn-disabled em button span:hover {
+	background-color: #F0F0F0 !important;
+	cursor:not-allowed !important;
+}
+/*按钮占满*/
+#docpanel .x-btn-group-body table,
+#docpanel .x-btn-group-body table tbody,
+#docpanel .x-btn-group-body table tbody tr{
+	width: 100%;
+    display: inline-block;
+}
+/* #docpanel .x-btn-group-body table,
+#docpanel .x-btn-group-body table tbody,
+#docpanel .x-btn-group-body table tbody tr,
+#docpanel .x-btn-group-body table tbody tr td,
+#docpanel .x-btn-group-body table tbody tr td div{
+	width: 100%;
+    display: inline-block;
+} */
+#docpanel .maintoolbar .btn-split:hover{
+	cursor:default;
+}
+#docpanel .maintoolbar .x-btn-default-toolbar-small{
+    border-radius: 0;
+    padding: 4px 4px 4px 4px;
+    border:none !important;
+}
+#docpanel .maintoolbar .btn-split {
+    font-size: 15px !important;
+    background-color: white;
+    margin: 3px 0px 0px 0px;
+}
+
+#docpanel-body{
+	 background-color: #fff;
+	/*  top: 35px !important; */
+	 
+}
+#docgrid{
+	background-color: #fff;
+	    margin: 6px 0px 0px 0px !important;
+	/* margin: 3px 0px 0px 0px !important;  */
+	/* top: 8px !important; */
+}
+
+#docgrid .x-grid-header-ct{
+    height: 28px !important;
+    border-bottom:1px;
+    background-color: #f4f6f9;
+    background-image: none;
+}
+
+#docgrid .x-column-header{
+	/* top: -1px !important;  */
+    text-align: center;
+    background-color: #e4e4e4;
+    background-image: none;
+    border-bottom: 1px solid #b4b4b4;
+}
+#docgrid .x-column-header.x-column-header-checkbox{
+	/* padding:16px !important; */
+}
+
+#docgrid .x-column-header-inner{
+    font-weight: 600;
+    font-size: 13px;
+    height: 28px !important;
+    font-family: "microsoft yahei", sans-serif;
+    zoom: 1;
+    position: relative;
+    white-space: nowrap;
+    line-height: 26px;
+    padding: 0px !important;
+}
+#docgrid .x-column-header-checkbox .x-column-header-inner span{
+	margin-top: 6.2px;
+	height: 14px !important;
+}
+#docgrid .x-column-header .x-column-header-text{
+	font: "microsoft yahei" !important;
+    font-weight: 600;
+    height: 28px;
+    color: #5e5e5e!important;
+    line-height: 28px !important;
+    text-align: center;
+}
+#docgrid .x-grid-row{
+    vertical-align: middle;
+    height: 36px;
+    line-height:36px;
+}
+#docgrid .x-panel-body{
+	background-color: #fff;
+	
+}
+#docgrid .x-grid-row-checker,
+#docgrid .x-column-header-checkbox .x-column-header-text{
+	background-image: url(../images/images/button/uncheck.png) !important;
+}
+
+#docgrid .x-grid-row-selected .x-grid-row-checker,  
+#docgrid .x-column-header-checkbox.x-grid-hd-checker-on .x-column-header-text{
+	background-image: url(../images/images/button/checked.png) !important;
+}
+
+#docgrid .x-grid-row.x-grid-row-selected .x-grid-cell{
+	/* background-image:none !important; */
+	/* background-color:#DEE6F3 !important;  */
+	background-color:#bcd2ee !important; 
+}
+
+#docgrid .x-grid-row .x-grid-cell
+{
+	background-image:none;
+	background-color:#fff !important;
+}
+#docgrid .x-grid-row.x-grid-row-over .x-grid-cell{
+	background-image:none !important;
+	/* background-color:#DEE6F3 !important;  */
+	background-color:#bcd2ee !important; 
+}
+#docgrid .x-grid-row-alt .x-grid-cell, .x-grid-row-alt .x-grid-rowwrap-div,
+#docgrid .x-panel-with-col-lines .x-grid-row .x-grid-cell{
+	background-image:none !important;
+	background-color:#fff !important;
+}
+#docgrid .x-grid-row  .x-grid-cell-inner .x-grid-row-checker{
+	margin-top: 2px;
+}
+#docgrid .x-grid-row .x-grid-cell-inner{
+	text-align: center !important;
+}
+#docgrid tr.x-grid-row td:nth-child(3) .x-grid-cell-inner {
+	text-align: left !important;
+	text-indent: 20px;
+}
+#docgrid tr.x-grid-row td:nth-child(5) .x-grid-cell-inner{
+	/* margin-top: 7px!important; */
+}
+/*头部checkbox与表内有边框不对其问题*/
+
+/*隐藏域边框处理*/
+ #docgrid .x-grid-header-ct .x-box-inner .x-column-header:nth-child(2), 
+#docgrid .x-grid-header-ct .x-box-inner .x-column-header:nth-child(9), 
+#docgrid tr.x-grxxid-row td:nth-child(2),
+#docgrid tr.x-grid-row td:nth-child(9){
+	border:none !important;
+}
+
+
+#movewin .x-grid-row .x-grid-cell .x-grid-cell-inner{
+	height:26px;
+	line-height:26px;
+}
+#movewin .x-grid-row .x-grid-cell .x-grid-cell-inner img{
+	margin-top:5px !important;
+}
+
+
+/* toolbar按钮图标 */
+.arrowup,.arrowdown,.reading,.sending,.rename,.deletedoc,.movedoc,.lockdoc,.editdoc,.setdirpower{
+	background-position-y: -1px !important;
+}
+.arrowup{
+	background-image: url(../images/images/button/bbar/arrowup.png) !important;
+}
+.arrowdown{
+	background-image: url(../images/images/button/bbar/arrowdown.png) !important;
+}
+.reading{
+	background-image: url(../images/images/button/bbar/reading.png) !important;
+}
+.sending{
+	background-image: url(../images/images/button/bbar/sending.png) !important;
+}
+.rename{
+	background-image: url(../images/images/button/bbar/rename.png) !important;
+}
+.deletedoc{
+	background-image: url(../images/images/button/bbar/deletedoc.png) !important;
+}
+.movedoc{
+	background-image: url(../images/images/button/bbar/movedoc.png) !important;
+}
+.lockdoc,.setdirpower{
+	background-image: url(../images/images/docico/lockdoc.png) !important;
+}
+.editdoc{
+	background-image: url(../images/images/button/bbar/editdoc.png) !important;
+}
+/* .connetdoc{
+	background-image: url(../images/images/button/bbar/connetdoc.png) !important;
+}
+.switch{
+	background-image: url(../images/images/button/bbar/switch.png) !important;
+} */
+/*按钮文字居中*/
+#docpanel .maintoolbar .x-btn-group-body .x-btn-default-toolbar-small button{
+	vertical-align: top;
+}
+#docpanel .maintoolbar .x-btn-group-body .x-btn-default-toolbar-small button span{
+	line-height: 14.5px;
+}

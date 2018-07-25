@@ -1,0 +1,45 @@
+<style>
+  .col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-7{
+       padding-left : 1px;
+	   padding-right: 1px;	
+  }
+    .form-group{
+	     margin-bottom:5px;
+	     margin-left:0px!important;
+	     margin-right:0px!important;
+	}
+</style>
+<div ng-controller="TailingBackCtrl" style="min-height: 400px;" class="col-xs-12 col-sm-6">
+    <div class='m-t-10 m-b-10 row'><a href="#/manageContents" class="btn btn-success btn-sm col-xs-2">返回</a></div>
+     <div>
+		<form class="form-horizontal block" name="form" id="form">
+           <div class="form-group m-t-5">
+             <label for="bar_code" class="col-sm-1 col-xs-3 control-label" name="required-label">条码</label>
+             <div class='col-sm-4 col-xs-7 '>
+             	<input type="text" class="form-control" id="bar_code" ng-model='barcode.bar_code' placeholder="条码" ng-keyup="enter($event,barcode.bar_code)" required focus-me>
+             </div>
+           </div> 
+           <div class="form-group m-t-5">
+             <label for="bar_prodcode" class="col-sm-1 col-xs-3 control-label" name="required-label">料号</label>
+             <div class='col-sm-4 col-xs-7 '>
+             	<input type="text" class="form-control" id="bar_prodcode" ng-model='barcode.bar_prodcode'required readonly>
+             </div>
+           </div>             
+           <div class="form-group">
+             <label for="bar_fremain" class="col-sm-1 col-xs-3 control-label " name="required-label">预计剩余</label>
+             <div class='col-sm-4 col-xs-7 '>
+             	<input type="text" class="form-control" id="bar_fremain" ng-model='barcode.bar_fremain'  ng-pattern="/^\+?[1-9][0-9]*$/"  placeholder="请输入预计剩余数" required enter-As-Tab>
+             </div>    
+           </div>  
+           <div class="form-group">
+             <label for="bar_location" class="col-sm-1 col-xs-3 control-label nec">归还储位</label>
+             <div class='col-sm-4 col-xs-7'>
+             	<input type="text" class="form-control" id="bar_location" ng-model='bar_location' placeholder="扫描储位标签" required>
+             </div> 
+           </div>
+           <div class="form-group">            
+              <button class="btn btn-success btn-sm col-sm-1 col-xs-2 col-xs-offset-3 col-sm-offset-2" ng-click="confirmTailingBack()" ng-disabled="form.$invalid" >确认</button>	
+            </div>       					
+        </form>
+     </div>
+</div>

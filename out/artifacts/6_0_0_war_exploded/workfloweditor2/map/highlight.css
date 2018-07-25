@@ -1,0 +1,45 @@
+BODY.hl {
+	BACKGROUND-COLOR: #ffffff
+}
+PRE.hl {
+	BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Courier New; COLOR: #000000; FONT-SIZE: 10pt
+}
+.num {
+	COLOR: #2928ff
+}
+.esc {
+	COLOR: #ff00ff
+}
+.str {
+	COLOR: #ff0000
+}
+.dstr {
+	COLOR: #818100
+}
+.slc {
+	FONT-STYLE: italic; COLOR: #838183
+}
+.com {
+	FONT-STYLE: italic; COLOR: #838183
+}
+.dir {
+	COLOR: #008200
+}
+.sym {
+	COLOR: #000000
+}
+.line {
+	COLOR: #555555
+}
+.kwa {
+	COLOR: #000000; FONT-WEIGHT: bold
+}
+.kwb {
+	COLOR: #830000
+}
+.kwc {
+	COLOR: #000000; FONT-WEIGHT: bold
+}
+.kwd {
+	COLOR: #010181
+}

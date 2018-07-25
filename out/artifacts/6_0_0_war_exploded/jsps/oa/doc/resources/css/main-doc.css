@@ -1,0 +1,197 @@
+.northpanel{
+		border:0;
+		width:100%;
+}
+.x-panel-body{
+	border:none;
+	background-color: #fff;
+}
+.x-btn-gray {
+	background-image: none !important;
+	background-color: #ffffff !important;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+}
+.x-btn-gray:hover {
+	color:#333 !important; 
+	background-color: #bcd2ee !important;
+}
+.x-btn-gray:active {
+    position: relative;
+	top: 1px;
+} 
+#centerEast,#centerEast #centerEast-body{
+	background-color: white;
+}
+#centerEast #centerEast-body{
+	/* //box-shadow:inset 0px 0px 5px 1px #c0c0c0; */
+    box-shadow: inset 0px 0px 4px 1px #c0c0c0;
+    padding: 4px 0 0 0;
+}
+.x-btn button{
+	vertical-align: middle;
+}
+.x-btn-ok {
+    background-image: url(../images/btn-ok.gif) !important;
+    vertical-align: bottom;
+    text-align: center;
+    height: 26px;
+    border: 0px !important;
+    width: 80px;
+}
+.x-btn-save {
+	 /* background-image:url('../images/save.gif') !important;  */
+	 background-image:url('../images/images/button/confirm.png') !important; 
+     background-repeat: no-repeat;
+}
+
+
+ .x-btn-update{
+	 /* background-image:url('../images/update.gif') !important;  */
+	 background-image:url('../images/images/button/confirm.png') !important; 
+     background-repeat: no-repeat;
+}
+.x-btn-delete  {
+	 background-image:url('../images/delete.gif') !important; 
+}
+.x-btn-submit {
+	 background-image:url('../images/submit.gif') !important; 
+}
+.x-btn-resSubmit {
+	 background-image:url('../images/resSubmit.gif') !important; 
+}
+.x-btn-audit {
+	 background-image:url('../images/audit.gif') !important; 
+}
+.x-btn-ok {
+	 /* background-image:url('../images/btn-ok.gif') !important;  */
+	 background-image:url('../images/images/button/confirm.png') !important; 
+     background-repeat: no-repeat;
+}
+.x-btn-resAudit {
+	 background-image:url('../images/resAudit.gif') !important; 
+}
+.x-btn-save,.x-btn-close,.x-btn-update,.x-btn-delete,
+.x-btn-submit,.x-btn-resSubmit,.x-btn-audit,.x-btn-ok,.x-btn-resAudit{
+	vertical-align: bottom;
+	 text-align: center;
+	 height:26px;
+	 border:0px !important; 
+	 width:80px;
+     background-color: #F2F2F2;
+     background-position: 5px !important;
+     border: 1px solid #d1d1d1 !important;
+}
+
+.x-btn-close {
+	/*  background-image:url('../images/close.gif') !important;  */
+	 background-image:url('../images/images/button/close.png') !important; 
+	 background-position: 5px 5px !important; 
+}
+.iconAll, .iconAll:hover {
+	background-image: url(../images/icon-all.gif);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: -13px -4px;
+}
+.uploadDoc{
+	background-image: url(../images/icon-all.gif);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: -13px -4px;
+}
+.x-form-download-trigger {
+    background: #cfcfcf url(../images/download.png) no-repeat center
+ center !important;
+}
+.x-form-trash-trigger {
+    background: #cfcfcf url(../images/trash.png) no-repeat center
+ center !important;
+}
+/* 鎻愮ず妗嗘牱寮� */
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    left:35%;
+    top:10px;
+    width:300px;
+    z-index:20000;
+}
+#msg-div .msg {
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    background: #F6F6F6;
+    border: 2px solid #ccc;
+    margin-top: 2px;
+    padding: 10px 15px;
+    color: #555;
+}
+#msg-div .msg h3 {
+    margin: 0 0 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+#msg-div .msg p {
+    margin: 0;
+}
+/* */
+#setpower.x-btn {
+	border: 1px solid #9d9d9d;
+}
+.WindowTitle{
+	font-size: 12px;
+}
+.x-grid-checkheader{
+	background: url(../images/images/button/uncheck.png)  no-repeat center !important;
+}
+.x-grid-checkheader.x-grid-checkheader-checked{
+	background: url(../images/images/button/checked.png)  no-repeat center !important;
+    
+}
+.x-btn-disabled,.x-btn-disabled em button span{
+	cursor:not-allowed !important;
+}
+/*2017-12-01*/
+.x-window{
+	z-index:999;
+}
+ 
+
+/*20171208*/
+ #form .x-toolbar.x-docked.x-docked-bottom  .x-box-inner{
+	margin-top:2px !important;
+}
+#form {
+	/* background-color:red !important; */
+}
+#downloadDoc,#read{
+	border:none !important;
+}
+#docpanel .btn-split.x-toolbar-text-default{
+	
+}
+#form #form-body textarea{
+	overflow-x: hidden;
+    overflow-y: auto;
+}
+#form .x-toolbar.x-docked-bottom .x-box-inner .x-box-item span.x-btn-inner{
+	    font-size: 14px;
+		text-indent: 10px;
+		letter-spacing: 1px;
+} 
+.x-btn-save button span.x-btn-inner,.x-btn-close button span.x-btn-inner,
+.x-btn-ok button span.x-btn-inner,.x-btn-update button span.x-btn-inner{
+	font-size: 14px;
+	text-indent: 10px;
+	letter-spacing: 1px;
+	height:20px;
+	line-height:20px;
+}
+#form #form-body {
+/* 	font-size: 14px;
+	text-indent: 10px;
+	letter-spacing: 1px; */
+}

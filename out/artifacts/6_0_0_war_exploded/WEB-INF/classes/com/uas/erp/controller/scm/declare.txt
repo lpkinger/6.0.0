@@ -1,0 +1,29 @@
+****************************************************************************
+优软ERP项目->供应链(Supply Chain Management)管理模块->控制层
+****************************************************************************
+说明:
+java类命名规则:业务名称+Controller			如,采购资料:PurchaseController
+action命名规则:scm/业务类别/请求名			如,新增采购:scm/purchase/savePurchase.action
+****************************************************************************
+详细:
+scm:{
+product(物料基本资料):{
+	ProductBaseController			物料资料-基本资料
+	ProductFeatureController		物料资料-特征资料
+	ProductFinanceController		物料资料-财务资料
+	ProductPlanController			物料资料-计划资料
+	ProductPurchaseController		物料资料-采购资料
+	ProductSaleController			物料资料-销售资料
+},
+purchase(采购管理系统):{
+	PurchaseController				采购资料
+	VendorController				供应商资料
+},
+sale(销售管理系统):{
+	CustomerController				客户资料
+	SaleController					销售资料
+},
+reserve(库存管理系统):{
+	ProdInOutController				出入库
+}
+}

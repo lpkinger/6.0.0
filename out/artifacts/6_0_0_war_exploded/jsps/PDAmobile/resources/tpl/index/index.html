@@ -1,0 +1,53 @@
+<style>
+	.m-b-25 {
+		margin-bottom: 25px;
+	}	
+	.row { 
+		margin-left: 15px;
+		margin-right: 0px;
+	}
+	.lg{
+	   padding: 3px 3px;
+	   font-size: 13px;
+	   line-height: 3;
+	   border-radius: 6px;
+	}
+</style>
+<div  style="min-height: 360px;" ng-controller="IndexCtrl">
+	<div class="row m-b-25" >
+		<div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 text-center"><h3>UAS仓储管理系统</h3></div>
+	</div>
+	<div class="row m-b-25" >
+		<a href="#/inContents" class="btn btn-default lg col-sm-3  col-xs-3   text-success">
+			<i class="fa fa-sign-in text-success"></i> 入库管理
+		</a>
+		<a href="#/outContents" class="btn btn-default lg col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 text-success">
+			<i class="fa fa-sign-out text-warning"></i> 出库管理
+		</a>
+		<a  ng-href="#/manageContents" class="btn btn-default lg col-sm-3  col-xs-3 col-sm-offset-1 col-xs-offset-1 text-success">
+			<i class="fa fa-cogs"></i>车间管理
+		</a>
+	</div>
+	<div class="row m-b-25">
+	    <a  ng-href="#/msdContents" class="btn btn-default lg col-sm-3 col-xs-3  text-success">
+			<i class="fa fa-cogs"></i>MSD管理
+		</a>
+		<a  ng-href="#/batchContents" class="btn btn-default lg col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1  text-success">
+			<i class="fa fa-cogs"></i>拆批合批
+		</a>		
+		<a ng-href="#/locationTransfer" class="btn btn-default lg col-sm-3 col-xs-3  col-sm-offset-1 col-xs-offset-1 text-success">
+			<i class="fa fa-cogs"></i> 储位转移
+		</a>		
+	</div>
+	<div class="row m-b-25">
+		<a href="#/countingContents"  class="btn btn-default lg col-sm-3  col-xs-3  ">
+			<i class="fa fa-cog"></i> 盘点作业
+		</a>
+		<a ng-href="#/checkContents" class="btn btn-default lg col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1  text-success">
+			<i class="fa fa-cog"></i>货物查找
+		</a>
+		<a ng-href="#/settingContents" class="btn btn-default lg col-sm-3  col-xs-3 col-sm-offset-1 col-xs-offset-1  text-success">
+			<i class="fa fa-cogs"></i> 操作设置
+		</a>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+{
+		    		"text":"供应链管理",
+		            "leaf":false,
+		            "cls": "x-tree-cls-parent",
+					"queryMode": "SYSSETTING",
+					"expanded":true,
+					"children":[{
+		            	"text":"采购单(全部)",
+		            	"check":true,
+		                "url" : "jsps/vendbarcode/purchaselist.jsp?whoami=VendPurchase",
+		                "cls": "x-tree-cls-node",
+		                "leaf": true,
+		                "id" : 1
+		            },{
+		            	"text":"采购单(未送货)",
+		                "url" : "jsps/vendbarcode/purchaselist.jsp?whoami=VendPurchase!UnDelivery",
+		                "cls": "x-tree-cls-node",
+		                "leaf": true,
+		                "id" : 2
+		            },{
+		            	"text":"采购转送货通知",
+		                "url" : "jsps/vendbarcode/batchdelivery.jsp?whoami=Delivery!Deal",
+		                "cls": "x-tree-cls-node",
+		                "leaf": true,
+		                "id" : 3
+		            },{
+		            	"text":"送货通知单",
+		                "url" : "jsps/vendbarcode/acceptNotifylist.jsp?whoami=VnedAcceptNotify",
+		                "cls": "x-tree-cls-node",
+		                "leaf": true,
+		                "id" : 4
+		            }]
+}

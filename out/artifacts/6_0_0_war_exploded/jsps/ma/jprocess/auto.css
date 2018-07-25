@@ -1,0 +1,80 @@
+.x-tree-arrows .x-tree-elbow-plus,.x-tree-arrows .x-tree-elbow-minus,.x-tree-arrows .x-tree-elbow-end-plus,.x-tree-arrows .x-tree-elbow-end-minus
+	{
+	background-image: url('../../../resource/ext/resources/themes/images/gray/tree/arrows.gif') !important;
+}
+
+.x-grid-tree-node-expanded .x-tree-icon-parent {
+	background-position: 0 0 !important;
+	background: no-repeat;
+	background-image: url('../../../resource/ext/resources/themes/images/gray/tree/folder-open.gif') !important;
+}
+.x-grid-row .x-grid-cell {
+	color: null;
+	font-size:14px;
+	background-color: #FAFAFA;
+	border-color: #ededed;
+	border-style: solid;
+	border-width: 1px 0;
+	border-top-color: #FAFAFA;
+	height: 24px;
+	line-height: 24px
+}
+.x-grid-row-alt .x-grid-cell,.x-grid-row-alt .x-grid-rowwrap-div {
+	background-color: #f1f1f1;
+}
+.form-field-allowBlank {
+	background-image:none !important;
+    background-color:#D5D5D5;
+    border-bottom: none !important;
+}
+.x-form-field {
+	border: 1px solid #D5D5D5 ;
+	background-color: #fffafa;
+	font-size: 14px !important;
+	color: #515151
+}
+
+.button1 {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    /* padding: 0.5em 1em; */
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    font:11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    height:24px !important;
+    background:url(../../../resource/images/bg_back.png);
+    font-weight:400 !important;
+    -moz-background-clip: padding; /* for Firefox 3.6 */
+    background-clip: padding-box;
+    border-radius: 0.2em;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+}
+
+.button1.pill {
+    border-radius: 50em;
+}
+.button1:hover,
+.button1:focus,
+.button1:active,
+.button1.active {
+    border-color: #D5D5D5;
+    border-bottom-color: #D5D5D5;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    background-color: #D5D5D5;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EEEEEE), to(#D5D5D5));
+    background-image: -moz-linear-gradient(#EEEEEE, #D5D5D5);
+    background-image: -o-linear-gradient(#EEEEEE,#D5D5D5);
+    background-image: linear-gradient(#EEEEEE,#D5D5D5);      
+}

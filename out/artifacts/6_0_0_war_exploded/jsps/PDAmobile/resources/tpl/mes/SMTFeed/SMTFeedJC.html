@@ -1,0 +1,59 @@
+<style>
+  .col-xs-2,.col-xs-3, .col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7{
+     padding-left : 1px;
+     padding-right: 1px;	
+   }
+</style>
+<div ng-controller="SMTFeedIDCtrl" style="min-height: 400px;" class="">
+   <div class="col-xs-12  col-sm-11 col-sm-offset-1">
+     <div class='m-b-10 row'><a href="#/SMTFeedContents" class="btn btn-success btn-sm m-t-10 col-xs-2">返回</a></div>
+     <div class="row"> 
+	     <form name="form " class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="form">  
+	        <div class="form-group"> 
+			     <label for="msl_location" class="col-xs-3" ng-show="type == 'JOIN'">接料站位: </label> 
+			     <label for="msl_location" class="col-xs-3" ng-show="type =='CHANGE'">换料站位: </label>
+			     <div class="col-xs-6">
+			       <input type="text" class="form-control " ng-model="mslJC.msl_location" readOnly required reset-field>
+			     </div>
+		    </div>	
+		    <div class="form-group">      	     
+			     <label class="col-xs-3">新料卷号:</label>
+			     <div class="col-xs-5">
+			       <input type="text" class="form-control " ng-model="mslJC.msl_barcode" readOnly required reset-field> 
+			     </div>
+			     <label class="col-xs-2">数量: </label>
+			     <div >{{mslJC.msl_remainqty}} </div>
+			     <!-- <div class="col-xs-2"> 
+			       <input type="text" class="form-control " ng-model="mslJC.msl_remainqty" readOnly required>
+			     </div> -->
+		    </div>	
+		    <div class="form-group">
+			     <label for="mslD" class="col-xs-3">采集栏:</label>
+			   <div class="col-xs-6">
+			     <input type="text" class="form-control"  id="mslD" ng-model="mslD" placeholder="请录入站位编号" focus-me ng-keyup="getJCData($event,mslD)">
+			   </div>
+		    </div>
+		     <button class="btn btn-success btn-sm col-xs-offset-4 col-xs-2" ng-disabled="form.$invalid" ng-click="confirmJC()" >确认</button>
+	     </form>
+     </div>
+       <div> 
+          <h4 class="col-xs-offset-1">消息提示  </h4>           
+          <div ng-show="tip.message" >
+             <span style="color:red;">{{tip.message}} </span> 
+          </div>
+          <div ng-show='tip.msl_prodcode'>
+             <div class="row "> 
+                  <div class="col-xs-8">物料编号:{{tip.msl_prodcode}}</div>
+		          <div class="col-xs-4">位号：{{tip.msl_location}}</div>
+             </div>
+             <div class="row "> 
+                 <div class="col-xs-9">卷号：{{tip.msl_barcode}}</div>
+                 <div class="col-xs-3">数量:{{tip.msl_remainqty}}</div>
+             </div>
+             <div class="row ">
+	             <div class="col-xs-8"> 飞达编号:{{tip.msl_fecode}}</div>                               
+             </div>
+          </div>     
+      </div> 
+   </div>
+</div>

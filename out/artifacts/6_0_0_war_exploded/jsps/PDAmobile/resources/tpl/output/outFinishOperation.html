@@ -1,0 +1,93 @@
+<style>
+	.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5 ,.col-xs-6 ,.col-xs-8{
+		    padding-left : 1px;
+		    padding-right: 1px;	
+		}
+	.m-l-10 {
+		margin-left:10px;
+	}
+</style>
+
+<div ng-controller="OutFinishOprCtrl" style="min-height: 400px;">
+	<div class="m-t-10" >
+	   <button type="button"  class="btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1" ng-click="returnInput()" style="
+         margin-left: 5px;">返回</button>		     
+	   <button type="button"   class="btn btn-success btn-sm col-xs-offset-1" ng-click="getList(order.PI_INOUTNO)">已采集列表 </button>
+	   <button type="button"  class="btn btn-success btn-sm col-xs-offset-1" ng-click='submitGet()' >提交采集</button>
+	   <button type="button"  class="btn btn-success btn-sm col-xs-offset-1" ng-click='print()' >打印</button>
+	</div>
+	<div ng-show="order" class="m-t-10 m-b-10" >
+	      <span class="col-md-2 col-xs-1 red"><b>{{detno}}</b></span></span>
+		  <span class="col-md-2 col-xs-5" ng-show="ordercode">{{ordercode}}</span>
+		  <span class="col-md-2 col-xs-5" ng-bind="bi_prodcode"></span>	
+		  <button class="btn btn-xs btn-success glyphicon glyphicon-search" ng-click="findProdcode()"></button>									       		       	
+	</div>
+	<div>
+		<form class="form-horizontal col-xs-offset-1" name="form">
+		  <div class="form-group">
+			  <label for="makeCode" class="col-xs-2">归属工单</label>
+			  <div class="col-xs-3"> 
+			   <input type="text" id="makeCode" ng-model="makeCode" class="form-control " enter-As-Tab >
+			  </div>			 
+			  <label for="saleCode" class="col-xs-2 m-l-10">归属订单</label>
+			  <div class="col-xs-3">
+			   <input type="text" id="saleCode" ng-model="saleCode" class="form-control" enter-As-Tab>
+			  </div>			 
+		  </div> 
+		  <div class="form-group">
+			  <label for="bi_barcode" class="col-xs-2">序列号</label>
+			  <div class="col-xs-3">
+			   <input type="text" id="bi_barcode" ng-model="bi_barcode" class="form-control" enter-As-Tab focus-me >
+			  </div>	
+			   <label for="pr_fbzs" class="col-xs-2 m-l-10">剩余数:</label>
+		      <div class="col-xs-2">
+			     {{pr_fbzs}}
+			  </div>			 
+		  </div>
+		  <div class="form-group">
+			  <label for="bi_outboxcode" class="col-xs-2">包装箱号</label>
+			  <div class="col-xs-3">
+			    <input type="text" id="bi_outboxcode" ng-model="bi_outboxcode" class="form-control" enter-As-Tab>
+			  </div>
+			 <!--  <label for="bi_outqty" class="col-xs-2 m-l-10">箱内总数</label>
+			  <div class="col-xs-2">
+			    <input type="text" id="bi_outqty" ng-model="bi_outqty" class="form-control" ng-pattern="/^\+?[1-9][0-9]*$/"  required readonly>
+			  </div> -->			 
+			  <button ng-click="scan()" class="btn btn-sm btn-success m-l-10 " ng-disabled="form.$invalid" >确认  </button>
+			    <a  ng-href="#/breakingPackage" class="btn btn-sm btn-success m-l-10 "> 拆包</a>
+		  </div>		  	 		  
+		</form>
+	</div>
+ 
+    <div ng-show="barcodes" class="messsage col-xs-12">
+     	 <div class="col-xs-8 m-l-10 ">{{barcodes.bi_barcode}}</div>
+     	 <div class="col-xs-2 m-l-10 ">{{barcodes.bi_outqty}} </div>     	     
+     	 <div class="col-xs-6 m-l-10 ">{{barcodes.bi_prodcode}}</div>
+     	 <div class="col-xs-5 text-overflow m-l-10 ">{{barcodes.bi_prodname}}</div>      
+     </div>
+ 	 <div ng-show ="order" class="col-xs-12  col-sm-11 col-sm-offset-1 m-t-10">
+		<table ng-table="tableParams" 
+			class="table table-bordered table-striped table-fixed ng-table-rowselected " style="table-layout：fixed;" >
+			<colgroup>
+				<col width="10%"></col>
+				<col width="35%"></col>
+				<col width="30%"></col>
+				<col width="15%"></col>
+			</colgroup>
+			<tr >
+				<th width="10%">行</th>
+				<th width="35%">料号</th>
+				<th width="30%">名称规格</th>
+				<th width="15%">剩余数</th>
+			</tr>
+			<tr ng-repeat="item in $data"
+	                ng-click="item.$selected = !item.$selected; changeSelection(item)"
+	                ng-class="{'active': item.$selected} " ng-show="item.PD_INQTY != 0">
+	            <td data-title="'行'">{{item.PD_PDNO}}</td>
+	            <td data-title="'料号'">{{item.PD_PRODCODE}}</td>
+	            <td data-title="'名称规格'" class="text-overflow">{{item.PR_DETAIL}}{{item.PR_SPEC}}</td>
+	            <td data-title="'剩余数'">{{item.PD_OUTQTY}}</td>	           
+			</tr>
+		</table>
+	</div>
+</div>

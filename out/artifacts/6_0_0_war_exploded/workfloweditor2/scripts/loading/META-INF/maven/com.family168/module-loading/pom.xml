@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.family168</groupId>
+  <artifactId>module-loading</artifactId>
+  <packaging>jar</packaging>
+  <name>Ext JS Loading</name>
+  <version>0.1</version>
+  <url>http://www.family168.com/</url>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+<!--
+    <outputDirectory>target/scripts</outputDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo.javascript</groupId>
+        <artifactId>javascript-maven-plugin</artifactId>
+        <version>1.0-alpha-1-SNAPSHOT</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+-->
+  </build>
+
+  <properties>
+    <java.version>1.5</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+</project>
+

@@ -1,0 +1,33 @@
+.x-form-display-field {
+    color: blue;
+    padding-top: 3px;
+}
+
+.x-panel-default-framed {
+	border:none;
+    background-color: #f2f2f2;
+}
+
+.x-box-layout-ct, .x-border-layout-ct {
+    background-color: #f2f2f2 !important;
+}
+
+.x-btn-default-small {
+	border:none;
+    background-color: #f2f2f2 !important;
+    background-image: none;
+}
+
+.x-btn-default-small-over {
+    border:none;
+    background-image: none;
+    color:none;
+    background-color: #bcd2ee !important;
+}
+
+.x-panel-body-default {
+    border:none;
+    padding-left: 15px;
+    border-right:1px solid #bdbdbd;
+}
+

@@ -1,0 +1,301 @@
+body {
+
+}
+
+.baseinfo-title .glyphicon {
+	padding-top: 5px;
+}
+
+.glyphicon:active {
+	color: #009933;
+}
+
+#top {
+	width: 100%;
+	height: 40px;
+	background-color: #CC3333;
+	color: #FFFFFF;
+}
+
+#mian {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+#footer {
+	width: 100%;
+	height: 30px;
+	background-color: #f6f5ec;
+	color: #666666;
+	font-size: 8px;
+	padding-top: 5px;
+	border-top: solid 1px #666666;
+}
+
+/*top*/
+
+#top .top-sysname {
+	float: left;
+	font-weight: bolder;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	padding-top: 5px;
+}
+
+#top .top-sysrelation {
+	float: right;
+	font-size: 15px;
+	padding-top: 10px;
+}
+
+#top a:link, #top a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#top a:active {
+	text-decoration: none;
+	color: #0099CC
+}
+
+/*main*/
+#title {
+	padding-bottom: 0px;
+	padding-right: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 1px ridge #663300;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	color: #27AD60;
+	font-family: sans-serif;
+}
+
+#title .glyphicon {
+	font-size: 15px;
+}
+
+#title .list-index {
+	display: inline-block;
+	float: right;
+	padding-top: 3px;
+	font-size: 15px;
+}
+
+#title a:link,  #title a:visited{
+	color: #888888;
+}
+
+#baseinfo {
+	padding-top: 5px;
+	border-bottom: solid 1px #CCCCCC;
+	border-right: solid 1px #CCCCCC;
+	border-left: solid 1px #CCCCCC;
+	margin-bottom: 5px;
+	background-color: #EEEEEE;
+}
+
+#visit_perpeo, #customer_perpeo, #productInfo, #feedBack {
+	border-bottom: solid 1px #CCCCCC;
+	border-right: solid 1px #CCCCCC;
+	border-left: solid 1px #CCCCCC;
+	margin-bottom: 5px;
+	background-color: #EEEEEE;
+}
+
+.baseinfo-title {
+	width: 100%;
+	background-color: #27AD60;
+	border-radius: 4px 4px 0px 0px;
+	font-size: 18px;
+	color: #FFFFFF;
+	height: 30px;
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+.de-title {
+	width: 100%;
+	background-color: #27AD60;
+	border-radius: 4px 4px 0px 0px;
+	font-size: 18px;
+	color: #FFFFFF;
+	height: 30px;
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+.form-horizontal .control-group {
+	margin-bottom: 5px;
+}
+
+.form-horizontal .control-group .control-label, .form-horizontal .control-group .form-control, .form-horizontal .control-group .form-remark{
+	font-weight: normal;
+}
+
+.form-horizontal .control-group .control-label {
+	width: 25%;
+}
+
+.form-horizontal .control-group .form-control {
+	display: inline-block;
+	width: 55%;
+	height: 30px;
+	padding: 4px 5px;
+	font-size: 12px;
+}
+
+.suggest-box {
+	margin-left: 25% ;
+	width: 55%;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: none;
+	font-size: 12px;
+}
+
+.suggest-box ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.suggest-box ul li {
+	padding: 2px 10px 2px 10px;
+	border-bottom: 1px solid #BBBBBB;
+	line-height: 25px;
+	width: 100%;
+	height: 29px;
+	overflow: hidden;
+}
+
+.suggest-box ul li:acitive {
+	background: #99CCCC;
+}
+
+.form-horizontal .control-group .form-textarea {
+	display: block;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.form-horizontal .control-group .input-append {
+	display: inline-block;
+	width: 55%;
+	padding: 0;
+}
+
+.form-horizontal .control-group .input-append .form-control{
+	display: inline-block;
+	width: 80%;
+}
+
+.form-horizontal .control-group .form-remark {
+	display: inline-block;
+	position: static;
+	padding-left: 5px;
+	font-size: 14px;
+	color: #339933;
+	vertical-align: inherit;
+}
+
+.form-horizontal .control-group .form-remark .btn {
+	width: 42px;
+	height: 26px;
+}
+
+.checkbox input[type=checkbox] {
+	margin-left: 0px;
+}
+
+.input-append.date .add-on i, .input-prepend.date .add-on i  {
+	display: inline-block;
+}
+
+.de-title .glyphicon {
+	padding-top: 5px;
+}
+
+.de-title .add-perpeo {
+	display: inline-block;
+	float: right;
+	font-size: 15px;
+	height: 100%;
+}
+
+.table input {
+	width: 100%;
+}
+
+.table {
+	margin-bottom: 5px;
+}
+
+.table th {
+	text-align: center;;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+	padding: 3px;
+}
+
+.table .form-control {
+	display: inline-block;
+	height: 30px;
+	padding: 4px 5px;
+	font-size: 14px;
+}
+
+#buttons {
+	padding-left: 5%;
+}
+
+#buttons .buttons-item {
+	display: inline-block;
+	padding: 5px;
+	width: 45%;
+}
+
+#buttons .buttons-item .btn {
+	height: 40px;
+	width: 100%;
+}
+
+#dbFindModal .modal-dialog {
+	height: 80%;
+	margin-top: 10%;
+}
+
+
+#dbFindModal .modal-dialog .modal-content .modal-body {
+	padding: 0px 5px;
+}
+
+#dbFindModal .modal-dialog .modal-content .modal-header,
+#dbFindModal .modal-dialog .modal-content .modal-footer {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#dbFindModal .modal-dialog .modal-content .modal-header {
+	background-color: #27AD60;
+	color: #FFFFFF;
+}
+
+#dbFindModal .modal-dialog .modal-content .modal-body .table {
+	width: 100%;
+}
+
+#dbFindModal .modal-dialog .modal-content .modal-body .table tr:hover {
+	background: #0099CC;
+}
+
+#dbFindModal .modal-dialog .modal-content .modal-footer button{
+	margin-left: 5px;
+}

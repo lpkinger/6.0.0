@@ -1,0 +1,52 @@
+<style>
+	.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-5 ,.col-xs-6,.col-xs-8{
+		    padding-left : 1px;
+		    padding-right: 1px;	
+		}	
+	.m-l-10 {
+		margin-left:10px;
+	}
+</style>
+
+<div ng-controller="HaveSubmitListCtrl" style="min-height: 400px;">
+	<div >
+	  <div class="col-xs-12 m-t-10 m-b-10" >
+	   <a ng-href="#/{{inout}}/{{pi_inoutno}}"  class="btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1"  style="
+         margin-left: 5px;">返回</a>	
+        <h5 class ="col-xs-offset-4"> 已提交列表</h5>
+      </div>   	     
+ 	 <div  class="col-xs-12  col-sm-11 col-sm-offset-1 m-t-10">
+ 	  <table  ng-table="tableParams" 
+		class="table table-bordered table-striped table-fixed  col-sm-6 col-sm-offset-1 ng-table-rowselected">
+		<colgroup>
+				<col width="35%"></col>
+				<col width="15%"></col>
+				<col width="35%"></col>
+				<col width="15%"></col>
+		</colgroup>
+		<tr >
+			<th width="35%">条码 <span ng-show="inout =='outMMWaitSubmit'|| inout == 'outFinWaitSubmit'">/箱号</span></th>
+			<th width="15%">数量</th>
+			<th width="35%">料号名称</th>
+			<th width="15%">操作</th>
+		</tr>
+		<tr ng-repeat="s in $data track by $index"
+	               ng-class="{'active': item.$selected} " >
+			<td >{{s.bi_barcode}}{{s.bi_outboxcode}}</td><!-- filter="{ 'name': 'text' }" -->
+			<td > 
+			    <span ng-show="inout =='inMMWaitSubmit' || inout =='inFinishWaitSubmit'">{{s.bi_inqty}}</span>
+			    <span ng-show="inout =='outMMWaitSubmit'|| inout =='outFinWaitSubmit'">{{s.bi_outqty}}</span>
+			</td>
+			<td>
+			  <div class="text-num">
+			    <span>{{s.bi_prodcode}}</span>
+			  </div>
+			  <div class="text-muted text-overflow text-center">
+			    <span>{{s.pr_detail}}</span>
+			  </div>
+            </td>	
+			<td ><button type="button" class="btn btn-warning" ng-click="deleteDes(s)">删除</button></td>				
+		</tr>
+	  </table>
+	</div>
+</div>

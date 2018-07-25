@@ -1,0 +1,116 @@
+<style>
+	.m-l-10 {
+		margin-left: 10px;
+	}
+	.selected {
+		border: solid 2px #0099CC;
+	}
+	.order {
+		border-bottom: solid 1px #0066CC;
+	}
+	.error {
+		border: solid 1px #FF6666;
+		border-radius: 4px;
+	}
+	.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-12{
+	    padding-left : 1px;
+	    padding-right: 1px;	
+	}
+</style>
+
+<script type="text/ng-template" id="myModalContent.html">       
+         <div class="modal-body row" stop-event="touchend"> 
+           <button class="btn-sm btn-success m-b-6" ng-click="returnBatching('Batch')">返回继续拆分</button> 
+            <table>
+               <thead>
+                   <tr style='background-color : #eee;'>
+                       <td>    新条码号        </td>
+			           <td>     数量              </td>
+                   </tr>
+                </thead>
+              <tr ng-repeat="item in items" >
+               <td>   {{item.bar_code}}        </td>
+			   <td>   {{item.bar_remain}}      </td>
+              </tr>
+           </table>
+         </div>  
+         <div class="modal-footer">  
+             <button class="btn-sm btn-success  col-xs-2" ng-click="print()">打印</button> 
+             <button class="btn-sm btn-warning col-xs-offset-3 col-xs-2" ng-click="cancel()">关闭</button>  
+         </div>  
+</script>  
+
+<div ng-controller="BreakingBatchCtrl" style="min-height: 400px;">	
+	<div class="row m-b-10 m-t-10">
+	     <a href= "#/batchContents" ng-show="!ispr_msd" class="btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1" style="
+          margin-left: 5px;">返回</a>
+          <a href= "#/msdContents" ng-show="ispr_msd" class="btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1" style="
+          margin-left: 5px;">返回</a>		     
+	</div>	
+	<div>
+		<form class="form-horizontal col-xs-offset-1 col-sm-offset-1 " name="scanProductForm">
+           <div class="form-group">
+             <label for="or_barcode" class="col-sm-1 col-xs-2 control-label">条码</label>
+             <div class='col-sm-4 col-xs-7 '>
+             	<input type="text" class="form-control" id="or_barcode" ng-model='barcode.or_barcode' placeholder="条码" ng-keyup="search($event,barcode.or_barcode)" focus-me enter-As-Tab required>
+             </div>           
+           </div>
+           <div class="form-group" ng-show="bar_prodcode">
+            <div  class="col-xs-5"> 
+                 {{bar_prodcode}}
+             </div>
+             <div class="col-xs-6 text-overflow"> 
+                 {{pr_detail}}
+             </div>
+           </div>
+           <div class="form-group">
+             <label for="or_remain" class="col-sm-1 col-xs-2 control-label">批数量</label>
+             <div class='col-sm-3 col-xs-7 '>
+             	<input type="text" class="form-control" id="or_remain" ng-model='barcode.or_remain' required  readonly>
+             </div>                           
+            </div>  
+            <div class="form-group">
+               <label for="bar_remain" class="col-sm-1 col-xs-2  control-label">拆分数 </label>
+               <div class='col-sm-3 col-xs-4'>
+             	  <input type="text" class="form-control" id="bar_remain" ng-model='barcode.bar_remain' placeholder="" required>            	
+               </div>   
+               <button class="btn btn-success  col-sm-1  col-xs-2 col-xs-offset-1" ng-click="breaking()" ng-disabled="scanProductForm.$invalid" >分拆</button>	  					     
+            </div>     
+        </form>
+	</div>	         
+	<div ng-show="ispr_msd">
+	    <span class="col-xs-offset-1">湿敏等级：{{msdLog.ms_level}}</span>
+	    <span class="col-xs-offset-1">状态：{{msdLog.status}}</span>
+		<div class="col-xs-offset-1">剩余车间寿命(h)：{{msdLog.ms_resttime}}</div>
+	</div>
+	<div class="col-xs-12" ng-show="ispr_msd">
+	   <table class="block table table-default table-striped table-hover">
+		 <thead>
+		    <tr class="header">
+			    <th width="80">日期</th>
+			    <th width="50">操作</th>
+			    <th width="80">操作人</th>
+			    <th width="120">剩余寿命(h)</th>			    
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in msdLog.log track by $index ">
+				<td class="text-center text-num text-bold f-16 text-success br-r">
+					<span ng-bind="::item.ms_date|date:'yy-MM-dd'"></span>
+				</td>
+				<td>
+				    <div class="text-num text-bold">
+					  <span ng-bind="::item.ms_action"></span>
+				    </div>
+				</td>
+			    <td class="text-center">
+					<div class="text-num f14" ng-bind="::item.ms_man"></div>						
+				</td>
+				<td class="text-center">
+					<div class="text-num f14" ng-bind="::item.ms_lifetime"></div>
+				</td>
+			</tr>
+		</tbody>
+	  </table>
+	</div>        
+</div>

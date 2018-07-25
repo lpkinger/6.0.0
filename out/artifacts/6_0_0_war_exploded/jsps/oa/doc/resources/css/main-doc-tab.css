@@ -1,0 +1,155 @@
+/*panel和tab之间*/
+ .x-splitter .x-box-item .x-splitter-default{
+	background-color: #fff;
+} 
+/*tab样式*/
+#doctab{
+	background-color: #fff;
+	border:none;
+	padding-left: 20px;
+}
+#doctab .x-tab-bar{
+    background-color: white;
+    background-image: none !important;
+}
+
+#doctab .x-tab-bar .x-border-box .x-tab-bar-top .x-tab-bar-body{
+	height: 25px;
+}
+#doctab .x-tab-bar .x-tab-bar-top .x-tab-bar-body{
+	padding: 1px 0 3px;
+}
+#doctab .x-tab-bar .x-tab-default-top {
+    padding: 0 0;
+    background: none !important; 
+    border:none; 
+}
+.x-tab-default-top em{
+	padding: 0px 6px 3px 6px !important;
+}
+#doctab .x-tab-bar .x-tab-default-top.x-tab-default-top-active {
+    border-bottom: #333 3px solid !important;
+}
+#doctab .x-tab-bar .x-tab button .x-tab-inner {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 -2px;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: "microsoft yahei", sans-serif;
+    font-size: 13.5px;
+    color: #999999;
+}
+
+#doctab .x-tab-bar .x-tab-active button .x-tab-inner{
+    color: #333;
+}
+
+#doctab .x-tab-bar .x-tab-bar-strip{
+	border:none;
+	height: 1px;
+}
+#doctab-body{
+	/* display:none;  */
+}
+#doctab-body .x-panel-body-default ,#doctab-body #folderForm-body{
+    background-color: #fff !important;
+    color: #333;
+}
+
+#doctab-body .x-panel-body-default {
+    border-width: 0;
+}
+#doctab-body  .x-form-item{
+    margin:8px 15px 2px 0px;
+    font-family: "microsoft yahei", sans-serif;
+}
+#doctab-body  .x-form-item-label{
+    font-size: 13px;
+    color: #666;
+    text-align: right !important;
+    font-weight: normal !important;
+}
+#doctab-body .x-border-box .x-form-text{
+	height: 24px !important;
+}
+#doctab-body  .x-form-text,#doctab-body textarea.x-form-field{
+	color: #333;
+    padding: 1px 3px !important;
+    border: 1px solid #b5b8c8 !important;   
+}
+#doctab-body  .x-form-item-body{
+	overflow: hidden !important;
+    position: relative;
+    float: left;
+}
+#doctab-body  .x-form-field-multi .x-form-item{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+/*grid 头样式*/
+
+
+#doctab .x-grid .x-grid-row{
+    vertical-align: middle;
+    height: 36px;
+    line-height:36px;
+}
+
+
+
+#doctab .x-grid .x-grid-row.x-grid-row-over .x-grid-cell{
+	background-image:none !important;
+	background-color:#DEE6F3 !important; 
+}
+#doctab .x-grid .x-grid-row-alt .x-grid-cell,
+#doctab .x-grid-row-alt .x-grid-rowwrap-div,
+#doctab .x-grid  .x-grid-row .x-grid-cell{
+	background-image:none !important;
+	background-color:#fff !important;
+}
+#doctab .x-grid .x-grid-row  .x-grid-cell-inner .x-grid-row-checker{
+	margin-top: 2px;
+}
+#doctab .x-grid .x-grid-row .x-grid-cell-inner{
+	text-align: center !important;
+}
+
+#doctab .x-grid .x-grid-header-ct{
+    height: 28px !important;
+    border-bottom:1px;
+    background-color: #f4f6f9;
+    background-image: none;
+}
+#doctab .x-grid .x-grid-row .x-grid-cell
+{
+	background-image:none;
+	background-color:#fff !important;
+}
+#doctab .x-grid .x-column-header-inner {
+    font-weight: 600;
+    font-size: 13px;
+    height: 28px !important;
+    font-family: "microsoft yahei", sans-serif;
+    zoom: 1;
+    position: relative;
+    white-space: nowrap;
+    line-height: 26px;
+    padding: 0px !important;
+}
+#doctab .x-grid .x-column-header .x-column-header-text{
+	font: "microsoft yahei" !important;
+    font-weight: 600;
+    height: 28px;
+    color: #5e5e5e!important;
+    line-height: 28px !important;
+    text-align: center;
+}
+#doctab .x-grid .x-column-header{
+    text-align: center;
+    background-color: #e4e4e4;
+    background-image: none;
+    border-bottom: 1px solid #b4b4b4;
+}

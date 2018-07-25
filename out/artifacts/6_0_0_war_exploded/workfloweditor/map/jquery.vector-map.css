@@ -1,0 +1,15 @@
+.jvectormap-label {
+	BORDER-BOTTOM: #cdcdcd 1px solid; POSITION: absolute; BORDER-LEFT: #cdcdcd 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; DISPLAY: none; FONT-FAMILY: sans-serif, Verdana; BACKGROUND: #292929; COLOR: white; FONT-SIZE: smaller; BORDER-TOP: #cdcdcd 1px solid; BORDER-RIGHT: #cdcdcd 1px solid; PADDING-TOP: 3px; -moz-border-radius: 3px
+}
+.jvectormap-zoomin {
+	POSITION: absolute; TEXT-ALIGN: center; PADDING-BOTTOM: 3px; LINE-HEIGHT: 10px; PADDING-LEFT: 3px; WIDTH: 10px; PADDING-RIGHT: 3px; BACKGROUND: #292929; HEIGHT: 10px; COLOR: white; CURSOR: pointer; PADDING-TOP: 3px; -moz-border-radius: 3px
+}
+.jvectormap-zoomout {
+	POSITION: absolute; TEXT-ALIGN: center; PADDING-BOTTOM: 3px; LINE-HEIGHT: 10px; PADDING-LEFT: 3px; WIDTH: 10px; PADDING-RIGHT: 3px; BACKGROUND: #292929; HEIGHT: 10px; COLOR: white; CURSOR: pointer; PADDING-TOP: 3px; -moz-border-radius: 3px
+}
+.jvectormap-zoomin {
+	TOP: 10px; LEFT: 10px
+}
+.jvectormap-zoomout {
+	TOP: 30px; LEFT: 10px
+}

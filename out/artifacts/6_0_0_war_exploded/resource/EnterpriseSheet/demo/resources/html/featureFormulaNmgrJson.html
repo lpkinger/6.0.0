@@ -1,0 +1,30 @@
+<pre><code>
+featureFormulaNmgrJson : {
+    fileName: 'Formula name mgr',
+	sheets: [
+           {name: 'name mgr', id: 1, color: 'red' }
+	],
+	fileConfig: [
+          {name: "rangeData", ctype: "ref", json: "[{span: [1,4,2,6,2], type: 1}]" }
+	],
+	floatings: [
+          { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,6]" }
+	],
+	cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30, hoff:0}}, 
+        {sheet: 1, row: 0, col: 2, json: {width: 200}},
+        {sheet: 1, row: 2, col: 2, json: {data: "Defined a name manager range", fw:"bold", fz:14 }},
+        
+        { sheet: 1, row: 4, col: 2, json: { data: "2" } },
+        { sheet: 1, row: 5, col: 2, json: { data: "3" } },
+        { sheet: 1, row: 6, col: 2, json: { data: "4" } },
+     
+        { sheet: 1, row: 8, col: 2, json: { data: "Defined: rangeData" } },
+        { sheet: 1, row: 8, col: 3, json: { data: "B4:B6" } },
+        { sheet: 1, row: 9, col: 2, json: { data: "sum(rangeData, 1)" } },
+        { sheet: 1, row: 9, col: 3, json: { data: "=sum(rangeData, 1)", cal: "true" } },
+        { sheet: 1, row: 10, col: 2, json: { data: "average(rangeData)" } },
+        { sheet: 1, row: 10, col: 3, json: { data: "=average(rangeData)", cal: "true" } },
+    ]
+},
+</code></pre>

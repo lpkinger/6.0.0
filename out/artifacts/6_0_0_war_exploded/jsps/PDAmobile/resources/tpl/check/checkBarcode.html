@@ -1,0 +1,39 @@
+<style>	
+	.m-b-3 {
+	   margin-bottom: 5px;
+	}
+	.m-l-10 {
+		margin-left: 10px;
+	}
+	.col-xs-6, .col-xs-2,.col-xs-4 {
+        padding-left:1px;
+        padding-right:1px;
+	}
+</style>
+         
+<div ng-controller="CheckCtrl" style="min-height: 400px;">	
+    <div><a ng-href="#/checkContents" class="m-l-15 btn btn-success btn-sm m-t-10 m-b-10" > 返回 </a></div>	
+	<div class="m-b-10">
+	    <input type="text" class="col-xs-6 m-l-15 " id="barcode" ng-model="barcode" placeholder="条码号" ng-keyup="searchBarcode($event)" focus-me required>
+	    <input type="text" class="col-xs-2 m-l-10" id="whcode" ng-model="whcode" placeholder="仓库"  ng-keyup="searchBarcode($event)" >	  	 
+	    <button class="btn btn-success btn-sm m-l-10 " ng-click="checkBarcode(barcode,whcode)" >查找</button>
+	</div>	
+	<div ng-show="barData" class="col-xs-offset-2">
+		<div class="col-xs-4 ">条码号：</div>
+		<div class="col-xs-6">{{barData.bar_code}}</div>
+		<div class="col-xs-4">料号：</div>
+		<div class="col-xs-6"> {{barData.bar_prodcode}}</div>	
+		<div class="col-xs-4" >名称：</div>
+		<div class="col-xs-6 text-overflow ">{{barData.pr_detail}}</div> 
+		<div class="col-xs-4" >规格：</div>
+		<div class="col-xs-6 text-overflow ">{{barData.pr_detail}}</div>    
+		<div class="col-xs-4">供应商：</div>
+		<div class="col-xs-6">{{barData.ve_shortname}}</div>	     
+		<div class="col-xs-4">仓库：</div>
+		<div class="col-xs-6">{{barData.bar_whcode}}</div>  
+		<div class="col-xs-4" >数量：</div>
+		<div class="col-xs-6">{{barData.bar_remain}}</div> 		
+		<div class="col-xs-4">储位：</div>
+		<div class="col-xs-6">{{barData.bar_location}} </div>    		
+	</div>
+</div>

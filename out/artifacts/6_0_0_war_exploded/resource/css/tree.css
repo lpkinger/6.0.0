@@ -1,0 +1,382 @@
+.x-tree-icon-parent {
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/book.png') no-repeat 0px -0px !important
+}
+.x-tree-icon-level-0 {
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/book.png') no-repeat 0px -0px !important
+}
+.x-tree-icon-level-1 {
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/book.png') no-repeat -16px -0px !important
+}
+.x-tree-icon-level-2 {
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/book.png') no-repeat -32px -0px !important
+}
+.x-tree-icon-level-3 {
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/book.png') no-repeat -48px -0px !important
+}
+.x-grid-tree-node-expanded .x-tree-icon-level-0 {
+	background: url('../images/tree/book.png') no-repeat -64px -0px !important
+}
+.x-grid-tree-node-expanded .x-tree-icon-level-1 {
+	background: url('../images/tree/book.png') no-repeat -80px -0px !important
+}
+.x-grid-tree-node-expanded .x-tree-icon-level-2 {
+	background: url('../images/tree/book.png') no-repeat -96px -0px !important
+}
+.x-grid-tree-node-expanded .x-tree-icon-level-3 {
+	background: url('../images/tree/book.png') no-repeat -112px -0px !important
+}
+.x-tree-icon-fa {
+	height: 32px !important;
+	width: 32px !important;
+	background: url('../images/icon/rooticon.png') no-repeat -0px -2px !important
+}
+
+.x-tree-icon-plm {
+	height: 32px !important;
+	width: 32px !important;
+	background: url('../images/icon/rooticon.png') no-repeat -0px -39px !important
+}
+
+.x-tree-icon-pm {
+	height: 32px !important;
+	width: 32px !important;
+	background: url('../images/icon/rooticon.png') no-repeat -0px -75px !important
+}
+
+.x-tree-icon-scm {
+	height: 32px !important;
+	width: 32px !important;
+	background: url('../images/icon/rooticon.png') no-repeat -0px -112px !important
+}
+
+.x-tree-icon-hr {
+	height: 32px !important;
+	width: 32px !important;
+	background: url('../images/icon/rooticon.png') no-repeat -0px -143px !important
+}
+
+.x-tree-icon-ma {
+	height: 32px !important;
+	width: 32px !important;
+	background: url('../images/icon/rooticon.png') no-repeat -0px -178px !important
+}
+
+.x-tree-icon-oa {
+	height: 32px !important;
+	width: 32px !important;
+	background: url('../images/icon/rooticon.png') no-repeat -0px -210px !important
+}
+
+.x-tree-icon-101 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -0px -0px !important
+}
+
+.x-tree-icon-102 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -27px -0px !important
+}
+
+.x-tree-icon-103 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -54px -0px !important
+}
+
+.x-tree-icon-104 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -81px -0px !important
+}
+
+.x-tree-icon-201 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -0px -24px !important
+}
+
+.x-tree-icon-202 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -27px -24px !important
+}
+
+.x-tree-icon-203 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -50px -24px !important
+}
+
+.x-tree-icon-204 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -81px -24px !important
+}
+
+.x-tree-icon-301 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -0px -50px !important
+}
+
+.x-tree-icon-302 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -25px -50px !important
+}
+
+.x-tree-icon-303 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -50px -50px !important
+}
+
+.x-tree-icon-304 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -81px -50px !important
+}
+
+.x-tree-icon-401 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -0px -75px !important
+}
+
+.x-tree-icon-402 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -27px -75px !important
+}
+
+.x-tree-icon-403 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -50px -75px !important
+}
+
+.x-tree-icon-404 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -81px -75px !important
+}
+
+.x-tree-icon-501 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -0px -97px !important
+}
+
+.x-tree-icon-502 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -28px -97px !important
+}
+
+.x-tree-icon-503 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -54px -97px !important
+}
+
+.x-tree-icon-504 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -81px -97px !important
+}
+
+.x-tree-icon-601 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -0px -124px !important
+}
+
+.x-tree-icon-602 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -27px -124px !important
+}
+
+.x-tree-icon-603 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -52px -124px !important
+}
+
+.x-tree-icon-604 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -81px -124px !important
+}
+
+.x-tree-icon-701 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -4px -154px !important
+}
+
+.x-tree-icon-702 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -27px -154px !important
+}
+
+.x-tree-icon-703 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -54px -154px !important
+}
+
+.x-tree-icon-704 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -81px -154px !important
+}
+
+.x-tree-icon-801 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -0px -178px !important
+}
+
+.x-tree-icon-802 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -27px -178px !important
+}
+
+.x-tree-icon-803 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -54px -178px !important
+}
+
+.x-tree-icon-804 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -81px -178px !important
+}
+
+.x-tree-icon-901 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -0px -202px !important
+}
+
+.x-tree-icon-902 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -27px -202px !important
+}
+
+.x-tree-icon-903 {
+	height: 25px !important;
+	width: 25px !important;
+	background: url('../images/icon/parenticon.png') no-repeat -52px -202px !important
+}
+
+.x-tree-icon-print {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -19px !important
+}
+
+.x-tree-icon-query {
+	background-image: url('../images/query.png')
+}
+
+.x-tree-icon-entry {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -52px !important
+}
+
+.x-tree-icon-list {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -2px !important
+}
+
+.x-tree-icon-other {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -68px !important
+}
+
+.x-tree-icon-into {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -83px !important
+}
+
+.x-tree-icon-out {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -98px !important
+}
+
+.x-tree-icon-del {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -117px !important
+}
+
+.x-tree-icon-res {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -133px !important
+}
+
+.x-tree-icon-end {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -149px !important
+}
+
+.x-tree-icon-lock {
+	background: url('../images/icon/nodeicon.gif') no-repeat -0px -167px !important
+}
+
+.x-tree-icon-happy {
+	background: url('../images/icon/happy_g.png') !important
+}
+
+.x-tree-icon-sad {
+	background: url('../images/icon/sad_g.png') !important
+}
+
+.x-tree-cls-node-on {
+	background-image: url('../images/button_08.jpg') !important;
+	font-size: 15;
+	margin-top: 5px;
+	height: 23 !important;
+	color: blue
+}
+
+.x-tree-cls-node-off {
+	background-image: url('../images/button_08.jpg') !important;
+	font-size: 15;
+	margin-top: 5px;
+	height: 23 !important;
+	color: gray
+}
+
+/**
+*优软云菜单样式
+*/
+.x-grid-tree-node-expanded .x-tree-icon-cloud-root{
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/cloud.png') no-repeat -32px 0px !important
+	
+} 
+.x-tree-icon-cloud-root {
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/cloud.png') no-repeat 0px 0px !important
+}
+.x-grid-tree-node-expanded .x-tree-icon-cloud-parent{
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/cloud.png') no-repeat -48px -0px !important
+	
+} 
+.x-tree-icon-cloud-parent {
+	height: 16px !important;
+	width: 16px !important;
+	background: url('../images/tree/cloud.png') no-repeat -16px -0px !important
+}

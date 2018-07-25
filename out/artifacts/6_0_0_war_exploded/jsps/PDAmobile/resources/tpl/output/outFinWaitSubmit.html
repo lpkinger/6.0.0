@@ -1,0 +1,40 @@
+<div ng-controller='OutFinWaitSubmitCtrl' style="min-height: 400px;">
+	<div class="row m-b-10 col-sm-offset-1" ng-show="grid">
+		<span class="f-16 col-md-3 col-xs-offset-2 col-xs-10">供应商：{{order.PI_TITLE}}</span>			       	
+	</div>
+	<div class = "m-b-10">
+	    <a href="#outFinishOperation/{{order.PI_INOUTNO}}"  class=" btn btn-success btn-sm col-md-2 col-xs-2 col-sm-offset-1 col-xs-offset-1"> 返回    </a>
+	    <button type="button" ng-show="order"  class="btn btn-success btn-sm col-xs-offset-2" ng-click='deleteAll()' >全部删除</button>
+	    <button type="button" ng-show="order"  class="btn btn-success btn-sm col-xs-offset-2" ng-click='submitGet()' >提交采集</button>
+	</div>
+    <table ng-show ="grid" ng-table="tableParams" 
+		class="table table-bordered table-striped table-fixed col-xs-12  col-sm-6 col-sm-offset-1 ng-table-rowselected">
+		<colgroup>
+			<col width="35%"></col>
+			<col width="15%"></col>
+			<col width="35%"></col>
+			<col width="15%"></col>
+		</colgroup>
+		<tr ng-repeat="s in $data track by $index"
+	               ng-class="{'active': item.$selected} " >
+			<td data-title="'条码'">{{s.bi_barcode}}</td><!-- filter="{ 'name': 'text' }" -->
+			<td data-title="'数量'">{{s.bi_outqty}}</td>
+			<td data-title="'料号名称'">
+			  <div class="text-num">
+			    <span>{{s.bi_prodcode}}</span>
+			  </div>
+			  <div class="text-muted text-overflow">
+			    <span>{{s.bi_prodname}}</span>
+			  </div>			   
+			</td>
+			<td data-title="'操作'">
+				<div class="btn-group btn-group-xs">
+					<button type="button" class="btn btn-default" ng-click="deleteWaitSubmitItem(s)">删除</button>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="m-b-10">
+	  <a ng-href="#/haveSubmitList/{{order.PI_ID}}/outFinWaitSubmit/{{order.PI_INOUTNO}}" class="btn btn-success btn-sm col-md-2 col-sm-offset-1 col-xs-offset-2">已提交列表</a>	
+	</div>
+</div>

@@ -1,0 +1,135 @@
+<style>
+	.m-l-18 {
+		margin-left: 18px;
+	}
+	.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-7 {
+        padding-left:1px;
+        padding-right:1px;
+	}
+	.sheight:{
+	  height: 28px;
+	}	
+</style>
+<div ng-controller="FeederUseCtrl" style="min-height: 400px;" class=""> 
+  <script type="text/ng-template" id="back.html">  
+	<div class="modal-body" stop-event="touchend">
+	  <form name="backForm2" class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="backForm2">  			            
+	       <div class="form-group">
+	         <label for="reason" class="col-sm-2 col-xs-3 control-label" >退回原因</label>
+	         <div class='col-sm-5 col-xs-7'>
+	            <input type="text" class="form-control" ng-model="items.reason" id="reason"  required> 
+	         </div>
+	       </div> 
+	       <div class="form-group" >
+	           <label for="isuse" class="col-sm-2 col-xs-3 control-label" >是否停用</label>
+	           <select ng-model="items.isuse" ng-options="a.id as a.name for a in choose" id="isuse" class='col-sm-5 col-xs-7 selectheight' required>
+               </select>
+	       </div>	         	
+		 </form>		
+	</div>
+	<div class="modal-footer">  
+          <button ng-click="confirmBack()"  class="btn btn-success btn-sm  col-xs-offset-3 col-xs-2" ng-disabled="backForm2.$invalid">确认</button>
+	      <button ng-click="cancel()"  class="btn btn-warning btn-sm  col-xs-offset-3 col-xs-2" >取消</button>
+    </div>
+  </script>
+
+	<div class="row  m-t-10 ">	
+	     <div ng-show="type =='list' || type =='feederUsedlist'">
+		    <div class=' col-xs-offset-1' >
+		      <button ng-click="clickReturn('use')" class="btn btn-success btn-sm m-b-10 col-xs-2">返回</button>
+		    </div>
+		  </div>
+	      <div ng-show="type =='listC'">
+	          <div class=' col-xs-offset-1' >	  
+	             <button  class="btn btn-success btn-sm m-b-10 col-xs-2 " ng-click="clickReturn('getE')" >返回</button>
+	          </div>
+	     </div>
+		 <div ng-show="type =='list'">
+		  <div class="row">
+		    <a ng-href="#/FeederOperate/get" class="btn btn-default col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 m-b-10 text-success">
+				<i class="fa fa-sign-out text-warning"></i> 飞达领用
+			</a>
+		  </div>
+		  <div class="row">
+			<a ng-href="#/FeederOperate/back" class="btn btn-default col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 m-b-10 text-success">
+				<i class="fa fa-sign-out text-warning"></i> 飞达退回
+			</a>
+		  </div>
+	    </div>    
+		<div class='m-b-10 col-xs-offset-1' ng-show = "type == 'get'||type == 'back'" >
+		   <button ng-click = "clickReturn('list')" class="btn btn-success btn-sm m-b-10 col-xs-2">返回</button>
+		   <a href="#/FeederOperate/listC" class="btn btn-success btn-sm  col-xs-4 col-xs-offset-4">已领飞达列表</a>
+		</div>
+		<div class="col-xs-12  col-sm-11 col-sm-offset-1" ng-show="type == 'get'">
+			 <form name="form" class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="form">  
+			   <div class="form-group">
+	             <div class='col-sm-5 col-xs-4 col-xs-offset-1'>
+	             	 <input type="text" class="form-control" placeholder="请采集飞达编号" ng-model="FeederGet.fe_code" id="fe_code" 
+			          focus-me required></input>	                         
+	             </div>	  
+	              <button ng-click="feederGet()"  class="btn btn-success btn-sm  col-xs-offset-1" ng-disabled="form.$invalid ">确认领用</button>           
+	           </div>		            
+		    </form>
+		    <div ng-show="message" class='col-xs-12'>{{message}}</div>		
+		    <div><!-- 未领用使用飞达规格列表 -->
+		      <table ng-table="tableParamsU" 
+				  class="table table-bordered table-striped ng-table-rowselected "  >
+				  <tr >
+				    <th width="30%">Feeder规格</th>
+					<th width="15%">需求数</th>
+					<th width="15%">已领数</th>
+					<th width="15%">未领数</th>
+				  </tr>
+				  <tr ng-repeat="item in $data" ng-show="item.ungetqty!= 0">
+			            <td >{{item.psl_feeder}}</td>
+			            <td >{{item.needqty}}</td>
+			            <td >{{item.getqty}}</td>    
+			            <td> {{item.ungetqty}}</td>	              
+				  </tr>
+			 </table>
+		   </div>   
+		</div>
+		<div class="col-xs-12  col-sm-11 col-sm-offset-1" ng-show="type =='back'">
+			 <form name="backForm" class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="backForm">  
+			   <div class="form-group">
+			     <label for="fe_code" class="col-sm-2 col-xs-3 control-label" name="required-label">飞达编号</label>
+	             <div class='col-sm-5 col-xs-7 '>
+	             	 <input type="text" class="form-control" placeholder="请采集飞达编号" ng-model="FeederBack.fe_code" id="fe_code" 
+			          focus-me  required></input>	               
+	             </div>	             
+	           </div>		            
+	           <div class="form-group">
+	            <label for="reason" class="col-sm-2 col-xs-3 control-label" >退回原因</label>
+	             <div class='col-sm-5 col-xs-7'>
+	             	 <input type="text" class="form-control" ng-model="FeederBack.reason" id="reason" placeholder="请填写退回原因" > 
+	             </div>
+	           </div> 
+	           <div class="form-group">
+	            <label for="isuse" class="col-sm-2 col-xs-3 control-label" >是否停用</label>
+	             <select ng-model="FeederBack.isuse" ng-options="a.id as a.name for a in choose" id="isuse" class='col-sm-5 col-xs-7 sheight' required>
+                 </select>
+	           </div>	         
+	           <div class="form-group">
+	             <button ng-click="feederBack()"  class="btn btn-success btn-sm  m-l-18" ng-disabled="backForm.$invalid">确认退回</button>
+	             <button ng-click="feederBackAll()"  class="btn btn-success btn-sm col-xs-offset-2" >全部退回</button>
+	           </div>		
+		    </form>	
+		   <div ng-show="message" class='col-xs-12'>{{message}}</div> 
+		</div>
+	</div>
+	<div ng-show="type == 'feederUsedlist' || type =='listC'">
+	 <div class=" col-sm-11 col-sm-offset-1"><!-- 已领Feeder列表 -->
+	    <p>搜索：<input type="text" ng-model="search" ></p>
+	     <table ng-table="tableParams" 
+			class="table table-bordered table-striped ng-table-rowselected " ><!-- show-filter="true" -->			
+		   <tr ng-repeat="item in $data| filter:search">
+             <td data-title ="'ID'" ng-show = 'false'>{{item.fu_id}}</td>
+             <td data-title ="'飞达编号'" >{{item.fe_code}}</td>
+		     <td data-title ="'飞达规格'" >{{item.fu_fespec}}</td>
+		     <td data-title ="'状态'">{{item.fu_status}}</td>
+		     <td data-title ="'操作'"><button type="button" class="btn btn-sm btn-success" ng-click="feederBackFromList(item)">退回</button></td>	 
+           </tr>
+		</table>
+	  </div>  
+	</div>		
+</div>

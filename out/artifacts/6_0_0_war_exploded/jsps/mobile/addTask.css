@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+	font-size: 16px;
+}
+
+body, .page {
+    background-color: #FBF9FE;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hd {
+    padding: 2em 0;
+}
+
+.page_desc {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+.bd.spacing {
+    padding: 0 15px;
+}
+
+.page_title {
+    text-align: center;
+    font-size: 34px;
+    color: #3CC51F;
+    font-weight: 400;
+    margin: 0 15%;
+}
+
+.page .weui_cell {
+	padding: 15px 15px;
+}
+
+#main .weui_cell .weui_cell_bd input {
+	text-align: right;
+}
+
+.page .weui_cell .weui_cell_ft {
+	padding-left: 10px;
+	font-size: inherit;
+}
+
+/* userTab */
+#userTab {
+	display: none;
+}
+
+#userTab.open {
+	display: block;
+}
+
+#userTab .header {
+	margin-top: 0;
+	background-color: #2e3238;
+	color: #ffffff;
+	font-size: 18px;
+}
+
+#userTab .header .check {
+	float: right;
+}
+#userTab .uas{
+	margin: 6px 0 -10px 2px;
+}
+.active{
+	color:rgb(99, 99, 173);
+}
+#userTab .fa-caret-right{
+	margin:0 3px 0 3px;
+	color:gray;
+}
+/* message */
+#successPage {
+	display: none;
+}
+
+.weui_msg_desc {
+	text-align: left;
+}
+
+.message-content {
+	float: right;
+}
+
+.weui_cells_access .weui_cells_checkbox .weui_cell_ft:after{
+	content:none;
+}
+
+.weui_btn {
+	margin-top: 15px;
+}
+
+/* slideIn slideOut animation */
+
+@keyframes slideIn {
+    from {
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+.page.slideIn {
+    animation: slideIn .2s forwards;
+}
+
+.page.slideOut {
+    animation: slideOut .2s forwards;
+}
+
+/* loading */
+#loadingToast {
+	display: none;
+}

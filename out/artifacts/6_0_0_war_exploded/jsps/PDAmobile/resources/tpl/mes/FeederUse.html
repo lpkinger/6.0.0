@@ -1,0 +1,53 @@
+<style>
+	.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-7 {
+        padding-left:1px;
+        padding-right:1px;
+	}
+</style>
+<div ng-controller="FeederUseCtrl" style="min-height: 400px;" class=""> 
+	<div class="row m-b-10 m-t-10">	       
+		<div class='m-b-10 col-xs-offset-1' style="height: 30px;">
+		  <a href="#/manageContents" class="btn btn-success btn-sm  col-xs-2">返回</a>
+		  <a href="#/FeederOperate/feederUsedlist" class="btn btn-success btn-sm  col-xs-4 col-xs-offset-4">已领飞达列表</a>
+		</div>
+		<div class="col-xs-12  col-sm-11 col-sm-offset-1">		  
+			 <form name="form" class="form-horizontal col-sm-offset-1 col-xs-offset-1" id="form">  
+			   <div class="form-group">
+			     <label for="fu_makecode" class="col-sm-2 col-xs-3 control-label" name="required-label">制造单号</label>
+	             <div class='col-sm-5 col-xs-7 '>
+	             	 <input type="text" class="form-control" placeholder="请输入制造单号" ng-model="FeederUse.fu_makecode" id="fu_makecode" 
+			          focus-me  ng-keyup="searchMa($event,FeederUse.fu_makecode)" required></input>	               
+	             </div>	             
+	           </div>		            
+	           <div class="form-group">
+	            <label for="ma_prodcode" class="col-sm-2 col-xs-3 control-label" >产品料号</label>
+	             <div class='col-sm-5 col-xs-7'>
+	             	 <input type="text" class="form-control" ng-model="FeederUse.ma_prodcode" id="ma_prodcode" readonly> 
+	             </div>
+	           </div> 
+	           <div class="form-group">
+	            <label for="pr_detail" class="col-sm-2 col-xs-3 control-label" >产品名称</label>
+	             <div class='col-sm-5 col-xs-7'>
+	             	 <input type="text" class="form-control"  ng-model="FeederUse.pr_detail" id="pr_detail" readonly> 
+	             </div>
+	           </div>
+	           <div class="form-group">
+	            <label for="pr_spec" class="col-sm-2 col-xs-3 control-label" >产品规格</label>
+	             <div class='col-sm-5 col-xs-7'>
+	             	 <input type="text" class="form-control" ng-model="FeederUse.pr_spec" id="pr_spec" readonly> 
+	             </div>
+	           </div>
+	            <div class="form-group">
+			     <label for="fu_linecode" class="col-sm-2 col-xs-3 control-label" name="required-label">所属线别</label>
+	             <div class='col-sm-5 col-xs-7 '>
+	             	 <input type="text" class="form-control" placeholder="请输入线别" ng-model="FeederUse.fu_linecode" id="fu_linecode" 
+			           required></input>	               
+	             </div>	             
+	           </div>
+	           <div class="form-group">
+	             <button ng-click="feederMakeQuery()"  class="btn btn-success btn-sm col-xs-2 col-xs-offset-4" ng-disabled="form.$invalid">确认</button>
+	           </div>		
+		    </form>		 
+		</div>
+	</div>
+</div>

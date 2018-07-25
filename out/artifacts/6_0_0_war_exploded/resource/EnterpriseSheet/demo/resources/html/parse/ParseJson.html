@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>EnterpriseSheet parse xlsx file</title>
+    <link rel="stylesheet" type="text/css" href="../../css/docs.css" />
+</head>
+
+<body>
+
+    <div id="ProjectTitle">EnterpriseSheet APIs</div>
+
+    <h1>Call parse function to parse JSON</h1>
+    
+    <hr style="height: 0.5px">
+    <div id="smallSublink"><a href="http://www.enterprisesheet.com/sheet/demo" TARGET=_BLANK>DEMO</a> -> EnterpriseSheet APIs -> Parse XLSX file</div>
+    <hr style="height: 0.5px">
+    
+	<form action="http://www.enterprisesheet.com/sheet/sheetParse/parseJson"
+	      method="post" >
+	<p>
+	Please input the json data and click submit:<br>
+	<textarea name="json" rows="10" cols="100"></textarea>
+	</p>
+	<div>
+	<input type="submit" value="Send">
+	</div>
+	</form>
+	
+	<br/>
+	<hr/>
+	<p>
+	After you click Send button, your json data will be sent to the system by call SheetParseController -> parseJson. See the following information for more detail.:  
+	</p>
+	
+	<pre>
+    /**
+     * This method will parse input json and generate an Excel file 
+     * 
+     * URL: http://localhost:8080/sheet/sheetParse/parseJson
+     * Method: POST
+     * 
+     * @param json
+     * @param request
+     * @param response
+     * @throws Exception
+     */
+    @RequestMapping(value = "parseJson", method = RequestMethod.POST)
+    public void parseJson(@RequestParam(required = true) String json,
+    		HttpServletRequest request, HttpServletResponse response) throws Exception{
+    	
+    	Map<String, Object> sheetDocumetJson = JsonUtil.getJsonObj(json);
+    	
+    	Pair<String,File> nameAndFile = sheetParseService.parseJson(sheetDocumetJson, request.getLocale());
+    	final String exportFilename = nameAndFile.getLeft();
+    	final File exportFile = nameAndFile.getRight();
+        try(InputStream in = new FileInputStream(exportFile)){
+            super.outputBinary(exportFilename, in, MimeTypes.MIME_APPLICATION_VND_MSEXCEL, request, response);
+        }
+    }
+	</pre>
+	
+	
+	<pre>
+	
+	com.cubedrive.sheet.web.sheet.SheetParseController.java
+	</pre>
+
+
+</body>
+</html>

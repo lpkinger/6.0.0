@@ -1,0 +1,255 @@
+
+
+.Windetail{
+	background-color: white;
+}
+.Wintitle{
+	background-color: white;
+	
+}
+.Wincontext{
+	background-color: white;
+	padding-bottom: 5px;
+	margin-left: 6px !important; 
+	left:0px !important; 
+	
+}
+#paneldetail  .x-panel-body {
+	background: #ffffff;
+	overflow:visible!important;
+}
+
+.x-panel-body {
+	background: #f1f1f1;
+	overflow:visible!important;
+}
+
+.x-border-layout-ct{
+	background: #f1f1f1;
+}
+
+.form .x-container{
+	overflow:visible!important;
+	margin:8px 5px 5px 5px;
+}
+
+.form .x-btn{
+	border-radius: 0;
+	height:27px;
+	padding:1px 0px 0px 0px;
+}
+
+.form .x-panel-body-default{
+	border:none
+}
+
+.form .x-btn-stat {
+  	position: absolute;
+  	top: -9px;
+  	right: -11px;
+	width:21px;
+	height:21px;
+	padding: 10px 2px 0px 3px;
+	margin-left: 3px;
+	border-radius: 100%;
+	/* background-color: #ec971f; /*姗欒壊*/ 
+	background-color: red;
+	color: #fff;
+	font-weight: 600;
+	font-size:1px;
+	line-height:0px
+}
+.form .btnhide .x-btn-stat {
+	display:none!important;
+	visibility: hidden!important;
+	width:0!important;
+	height:0!important;
+	background:none!important;
+	font-size:0!important;		 	
+}
+.form .x-btn-switch-active {
+	/* background-color: #437ABB;
+	background: #437ABB; */
+	background-color:#037ee7;
+	background:#037ee7;
+	font-size:1px;
+}
+
+.form .x-btn-switch-active  .x-btn-inner{
+	color:white
+}
+
+.form .x-btn-switch-active .form .x-btn-inner {
+	background-color: #3384FF;
+	color: #fff
+}
+.form .x-btn-switch-active .form .x-btn-stat {
+	/* background-color: #ec971f; 姗欒壊*/
+	background-color: red; 
+	color: #fff
+}
+
+.form .x-form-display-field{
+	font-weight: 500;
+	font-size:13px;
+	color:black;
+	padding:6px 10px 0 0;
+	width:80px
+}
+
+.form .x-btn-inner{
+	font-size:13px!important;
+	margin:0px 1px 0px -2px;
+}
+
+/*form header*/
+.form .x-panel-header{
+	top:7px!important
+}
+
+.form .x-panel-header-default-top{
+	box-shadow:none;
+}
+
+.form .x-panel-header-default{
+	background-color:#F2F0F2;
+	background:#F2F0F2;
+	border-width:0 0 1px 0;
+}
+
+.form .x-docked-top{
+	background-color: transparent;
+    padding: 0;
+}
+
+.form .x-panel-header-text{
+	/* color:#ec971f; */
+	color:#fd8505;
+	font-weight: bold;
+	font-size:15px;
+}
+
+.form .x-border-layout-ct{
+	background-color:#F2F0F2!important;
+}
+
+.form .x-panel-header{
+	padding:0 0 5px 0;
+}
+
+/*toolbar*/
+.tags-flag{
+	width:10px;
+	height:10px;
+	display:inline-block;
+	margin:2px 3px -1px 0;
+	padding:2px 0 0 0;
+}
+
+.tags-font{
+	font-size:10px;
+	margin:0 10px 0 0 ;
+}
+
+.form .x-btn-default-medium{
+	padding: 0 !important;
+	background-image:none!important;
+}
+#addTaskBtn {
+    border: 1px solid #bdbdbd;
+	/* height: 26px !important;
+	line-height: 26px !important;
+    background-color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #bbbbbb; */
+}
+#addTaskBtn-btnIconEl {
+    height: 26px;
+    margin-left:2px;
+}
+.x-btn-default-toolbar-small-noicon button {
+	/* height: 26px !important;
+	line-height: 26px !important; */
+}
+
+/*grid*/
+.x-grid-row .x-grid-cell{
+	font:normal 14px tahoma, arial, verdana, sans-serif!important;
+}
+
+
+.x-column-header{
+	font:normal 14px tahoma, arial, verdana, sans-serif!important;
+	font-weight:600!important;
+}
+
+
+/*娴佺▼涓績銆佹秷鎭腑蹇冨拰浠诲姟涓績鍏叡grid鐨勬牱寮�*/
+.x-grid-row .x-grid-cell {
+	/* color: null;
+	font: normal 11px tahoma, arial, verdana, sans-serif;
+	background-color: #E0E0FF;
+	border-top-color: #fafafa;
+	height: 26px;
+	line-height: 26px;
+ 	padding:1px 0 1px 0;  */
+}
+
+
+.x-grid-row-alt .x-grid-cell{
+	/* background:white!important; */
+}
+
+.x-grid-header-ct{
+	
+}
+ .x-grid-row-alt .x-grid-cell .x-grid-row-over{
+	/* background:#EFEFEF!important; */
+} 
+/*娴佺▼涓績銆佹秷鎭腑蹇冨拰浠诲姟涓績grid鏍囬鏍峰紡锛屽ぇ閮ㄥ垎娌跨敤ext-all-grey.css鍘熸湁鏍峰紡*/
+.x-column-header{
+	text-shadow: 0 0 0 rgba(255, 255, 255, 0.3);
+}
+
+/*scrollbar*/
+::-webkit-scrollbar-track
+{
+	
+  background: white;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: white;
+}
+
+/*toolbar*/
+/*
+.x-toolbar-default{
+	background-image:none;
+	background-color:white;
+}
+*/
+
+.x-toolbar .x-toolbar-text{
+	font-size:14px!important
+}
+
+.statbtnhide{
+	display:none!important;
+	visibility: hidden!important;
+	width:0!important;
+	height:0!important;
+	background:none!important;
+	font-size:0!important;
+
+}
+
+/*娴佺▼涓績銆佹秷鎭腑蹇冨拰浠诲姟涓績grid鏍囬鐨勮緭鍏ユ鏍峰紡*/
+.x-form-field {
+	border: 1px solid #8b8970;
+	font-size: 14px !important;
+	color: #515151
+}

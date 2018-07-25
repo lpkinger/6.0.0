@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width">
+<link href="resources/img/icon/u.png" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="resources/lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="resources/lib/fontawesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/css/signin.css" />
+</head>
+<body>
+ <div style="padding: 15px 30px 15px;">
+    <h4 class="text-center" style="font-family: Microsoft Yahei; font-weight: bold;">请重新登录</h4>
+	<form ng-submit="login(user)" name="myform" novalidate stop-event="touchend" >
+		<div class="form-group">
+			<div class="has-feedback-left group">				
+			    <span class="fa fa-user form-control-feedback-left"></span> 		 								
+				<input type="text" class="form-control" placeholder="账号"
+				  ng-model="user.j_username" name="j_username" required focus-me enter-As-Tab>	
+				<div class="input-group-addon" ng-model="user.master" name="master">{{user.master}}</div>						
+			</div>			
+		</div>				
+		<div class="form-group">
+			 <div class="has-feedback-left">
+				   <span class="fa fa-lock form-control-feedback-left"></span> 
+				   <input type="password" class="form-control" placeholder="密码" id="j_password"
+						ng-model="user.j_password" name="j_password" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class=" has-feedback-left">
+				<input type="checkbox" checked="checked" id="rem" ng-model="user.remember_me" />
+		        <label for="rem">记住账号</label>						
+			</div>
+		</div>
+		<div class="form-group">
+			<div>
+			   <button class="btn btn-inverse" type="submit" ng-disabled="myform.$invalid">登录</button>
+			   <a href="#" class="pull-right">无法登录？</a>
+			</div>
+		</div>
+	</form>
+ </div>
+	<div class="loading" ng-class="{'in': loading}"><i></i></div>
+<body>
+</html>

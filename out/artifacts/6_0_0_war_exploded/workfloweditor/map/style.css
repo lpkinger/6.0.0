@@ -1,0 +1,51 @@
+BODY {
+	FONT-FAMILY: serif
+}
+#menu {
+	POSITION: fixed; WIDTH: 200px; TOP: 1em; LEFT: 1em
+}
+#menu UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+#menu UL UL {
+	PADDING-LEFT: 1em
+}
+#content {
+	MARGIN-LEFT: 200px
+}
+DL {
+	MARGIN-LEFT: 1em
+}
+DT {
+	FONT-WEIGHT: bold
+}
+DT SPAN {
+	FONT-FAMILY: monospace; FONT-WEIGHT: normal
+}
+DD {
+	MARGIN-BOTTOM: 1em; MARGIN-LEFT: 0px
+}
+#example-map-1 {
+	WIDTH: 600px; HEIGHT: 400px
+}
+#example-map-2 {
+	WIDTH: 800px; HEIGHT: 500px
+}
+#example-map-3 {
+	WIDTH: 800px; HEIGHT: 500px
+}
+#avaliable-maps-usa {
+	WIDTH: 600px; HEIGHT: 400px
+}
+#avaliable-maps-germany {
+	WIDTH: 400px; HEIGHT: 400px
+}
+#avaliable-maps-europe {
+	WIDTH: 680px; HEIGHT: 520px
+}
+#example-map-events {
+	WIDTH: 600px; HEIGHT: 400px
+}
+PRE CODE {
+	PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; DISPLAY: block; BACKGROUND: #f8f8ff 0px 0px; COLOR: #000000; PADDING-TOP: 0.5em
+}

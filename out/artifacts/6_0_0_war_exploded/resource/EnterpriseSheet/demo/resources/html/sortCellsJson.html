@@ -1,0 +1,63 @@
+<pre>
+sortCellsJson : { 
+    fileName: 'Sort cell ranges',
+    sheets: [
+        {name: 'Sort', id: 1, color: 'red' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,4]" },
+    ],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height: 30}}, 	
+        {sheet: 1, row: 10, col: 0, json: {height: 30}},
+        {sheet: 1, row: 12, col: 0, json: {height: 30}},
+        {sheet: 1, row: 0, col: 2, json: {width: 150}},
+        {sheet: 1, row: 0, col: 3, json: {width: 150}},
+        {sheet: 1, row: 0, col: 4, json: {width: 150}},
+        {sheet: 1, row: 0, col: 6, json: {width: 150}},
+	    {sheet: 1, row: 2, col: 2, json: {data: "Apply sort to the cell range", fw:"bold", fz:14 }}, 
+
+	    {sheet: 1, row: 3, col: 2, json: { data: "Sort by number" } },
+        {sheet: 1, row: 4, col: 2, json: { data: "100" } },
+        {sheet: 1, row: 5, col: 2, json: { data: "20" } },
+        {sheet: 1, row: 6, col: 2, json: { data: "150" } },
+        {sheet: 1, row: 7, col: 2, json: { data: "60" } },
+        {sheet: 1, row: 8, col: 2, json: { data: "300" } },
+        
+        {sheet: 1, row: 10, col: 2, json: { data: "Sort ascending", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 105%;", onBtnClickFn: "BTN_SORT_ASC_CALLBACK_FN" } },	
+        {sheet: 1, row: 12, col: 2, json: { data: "Sort descending", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 105%;", onBtnClickFn: "BTN_SORT_DESC_CALLBACK_FN" } },
+        
+        {sheet: 1, row: 3, col: 4, json: { data: "Sort by String" } },
+        {sheet: 1, row: 4, col: 4, json: { data: "abc" } },
+        {sheet: 1, row: 5, col: 4, json: { data: "hij" } },
+        {sheet: 1, row: 6, col: 4, json: { data: "efg" } },
+        {sheet: 1, row: 7, col: 4, json: { data: "kzh" } },
+        {sheet: 1, row: 8, col: 4, json: { data: "yyy" } },
+        
+        {sheet: 1, row: 10, col: 4, json: { data: "Sort ascending", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 105%;", onBtnClickFn: "BTN_SORT_ASC_CALLBACK_FN_2" } },	
+        {sheet: 1, row: 12, col: 4, json: { data: "Sort descending", it: "button", btnStyle: "color: #FFF; background-color: #900;font-size: 105%;", onBtnClickFn: "BTN_SORT_DESC_CALLBACK_FN_2" } }	
+    ]
+},
+</pre>
+
+<pre>
+// ascending sort the cells
+function BTN_SORT_ASC_CALLBACK_FN() {
+	SHEET_API.sortCellByAsc(SHEET_API_HD, [1, 4, 2, 8, 2]);
+}
+
+// Desc sort the cells
+function BTN_SORT_DESC_CALLBACK_FN() {
+	SHEET_API.sortCellByDesc(SHEET_API_HD, [1, 4, 2, 8, 2]);
+}
+
+// ascending sort the cells
+function BTN_SORT_ASC_CALLBACK_FN_2() {
+	SHEET_API.sortCellByAsc(SHEET_API_HD, [1, 4, 4, 8, 4]);
+}
+
+// Desc sort the cells
+function BTN_SORT_DESC_CALLBACK_FN_2() {
+	SHEET_API.sortCellByDesc(SHEET_API_HD, [1, 4, 4, 8, 4]);
+}
+</pre>

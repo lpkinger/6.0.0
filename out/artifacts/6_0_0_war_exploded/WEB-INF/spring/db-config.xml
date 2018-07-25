@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- 数据源 -->
+	<bean id="uas_master" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close" lazy-init="true">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@www.ubtob.com:1521:orcl" />
+		<property name="username" value="uas_master" />
+		<property name="password" value="select!#%*(" />
+		
+		<property name="initialSize" value="10" />
+		<property name="maxActive" value="80" />
+		<property name="minIdle" value="10" />
+		
+		<!-- 配置获取连接等待超时的时间 -->
+		<property name="maxWait" value="60000" />
+		
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="testWhileIdle" value="true" />
+		<property name="validationQuery" value="SELECT 1 FROM SYS.DUAL" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<!-- 配置一个连接在池中最小生存的时间 -->
+		<property name="minEvictableIdleTimeMillis" value="1800000" />
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize" value="80" />
+		<!-- 配置监控统计拦截的filters -->
+		<property name="filters" value="stat" />
+		<property name="removeAbandoned" value="true" />
+		<property name="removeAbandonedTimeout" value="1800" />
+	</bean>
+	<!-- UAS -->
+	<bean id="UAS" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"  lazy-init="true">
+	 <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@192.168.253.6:1521:orcl" />
+	    <property name="username" value="UAS" />
+	    <property name="password" value="select!#%*(" />  
+	     <!-- 乔晶电子 -->
+	   <!--    <property name="username" value="QIAOJING_EL" /> 
+	    <property name="url" value="jdbc:oracle:thin:@qiaojing2016.uttcare.com:1521:orcl" /> 
+	    <property name="password" value="select!#%*(" />    -->
+	   <!-- <property name="url" value="jdbc:oracle:thin:@192.168.253.6:1521:orcl" /> -->
+	     <!--华商龙深圳-->
+	 <!--   <property name="username" value="N_HUASL_SZ" /> 
+	    <property name="url" value="jdbc:oracle:thin:@218.18.115.198:1521:orcl" /> 
+	    <property name="password" value="select!#%*(" />  -->
+	     <!-- 万利达 -->
+	     <!--  <property name="username" value="N_MALATA" /> 
+	    <property name="url" value="jdbc:oracle:thin:@117.25.180.218:1521:orcl" /> 
+	    <property name="password" value="select!#%*(" />    -->
+		<!-- 赛亿 -->
+		<!-- <property name="username" value="SAIYI" />
+	    <property name="url" value="jdbc:oracle:thin:@58.250.30.13:1521:orcl" />
+	    <property name="password" value="select!#%*(" /> -->
+		<!-- 富为电子 -->
+		<!-- <property name="url" value="jdbc:oracle:thin:@richwellgroup.com.cn:1521:orcl" />
+		<property name="username" value="FW" />
+		<property name="password" value="select!#%*(" /> -->
+		<!-- 淼英辉 -->
+		<!-- <property name="url" value="jdbc:oracle:thin:@113.98.248.236:1521:orcl" />
+		<property name="username" value="MYH" />  -->
+		<!-- 自然声 -->
+		<!-- <property name="url" value="jdbc:oracle:thin:@oa.nseco.com:1521:orcl" />
+		<property name="username" value="NATURALSOUND" /> -->
+		<!-- 联维亚 -->
+		<!-- <property name="url" value="jdbc:oracle:thin:@121.15.14.59:1521:orcl" />
+		<property name="username" value="LVA" /> -->
+		<!-- 五元素 -->
+	    <!-- <property name="url" value="jdbc:oracle:thin:@scope2015.oicp.net:1521:orcl" />
+		<property name="username" value="scope" />
+		<property name="password" value="select!#%@$^" /> -->
+		<!-- 麦斯美电子 -->
+	    <!-- <property name="url" value="jdbc:oracle:thin:@58.250.37.47:1521:orcl" />
+	    <property name="username" value="MMAUTO" /> -->
+		<!-- 贝腾 -->
+	   <!--  <property name="url" value="jdbc:oracle:thin:@202.104.151.184:1521:orcl" />
+	    <property name="username" value="BT_TEST" /> -->	    
+	    <!-- 马甲 -->
+	    <!-- <property name="url" value="jdbc:oracle:thin:@15884v5i04.imwork.net:1521:orcl" />
+	    <property name="username" value="MJ" /> -->
+	    <!-- <property name="password" value="select!#%*(" /> -->
+		<property name="initialSize" value="10" />
+		<property name="maxActive" value="80" />
+		<property name="minIdle" value="10" />		
+		<!-- 配置获取连接等待超时的时间 -->
+		<property name="maxWait" value="60000" />		
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="testWhileIdle" value="true" />
+		<property name="validationQuery" value="SELECT 1 FROM SYS.DUAL" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<!-- 配置一个连接在池中最小生存的时间 -->
+		<property name="minEvictableIdleTimeMillis" value="1800000" />
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize" value="80" />
+		<!-- 配置监控统计拦截的filters -->
+		<property name="filters" value="stat" />
+	</bean>
+	
+	<!-- 将需要用到的多个帐套的dataSource定义在此，再通过multiDataSource切换 -->
+	<bean id="dataSource" class="com.uas.erp.dao.MultiDataSource">
+		<property name="dataSource">
+			<ref bean="#{about.defaultSob}" />
+		</property>
+		<!-- 配置connectTimeout 和 socketTimeout (防止发生网络异常时，spring jdbcTemplate无法捕捉，可能无限等待) -->
+		<property name="connectionProperties"
+			value="oracle.net.CONNECT_TIMEOUT=6000;oracle.jdbc.ReadTimeout=6000" />
+	</bean>
+
+	<!-- 操作LOB 数据 -->
+	<bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler"
+		lazy-init="true" />
+	<!-- jbpm配置文件 -->
+	<bean id="springHelper" class="org.jbpm.pvm.internal.processengine.SpringHelper">
+		<property name="jbpmCfg" value="jbpm.cfg.xml"></property>
+	</bean>
+	<bean id="processEngine" factory-bean="springHelper"
+		factory-method="createProcessEngine">
+	</bean>
+	<bean id="repositoryService" factory-bean="processEngine"
+		factory-method="getRepositoryService" />
+
+	<bean id="executionService" factory-bean="processEngine"
+		factory-method="getExecutionService" />
+
+	<bean id="historyService" factory-bean="processEngine"
+		factory-method="getHistoryService" />
+
+	<bean id="managementService" factory-bean="processEngine"
+		factory-method="getManagementService" />
+
+	<bean id="identityService" factory-bean="processEngine"
+		factory-method="getIdentityService" />
+
+	<bean id="taskService" factory-bean="processEngine"
+		factory-method="getTaskService" />
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="#{about.defaultSob}" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop>
+				<prop key="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</prop>
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>jbpm.repository.hbm.xml</value>
+				<value>jbpm.execution.hbm.xml</value>
+				<value>jbpm.history.hbm.xml</value>
+				<value>jbpm.task.hbm.xml</value>
+				<value>jbpm.identity.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+</beans>

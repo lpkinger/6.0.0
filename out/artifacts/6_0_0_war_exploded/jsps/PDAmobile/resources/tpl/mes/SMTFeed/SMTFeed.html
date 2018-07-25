@@ -1,0 +1,72 @@
+<style>
+	.m-l-18 {
+		margin-left: 18px;
+	}
+    .form-group{
+	     margin-left:0px!important;
+	     margin-right:0px!important;
+	}
+	.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-7 {
+        padding-left:1px;
+        padding-right:1px;
+	}
+</style>
+<div ng-controller="SMTFeedCtrl" style="min-height: 400px;background-color:#DCDCDC;" class=""> 
+<script type="text/ng-template" id="makeCodeContent.html">  
+         <div class="modal-header">  
+             <p>请选择作业单号</p>
+         </div>  
+         <div class="modal-body" stop-event="touchend">           
+            <table id='tableResult' cellspacing='0' cellpadding='3' class="">
+                <thead>
+                   <tr style='background-color : #eee;'>
+                       <td style='width : 40px; '> </td>
+                       <td style='width : 140px; '>作业单号  </td>
+                   </tr>
+                </thead>
+               <tr ng-repeat='item in items'">
+                   <td style='width : 40px;' >
+                     <input type="radio"  id="rem" ng-model="makeC" ng-value="item" />
+                   </td>
+	               <td style='width : 140px;' >
+                     <label for="rem" >{{item.mc_code}}</label>	
+                   </td>
+               </tr>
+            </table>
+         </div>  
+         <div class="modal-footer">  
+             <button class="btn-sm btn-success col-xs-offset-3 col-xs-2" ng-click="selectBill(makeC)">确认</button> 
+             <button class="btn-sm btn-warning col-xs-offset-3 col-xs-2" ng-click="cancel()">取消</button>  
+         </div>  
+ </script>  
+	<div class="row m-t-10 col-xs-12  col-sm-11 col-sm-offset-1">
+		<div class='m-b-10 row'><a href="#/manageContents" class="btn btn-success btn-sm col-xs-2">返回</a></div>
+		<form name="form" class="form-horizontal block" id="form">  
+			<div class="form-group m-t-5">
+			   <label for="mc_devcode" class="col-sm-2 col-xs-3 control-label" name="required-label">设备编号</label>
+	           <div class='col-sm-5 col-xs-7 '>
+	             <input type="text" class="form-control" placeholder="请采集设备编号" ng-model="makeCraft.mc_devcode" id="mc_devcode" 
+			        focus-me ng-keyup="search($event,makeCraft.mc_devcode)" required reset-field></input>	              
+	           </div>	         
+	         </div>	
+	         <div class="form-group" ng-show="tip" style="color:red;">
+	              {{tip}}
+	         </div>     
+	       <!--   <div class="form-group">
+	          <label for="mc_makecode" class="col-sm-2 col-xs-3 control-label" >制造单号</label>
+	          <div class='col-sm-5 col-xs-7'>
+	             <input type="text" class="form-control" placeholder="制造单号" ng-model="makeCraft.mc_makecode" id="mc_makecode"  enter-As-Tab reset-field> 
+	          </div>
+	         </div>  -->
+	         <div class="form-group">
+	          <label for="mc_code" class="col-sm-2 col-xs-3 control-label" >作业单号</label>
+	          <div class='col-sm-5 col-xs-7'>
+	             <input type="text" class="form-control" placeholder="作业单号" ng-model="makeCraft.mc_code" id="mc_code"  enter-As-Tab reset-field> 
+	          </div>
+	         </div>
+	         <div class="form-group">
+	           <button ng-click="confirm()"  class="btn btn-success btn-sm  col-xs-2 col-xs-offset-3" ng-disabled="form.$invalid ">确认</button>
+	         </div>		
+		  </form>			    
+	</div>
+</div>

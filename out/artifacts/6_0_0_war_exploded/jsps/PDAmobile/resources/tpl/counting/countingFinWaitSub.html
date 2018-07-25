@@ -1,0 +1,40 @@
+<div ng-controller='CountingFinishCtrl' style="min-height: 400px;">
+	<div class="row m-b-10 col-sm-offset-1" ng-show="grid">
+		<span class="f-16 col-md-3 col-xs-8">盘点底稿编号：{{stocking.ST_CODE}}</span>
+		<span class="f-16 col-md-2 ">仓库：{{stocking.ST_WHCODE}}</span>			       	
+	</div>
+	<div class = "m-b-10">
+	    <a href="#/countingFinish" class=" btn btn-success btn-sm col-md-2 col-sm-offset-1 col-xs-offset-1"> 返回    </a>
+	    <button type="button" class="btn btn-success btn-sm col-xs-offset-2" ng-click='deleteAll()' >全部删除</button>
+	    <button type="button" class="btn btn-success btn-sm col-xs-offset-2" ng-click='submitGet()' >提交采集</button>
+	</div>
+    <table ng-show ="grid" ng-table="tableParams" 
+		class="table table-bordered table-fixed table-striped col-xs-12 col-sm-6 col-sm-offset-1 ng-table-rowselected">
+		<colgroup>
+				<col width="25%"></col>
+				<col width="25%"></col>
+				<col width="15%"></col>
+				<col width="10%"></col>
+				<col width="15%"></col>
+		</colgroup>
+		<tr >
+			<th width="25%">序列号</th>
+			<th width="25%">箱号</th>
+			<th width="15%">总数</th>
+			<th width="10%">料号</th>
+			<th width="15%">操作</th>
+		</tr>
+		<tr ng-repeat="s in $data track by $index"
+	               ng-class="{'active': item.$selected} " >
+			<td >{{s.stb_barcode}}</td><!-- filter="{ 'name': 'text' }" -->
+			<td >{{s.stb_outboxcode}}</td>
+			<td >{{s.stb_qty}}</td>
+			<td class="text-overflow">{{s.stb_prodcode}}</div></td>
+			<td >
+				<div class="btn-group btn-group-xs">
+					<button type="button" class="btn btn-default" ng-click="deleteWaitSubmitItem(s)">删除</button>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

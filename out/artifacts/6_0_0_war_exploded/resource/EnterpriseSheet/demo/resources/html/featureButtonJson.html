@@ -1,0 +1,26 @@
+<pre><code>
+featureButtonJson : {
+    fileName: 'Button cells',
+    sheets: [
+        {name: 'Buttons', id: 1, color: 'orange' }
+    ],
+    floatings: [
+        { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,8]" }
+    ],
+    cells: [
+        {sheet: 1, row: 0, col: 2, json: {width: 200}}, 
+        {sheet: 1, row: 0, col: 5, json: {width: 100}}, 
+        {sheet: 1, row: 0, col: 9, json: {width: 100}}, 
+        {sheet: 1, row: 0, col: 0, json: {height: 30}}, 
+        {sheet: 1, row: 2, col: 2, json: {data: "Add button to the cell", fw:"bold", fz:14 }}, 
+        
+        { sheet: 1, row: 4, col: 2, json: { data: "Click me!", it: "button", btnStyle: "color: #900; font-weight: bold;", onBtnClickFn: "CUSTOM_BUTTON_CLICK_CALLBACK_FN" } },
+        { sheet: 1, row: 5, col: 2, json: { data: "Click me!", it: "button", btnStyle: "color: #900; font-weight: bold; font-size: 150%; text-transform: uppercase;", onBtnClickFn: "CUSTOM_BUTTON_CLICK_CALLBACK_FN" } },
+        { sheet: 1, row: 6, col: 2, json: { data: "Click me!", it: "button", btnStyle: "color: #FFF; background-color: #900;", onBtnClickFn: "CUSTOM_BUTTON_CLICK_CALLBACK_FN" } },
+        { sheet: 1, row: 7, col: 2, json: { data: "Click me!", it: "button", btnStyle: "color: #900; border: 1px solid #900; font-weight: bold;", onBtnClickFn: "CUSTOM_BUTTON_CLICK_CALLBACK_FN" } },
+        { sheet: 1, row: 8, col: 2, json: { data: "Click me!", it: "button", btnStyle: "color: #900; text-transform: uppercase; margin-left: 20px;", onBtnClickFn: "CUSTOM_BUTTON_CLICK_CALLBACK_FN" } },
+        { sheet: 1, row: 9, col: 2, json: { data: "Click me!", it: "button", btnStyle: "color: #900; text-transform: uppercase; margin-top: 10px;", onBtnClickFn: "CUSTOM_BUTTON_CLICK_CALLBACK_FN" } },
+        { sheet: 1, row: 10, col: 2, json: { data: "Click me!", it: "button", btnStyle: "color: #900; border: 1px solid #900; font-weight: bold; width: 150px;", onBtnClickFn: "CUSTOM_BUTTON_CLICK_CALLBACK_FN" } },
+    ]
+},
+</code></pre>

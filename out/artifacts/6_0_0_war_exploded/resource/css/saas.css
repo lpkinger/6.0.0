@@ -1,0 +1,265 @@
+body {
+	line-height: 1.6;
+	font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei",
+		"\9ED1\4F53", Arial, sans-serif;
+	color: #222;
+	font-size: 14px;
+}
+
+h1,h2,h3 {
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.text-link {
+	text-decoration: underline;
+}
+
+.text-inverse {
+	color: #f37;
+}
+
+.has-feedback-left {
+	position: relative;
+}
+
+.form-control-feedback-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: block;
+	width: 30px;
+	height: 34px;
+	line-height: 2.3;
+	text-align: center;
+	pointer-events: none;
+	color: #bbb;
+	font-size: 16px;
+}
+
+.has-feedback-left>.form-control {
+	padding-left: 30px;
+}
+
+input[type="submit"],button[type="submit"],.btn-submit {
+	width: 120px;
+	letter-spacing: 4px;
+}
+
+@media ( min-width : 1200px) {
+	.container {
+		width: 990px;
+	}
+}
+
+.icon-left {
+	margin-right: 5px;
+}
+/*brower-tip*/
+#brower-tip {
+    height: 31px;
+    line-height: 31px;
+    background: #ffffe1;
+    border-bottom: 1px solid #eed8a6;
+}
+
+#brower-tip .btn {
+	margin-left: 5px;
+}
+/*header*/
+#top {
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+  	box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+}
+
+#top .navbar-header .navbar-brand {
+	height: 60px;
+	line-height: 60px;
+}
+
+#top .navbar-header .title {
+	padding: 0;
+}
+
+#top .navbar-header b {
+	display: block;
+	width: 1px;
+	height: 18px;
+	margin: 23px 10px 0 11px;
+	z-index: 100;
+	float: left;
+	background: #ccc;
+}
+
+.navbar-header span {
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	color: #666;
+}
+
+#top .navbar-right a {
+	color: #666;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+/*main*/
+#banner {
+	background: url("../images/screens/saas_bg_new.png") no-repeat center center;
+	background-color: #fff;
+}
+
+#banner>.container {
+	height: 497px;
+	position: relative;
+}
+
+#en-info {
+	position: absolute;
+	top: 150px;
+	left: 50px;
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+#login-wrap {
+	position: absolute;
+	width: 386px;
+	top: 100px;
+	right: 10px;
+	padding: 25px 35px 20px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	background-color: #fff;
+}
+
+#login-wrap .title {
+	font-size: 20px;
+	color: #3b6ea5;
+	letter-spacing: 5px;
+	font-weight: bold;
+}
+
+#code-wrap {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: 490px;
+	padding: 16px;
+	background-color: #fff;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	color: #717375;
+	font-size: 12px;
+	-moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#guest-wrap {
+	position: absolute;
+	width: 386px;
+	top: -600px;
+	right: 10px;
+	padding: 25px 35px 20px;
+	opacity: 0;
+	-webkit-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out
+}
+
+#guest-wrap.slidein {
+	top: 100px;
+	opacity: 1;
+}
+
+/*footer*/
+#footer {
+	color: #999;
+	padding: 30px 0;
+	font-size: 12px;
+}
+#footer a {
+	color: #999;
+}
+#footer ul {
+	margin: 0;
+}
+#footer .list-inline>li:not(:last-child):after {
+	margin-left: 15px;
+	content: "|";
+	color: #ddd;
+}
+/*search*/
+#search-wrap {
+	width: 639px;
+	margin: 100px auto;
+}
+
+#search-wrap .input-group {
+	margin: 30px 0;
+}
+
+#result-wrap {
+	border: 1px solid #ddd;
+}
+
+#result-wrap p {
+	padding: 10px;
+	background-color: #f5f5f5;
+  	border-bottom: 1px solid #e3e3e3;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+  	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+#search-result {
+	margin-top: 20px;
+	padding: 5px 10px;
+}
+
+#search-result li {
+	padding: 8px 0;
+}
+/*loading*/
+.loading-container {
+	width: 200px;
+	height: 46px;
+	position: absolute;
+	display: none;
+	top: 150px;
+	left: 50%;
+	margin-left: -100px;
+	line-height: 46px;
+	color: #31708f;
+	text-align: center;
+	font-size: 15px;
+	font-family: "Microsoft YaHei";
+	background: #d9edf7 url(../images/loading.gif) no-repeat 30px 50%;
+	z-index: 99999999;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.loading-back {
+	content: " ";
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	opacity: .3;
+	z-index: 99999998;
+}

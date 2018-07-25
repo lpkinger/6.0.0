@@ -1,0 +1,663 @@
+/** scrollbar **/
+::-webkit-scrollbar {
+	background-color: transparent;
+	width: 8px
+}
+
+::-webkit-scrollbar:horizontal {
+	height: 12px !important;
+}
+
+.x-scroller-horizontal {
+	height: 12px !important;
+	border: none;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(231, 231, 231, 0.8);
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(231, 231, 231, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover,::-webkit-scrollbar-thumb:active {
+	background-color: #999
+}
+.x-scroller-vertical {
+	border-radius: 5px;
+	right: 0 !important;
+	width: 9px !important;
+	left: auto !important;
+}
+/** loading **/
+.x-mask {
+	background: transparent;
+}
+/** tree **/
+#tree-tab .x-panel-header-default {
+	background-color: #2b4e63;
+    line-height: 0px;
+    border-width: 1px;
+    border-style: solid;
+    background-image: none;
+}
+
+#tree-tab .x-panel-header-horizontal .x-panel-header-body {
+	border-top: 2px solid #2b4e63;
+    height: 19px;
+}
+
+#tree-tab .x-panel-header {
+	padding: 0px 0px 0px 0px;
+}
+.x-panel-header-text-container {
+	height:0 !important;
+}
+#tree-tab div {
+	font-family: SimHei;
+	border: none;
+}
+.x-scroller-ct {
+	-moz-padding-start: 4px;
+}
+#tree-tab .x-box-scroller {
+	width: 16px;
+    height: 16px;
+    cursor: pointer;
+	background-repeat: no-repeat;
+	background-position-y: 2px;
+}
+#tree-tab .x-tabbar-scroll-left {
+	background: url(../../../images/upgrade/blue/mainicon/tree/arrow_left.png);
+}
+#tree-tab .x-tabbar-scroll-right {
+	background: url(../../../images/upgrade/blue/mainicon/tree/arrow_right.png);
+}
+#tree-tab .x-tool {
+	/* left: 201px !important; */
+}
+#tree-tab .x-tool img {
+    margin-top: -1px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background: url(../../../images/upgrade/blue/mainicon/tree/treeshrink.png);
+}
+.x-panel-header {
+    padding: 0px 0px 0px 0px;
+}
+#tree-tab .x-panel-header-body .x-tool img {
+    margin-right: 1px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background: url(../../../images/upgrade/blue/mainicon/tree/treeshrink.png);
+}
+.x-form-item-body {
+	overflow: visible;
+}
+
+/** QmakeBtn **/
+#qmake-order-btn {
+	background-image: none;
+	background-color: #2b4e63 !important;
+}
+#qmake-order-btn button {
+	height: 26px;
+    width: 166px !important;
+    text-align: center;
+    background-color: #319bf5;
+    border-radius: 4px;
+}
+#qmake-order-btn button:active {
+    background-color: #3a82b1;
+}
+#qmake-order-btn button:FOCUS {
+    background-color: #3a82b1;
+}
+#qmake-order-btn-btnInnerEl{
+	width: 100% !important;
+	padding: 0 !important;
+    font-size: 14px !important;
+}
+#collapse-placeholder-tree-tab {
+    background-color: #2b4e63 !important;
+    line-height: 0px;
+    border-color: #2b4e63;
+    border-width: 1px;
+    border-style: solid;
+    background-image: none;
+    box-shadow: none;
+}
+
+#collapse-placeholder-tree-tab tspan {
+	fill: white;
+}
+
+/** QmakeBtn Menu **/
+.x-addbtn-search-toolbar {
+	border: none;
+	background: #487895;
+}
+.x-addbtn-search-trigger {
+	
+}
+ .x-addbtn-search-trigger .x-form-text {
+	font-size: 14px;
+	height: 26px !important;
+	width: 160px !important;
+	padding-right: 24px;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	background: #446b83;
+}
+.x-addbtn-search-trigger .x-form-trigger-wrap {
+	height: 26px;
+	position: absolute;
+    left: 138px;
+}
+.x-addbtn-search-trigger-icon {
+	opacity: .5;
+	height: 26px !important;
+	border: none;
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/search.png);
+	background-repeat: no-repeat;
+	background-position: center !important;
+}
+.x-addbtn-search-trigger-icon-over {
+	opacity: .8;
+}
+.x-btn-arrow {
+    background-image: none;
+}
+
+.x-icon-addbtn{
+	background: url(../../../images/upgrade/blue/mainicon/tabheader/add.png);
+}
+
+.x-tree-addbtn .x-tree-icon-leaf {
+	margin-top: 9px;
+    background: url(../../../images/upgrade/blue/mainicon/tree/leaf.png);
+}
+
+.x-tree-addbtn .x-tree-icon-makeorder {
+	margin-top: 9px;
+    background: url(../../../images/upgrade/blue/mainicon/tree/leaf.png);
+}
+
+.x-tree-addbtn{
+	width: 100% !important;
+	height: 36px !important;
+	text-align: left !important;
+	border:none;
+	background: none;
+	background-color: #487895;
+	padding: 0;
+}
+.x-tree-addbtn-over {
+	background-color: #5b89a4;
+	border-radius: 0;
+}
+.x-css-shadow {
+	display: none !important;
+	top: 133px !important;
+    border: none;
+    left: 26px !important;
+    border-radius: 4px;
+}
+#x-addmenu {
+	top: 133px !important;
+	border-color: #7e98ae;
+    left: 26px !important;
+    border-radius: 4px;
+}
+#x-addmenu .x-vertical-box-overflow-body {
+	width: 100% !important;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#x-addmenu .x-btn em {
+	height: 36px !important;
+}
+#x-addmenu .x-btn-default-small-icon-text-left .x-btn-icon {
+	left: 5px;
+}
+#x-addmenu .x-btn-default-small-icon-text-left button {
+	height: 36px !important;
+}
+#x-addmenu .x-btn-inner {
+	color: white;
+    height: 36px !important;
+    line-height: 36px !important;
+    text-align: left;
+    font-family: SimHei;
+    font-size: 14px;
+    padding-left: 30px;
+    overflow: hidden;
+    width: 150px !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#x-addmenu .x-box-scroller-top {
+	display: none;
+}
+#x-addmenu .x-box-scroller-bottom {
+	display: none;
+}
+.x-menu-icon-separator {
+	display: none;
+}
+/** end QmakeBtn Menu **/
+/** treeBody **/
+.x-panel-header-body .x-tool img {
+    margin-right: 1px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background: url(../../../images/upgrade/blue/mainicon/tree/treeexpand.png);
+}
+
+#tree-tab .x-panel-header-text-default {
+    margin-left: 200px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: tahoma, arial, verdana, sans-serif;
+}
+#tree-tab .x-tab-bar-top .x-tab-bar-body {
+    border-width: 1px 1px 0;
+    padding: 0;
+}
+
+#tree-tab .x-tab-bar .x-tab-bar-body .x-horizontal-box-overflow-body {
+	height: 100% !important;
+}
+#tree-tab .x-tab-bar-body {
+    height: 30px !important;
+    background-color: #2b4e63 !important;
+    background: url(../../../images/upgrade/blue/mainicon/tree/dot2.png) bottom;
+    background-repeat: repeat-x !important;
+}
+
+#tree-tab .x-tab-default-top {
+    background: #2b4e63;
+    box-shadow: none;
+    border-radius: 0;
+    top: -1px !important;
+    height: 30px;
+}
+#tree-tab .x-tab-default-top:first-child {
+	left: 25px !important;
+}
+#tree-tab .x-tab-default-top:last-child {
+	left: 131px !important;
+}
+
+#tree-tab .x-tab-active em button {
+    padding-bottom: 9px;
+    border-bottom: 2px solid white;
+    height: 100%;
+    border-radius: 0;
+}
+#tree-tab .x-tab-default-top em {
+	/* position: absolute;
+    padding: 0;
+    top: 1px !important;
+    padding-bottom: 10px !important; */
+}
+#tree-tab .x-tab-active button .x-tab-inner {
+    color: white !important;
+}
+
+#tree-tab .x-tab button .x-tab-inner {
+	font-family: SimHei;
+	font-size: 15px;
+	font-weight: bold;
+    color: #a9a9a9;
+}
+#tree-tab .x-tab button .x-tab-icon, .x-tab a .x-tab-icon {
+	/* position: absolute;
+    background-repeat: no-repeat;
+    top: -1px;
+    left: 22px;
+    right: auto;
+    bottom: 2px;
+    width: 18px;
+    height: 18px;
+    padding-bottom: 2px; */
+}
+#tree-tab .x-tab-default-top:last-child em {
+	/* left: 130px; */
+}
+#tree-tab .x-tab-bar-strip {
+    display: none;
+}
+
+#tree-tab-body .x-toolbar {
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    background-color: #2b4e63 !important;
+    background-image: url(../../../images/upgrade/blue/mainicon/tree/dot2.png);
+    text-align: center;
+    border: none;
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+}
+#tree-tab-body.x-toolbar-default {
+    border-color: #2b4e63 !important;
+    background-image: none;
+}
+
+.search-field {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.search-field input {
+	font-size: 14px;
+    padding-left: 10px;
+    padding-right: 30px;
+    width: 146px !important;
+    height: 24px !important;
+    border: none;
+    background: rgb(64, 95, 114) !important;
+    border-radius: 10px !important;
+    margin-left: 20px;
+    position: relative;
+    top: 6px;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+	color: #bababa;
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #bababa;
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #bababa;
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: #bababa;
+}
+
+.search-field .x-form-trigger-wrap {
+	position: absolute;
+    left: 144px;
+}
+
+.search-field .x-form-search-trigger {
+	margin-top: 4px;
+	background: url(../../../images/upgrade/blue/mainicon/tree/search.png) no-repeat bottom;
+	background-size: contain;
+	width: 14px;
+	height: 20px;
+}
+
+.treepanel .tree-back {
+    background-image: url(../../../images/upgrade/blue/mainicon/tree/refresh.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+	width: 14px;
+	height: 14px;
+}
+
+.treepanel .x-btn-tb {
+	background: none !important;
+	left: 182px !important;
+}
+.treepanel .x-scroller {
+	background-color: #2b4e63!important;
+}
+
+.treepanel-body {
+	border: none;
+    background-color: #2b4e63!important;
+    width: 100% !important;
+}
+.treepanel-body .x-grid-table {
+    border-collapse: collapse;
+}
+.treepanel-body .x-grid-row {
+    border: none !important;
+    height: 40px !important;
+    vertical-align: middle;
+}
+.x-tree-panel .x-grid-row .x-grid-cell-inner {
+	height: 18px;
+	line-height: 18px;
+}
+.treepanel-body .x-grid-row-over td {
+    color: white;
+}
+.treepanel-body .x-tree-cls-parent:hover {
+    color: white;
+}
+.treepanel-body td {
+	font-family: SimHei;
+    font-size: 14px !important;
+    color: #d7d7d7 !important;
+    background: #2b4e63 !important;
+}
+#tree-panel .x-scroller, #workspacetree-panel .x-scroller {
+	opacity: 0.3;
+}
+#tree-panel:hover .x-scroller, #workspacetree-panel:hover .x-scroller {
+	opacity: 1;
+}
+#tree-panel-body .x-tree-cls-node {
+    background-color: #3e5e70 !important;
+}
+
+.treepanel-body .x-grid-cell-first {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/dot2.png) !important;
+	background-position-y: bottom !important;
+	background-repeat: repeat-x !important;
+}
+ .treepanel-body .x-grid-cell-last {
+ 	background-image: url(../../../images/upgrade/blue/mainicon/tree/dot2.png) !important;
+	background-position-y: bottom !important;
+	background-repeat: repeat-x !important;
+ }
+.treepanel-body .x-grid-cell-last {
+	padding-left: 0px;
+}
+.treepanel-body .x-grid-row-selected td {
+    color: white;
+    background-color: #476f87 !important;
+}
+.treepanel-body .x-grid-row .x-grid-cell, .x-grid-row-over .x-grid-cell {
+    font: normal 14px tahoma, arial, verdana, sans-serif;
+}
+.treepanel-body .x-tree-elbow-plus {
+    display: none !important;
+}
+.treepanel-body .x-tree-icon {
+    margin-left: 8px;
+    margin-right: 5px;
+}
+#workspacetree-panel .treepanel-body .x-tree-icon {
+    margin-left: 26px;
+    margin-right: 10px;
+}
+/** tree icon **/
+.x-tree-common-use + td > div > img {
+	opacity: 0;
+}
+.x-tree-common-use + td > div {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/more1.png);
+	background-repeat: no-repeat;
+}
+.x-tree-common-use + td > div:hover {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/more2.png);
+	background-repeat: no-repeat;
+}
+.treepanel-body .x-tree-icon-parent {
+    background-image: url(../../../images/upgrade/blue/mainicon/tree/treein.png);
+}
+.treepanel-body .x-grid-tree-node-expanded .x-tree-icon-parent {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/treeout.png);
+}
+.treepanel-body .x-tree-icon-usoftmall {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/shop2.png);
+}
+.treepanel-body .x-grid-tree-node-expanded .x-tree-icon-usoftmall {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/shop.png);
+}
+.treepanel-body .x-tree-icon-financial {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/financial.png);
+}
+.treepanel-body .x-grid-tree-node-expanded .x-tree-icon-financial {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/financial2.png);
+}
+
+.treepanel-body .x-tree-icon {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.treepanel-body .x-tree-icon-common-use {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/commonuse.png) !important;
+}
+.treepanel-body .x-tree-icon-leaf {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/leaf.png);
+}
+.treepanel-body .x-tree-icon-customer-service {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/customer_service.png);
+}
+.treepanel-body .x-tree-icon-purchase {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/purchase.png);
+}
+.treepanel-body .x-tree-icon-project {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/project.png);
+}
+.treepanel-body .x-tree-icon-mrp {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/MRP.png);
+}
+.treepanel-body .x-tree-icon-make {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/manufacturing.png);
+}
+.treepanel-body .x-tree-icon-quality {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/quality.png);
+}
+.treepanel-body .x-tree-icon-stock {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/stock.png);
+}
+.treepanel-body .x-tree-icon-administration {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/administration.png);
+}
+.treepanel-body .x-tree-icon-hr2 {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/hr.png);
+}
+.treepanel-body .x-tree-icon-account-receivable {
+	background-image: url(../../../images/upgrade/blue/mainicon/tree/account_receivable.png);
+}
+
+/** tree foot **/
+.treepanel-body .x-tree-elbow-end-plus {
+	display: none !important;
+}
+.treepanel-body .x-tree-elbow-end {
+	display: none !important;
+}
+.treepanel-body .x-tree-elbow {
+    display: none !important;
+}
+.treepanel-body a:link {
+	color: #00BCD4;
+}
+.treepanel-body a:visited {
+	color: #00BCD4;
+}
+.treepanel-body a:active {
+	color: #87e7ec;
+}
+.treepanel-body a:hover {
+	color: #5adcec;
+}
+.treepanel-body .x-tree-elbow-line, .tree-body .x-tree-elbow, .tree-body .x-tree-elbow-end {
+    opacity: 0;
+}
+.treebtn {
+	background: none;
+}
+.x-btn-default-toolbar-small-icon-text-left button {
+	height: auto;
+}
+#tree-tab .x-docked-bottom {
+    background-color: #2b4e63;
+    height: 50px;
+    border-top: 1px solid #476f87 !important;
+    background-image: none;
+}
+.treebtn .treebtn:hover {
+    background-color: #2b4e63;
+    background-image: none !important;
+}
+.x-btn-default-toolbar-small {
+	background-color: #2b4e63;
+    background-image: none !important;
+}
+.x-btn-default-toolbar-small-over {
+	background-color: #2b4e63;
+    background-image: none !important;
+}
+#tree-tab .x-btn-default-toolbar-small .x-btn-inner {
+	height: 24px !important;
+    line-height: 24px !important;
+    font-size: 14px;
+    font-family: SimHei;
+    font-weight: normal;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    padding: 0 0 0 43px;
+}
+#tree-tab .x-btn-default-toolbar-small-icon-text-left .x-btn-icon {
+    width: 16px;
+    height: auto;
+    top: 0;
+    left: 18px;
+    bottom: 0;
+    right: auto;
+}
+#allNavigation button {
+	overflow: visible !important;
+}
+
+#allNavigation i {
+	width: 10px;
+	height: 10px;
+	top: -1px;
+	right: -3px;
+}
+.menu {
+    background: url(../../../images/upgrade/blue/mainicon/tree/menu.png);
+}
+
+.upgradetip {
+	overflow: visible;
+}
+.baseconfig {
+    background: url(../../../images/upgrade/blue/mainicon/tree/baseconfig.png);
+}
+#tree-tab .x-tab-default-top-active{
+	border: none !important;
+}

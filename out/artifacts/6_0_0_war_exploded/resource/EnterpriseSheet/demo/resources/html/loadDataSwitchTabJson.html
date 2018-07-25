@@ -1,0 +1,57 @@
+<pre>
+	var loadingMask = new Ext.LoadMask({target:Ext.getBody(), msg: SLANG['waiting']});
+        loadingMask.show();
+        
+        var callback = function(){
+        	loadingMask.hide();	
+        };
+        
+        var cells = [];
+        cells.push({sheet:1, row:2, col:2, json:{data: "Click Second tab to load data in tab 2", fw:"bold" }});	
+        for(var i = 10; i <= 30; i++){
+	        for(var j = 1; j <= 100; j++){
+	        	var data = i + j;
+	        	cells.push({sheet:1, row:i, col:j, json:{data: data}});		
+	        }
+        }
+        cells.push({sheet:1, row:2, col:j, json:{data: data}});
+
+        SHEET_API.loadData(SHEET_API_HD, {
+			fileName: titleTxt,
+			sheets: [{ name: "First tab", id: 1, color: 'red'}, { name: "Second Tab", id: 2, color: 'green'}],
+			floatings: [ { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,8]" } ],
+			cells: cells
+		}, callback, this);  
+        
+        // ===========================================================================================
+        
+        // listen to tab switch action
+        var cells2 = [];
+        for (var i = 1; i <= 20; i++) {
+	        for(var j = 1; j <= 50; j++){
+	        	var data = i * j;
+	        	cells2.push({sheet:2, row:i, col:j, json:{data: data}});		
+	        }
+        }
+        
+        // Please define call back function in here ...
+        var callbackFnForTab2 = function() {
+        	// add merged cells in here ...
+        	SHEET_API.mergeCellForSpan(SHEET_API_HD, [2, 2, 2, 4, 4]);
+        	SHEET_API.mergeCellForSpan(SHEET_API_HD, [2, 2, 6, 6, 8]);
+        };
+        
+        var sheet = SHEET_API_HD.sheet;
+        TAB2_DATA_LOADED = false;
+	sheet.on({
+	    scope: this,
+	    'switchsheet': function(oldSheetId, sheetId) {
+	    	if (sheetId == 2 && !TAB2_DATA_LOADED) {
+	    		alert("call backend to load tab2 data during tab switch.");
+	    		TAB2_DATA_LOADED = true;
+	    		// please use callback fn - which will make your data render correctly
+	    		SHEET_API.loadMoreData(SHEET_API_HD, {cells: cells2}, callbackFnForTab2, this);
+	    	}
+	    }
+	});
+</pre>

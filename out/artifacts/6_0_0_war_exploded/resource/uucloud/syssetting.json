@@ -1,0 +1,633 @@
+	{
+    	"text":"系统维护管理",
+    	"leaf":false,
+    	"cls": "x-tree-cls-root",
+    	"queryMode": " ",
+    	"children": [{
+            "text":"基础设置",
+            "leaf":false,
+            "cls": "x-tree-cls-parent",
+			"queryMode": "SYSSETTING",
+            "children": [{
+            	"text":"企业信息",
+                "url" : "jsps/ma/logic/enterprise.jsp?formCondition=1IS1",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id":13141
+            },{
+            	"text":"所属公司",
+                "url" : "jsps/common/datalist.jsp?whoami=Cop",
+                "cls": "x-tree-cls-node",
+                "addurl": "jsps/common/commonpage.jsp?whoami=Cop",
+                "leaf": true,
+                "id" : 13142
+            },{
+            	"text":"系统logo设置",
+                "url" : "jsps/ma/LogoSet.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13143
+            },{
+            	"text":"单据前缀码设置",
+                "url" : "jsps/common/datalist.jsp?whoami=MaxNumbers",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13144
+            },{
+            	"text":"财务初始化期间设置",
+                "url" : "jsps/common/editDatalist.jsp?whoami=Periods",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13145
+            },{
+            	"text":"模块当前期间查看",
+                "url" : "jsps/common/editDatalist.jsp?whoami=Periods!Now",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13146
+            },{
+            	"text": "<a href='jsps/common/init.jsp' target='_blank'>初始化数据导入</a>",
+                "showMode": 2,
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13147
+            },{
+            	"text": "<a href='system/init.action' target='_blank'>初始化基础设置</a>",
+                "showMode": 2,
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13148
+            },{
+            	"text":"基础数据刷新",
+                "url" : "jsps/sys/sysdatacheck.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13149
+            },{
+            	"text":"变更类型设置",
+                "url" : "jsps/common/datalist.jsp?whoami=ChangeType",
+                "cls": "x-tree-cls-node",
+                "addurl" : "jsps/common/commonpage.jsp?whoami=ChangeType",
+                "leaf": true,
+                "id" : 13150
+            },{
+            	"text":"开立新账套",
+                "url" : "jsps/ma/createAccountBook/createAccountBook.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13133
+            },{
+            	"text":"系统背景设置",
+                "url" : "jsps/ma/LoginImg.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13134
+            },{
+            	"text":"工作台业务",
+                "url" : "jsps/common/datalist.jsp?whoami=BenchBusiness",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "addurl":"jsps/ma/bench/business.jsp",
+                "id" : 13115
+            },{
+            	"text":"工作台设置",
+                "url" : "jsps/ma/bench/benchSet.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13136
+            },{
+            	"text":"场景编号",
+                "url" : "jsps/common/datalist.jsp?whoami=BenchSceneCode",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13137
+            },{
+            	"text":"密码加密设置",
+                "url" : "jsps/ma/encryptConfig.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id":13217
+            },{
+            	"text":"方案导入",
+                "url" : "jsps/common/importScheme.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13135
+            }]
+       	},{
+       		"text":"权限设置",
+            "leaf":false,
+            "cls": "x-tree-cls-parent",
+			"queryMode": "SYSSETTING",
+            "children":[{
+            	"text": "<a href='jsps/ma/power.jsp' target='_blank'>系统权限设置</a>",
+                "showMode": 2,
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13151
+            },{
+            	"text":"数据权限设置",
+                "url" : "jsps/ma/datalimit.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13152
+            },{
+            	"text":"修改权限日志",
+                "url" : "jsps/common/datalist.jsp?whoami=PowerLog",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13153
+            },{
+            	"text":"岗位权限列表",
+                "url" : "jsps/ma/powerDataList.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13154
+            },{
+            	"text":"岗位特殊权限列表",
+                "url" : "jsps/ma/specialPowerDataList.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13155
+            },{
+            	"text":"权限申请",
+                "url" : "jsps/common/datalist.jsp?whoami=PowerApply",
+                "cls": "x-tree-cls-node",
+                "addurl":"jsps/oa/powerApply/powerApply.jsp",
+                "leaf": true,
+                "id" : 13156
+            },{
+            	"text":"个人数据权限列表",
+                "url" : "jsps/common/datalist.jsp?whoami=PersonDataPower",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13157
+            },{
+            	"text":"岗位数据权限列表",
+                "url" : "jsps/common/datalist.jsp?whoami=PositionDataPower",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13158
+            }]
+       	},{
+       		"text":"界面设置",
+            "leaf":false,
+            "cls": "x-tree-cls-parent",
+			"queryMode": "SYSSETTING",
+            "children":[{
+            	"text":"导航栏设置",
+                "url" : "jsps/ma/sysNavigation.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13159
+            },{
+            	"text":"系统数据字典",
+                "url" : "jsps/common/datalist.jsp?whoami=DataDictionary$DB",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13160
+            },{
+            	"text":"Form设置",
+                "url" : "jsps/common/datalist.jsp?whoami=Form",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "addurl":"jsps/ma/form.jsp",
+                "id" : 13161
+            },{
+            	"text":"Form流程设置",
+                "url" : "jsps/common/editDatalist.jsp?whoami=Form",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13162
+            },{
+            	"text":"DBfind设置",
+                "url" : "jsps/common/datalist.jsp?whoami=DBfindSet",
+                "cls": "x-tree-cls-node",
+                "addurl":"jsps/ma/dbFindSet.jsp",
+                "leaf": true,
+                "id" : 13163
+            },{
+            	"text":"DataList设置",
+                "url" : "jsps/common/datalist.jsp?whoami=DataList",
+                "cls": "x-tree-cls-node",
+                "addurl" : "jsps/ma/dataList.jsp",
+                "leaf": true,
+                "id" : 13164
+            },{
+            	"text":"DetailGrid设置",
+                "url" : "jsps/common/datalist.jsp?whoami=DetailGrid",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13165
+            },{
+            	"text":"GridButton设置",
+                "url" : "jsps/common/datalist.jsp?whoami=GridButton",
+                "cls": "x-tree-cls-node",
+                "addurl" : "jsps/common/commonpage.jsp?whoami=GridButton",
+                "leaf": true,
+                "id" : 13227
+            },{
+            	"text":"关联查询设置",
+                "url" : "jsps/common/datalist.jsp?whoami=RelativeSearch",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13166
+            },{
+            	"text":"DBfindSetUI设置",
+                "url" : "jsps/common/datalist.jsp?whoami=DBfindSetUI",
+                "cls": "x-tree-cls-node",
+                "addurl" : "jsps/ma/dbFindSetUI.jsp",
+                "leaf": true,
+                "id" : 13167
+            },{
+            	"text":"自定义OA单据",
+                "url" : "jsps/common/LaunchProcess.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13168
+            },{
+           		"text":"放大镜联想设置",
+                "url" : "jsps/common/datalist.jsp?whoami=Dbfind$Prop",
+                "cls": "x-tree-cls-node",
+                "addurl" : "jsps/common/commonpage.jsp?whoami=Dbfind$Prop",
+                "leaf": true,
+                "id" : 13225
+            },{
+           		"text":"Excel报表单据设置",
+                "url" : "jsps/myexcel/Excel.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13226
+            }]
+       	},{
+       		"text":"流程管理",
+    		"leaf":false,
+    		"cls": "x-tree-cls-root",
+    		"queryMode": " ",
+    		"children": [{
+    			"text":"流程设计",
+    			"leaf":false,
+    			"cls": "x-tree-cls-root",
+    			"queryMode": "SYSSETTING",
+    			"children":[{
+    				"text": "<a href='workfloweditor/workfloweditor.jsp' target='_blank'>流程设计</a>",
+	                "showMode": 2,
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13169
+    			},{
+    				"text":"已定义流程",
+	                "url" : "jsps/common/jprocessDeploylist.jsp?whoami=JProcessDeploy",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13170
+    			},{
+    				"text":"流程设置",
+	                "url" : "jsps/common/datalist.jsp?whoami=JProcessSet",
+	                "cls": "x-tree-cls-node",
+	                "addurl":"jsps/common/jprocessSet.jsp",
+	                "leaf": true,
+	                "id" : 13171
+    			},{
+    				"text":"流程按钮",
+	                "url" : "jsps/common/datalist.jsp?_noc=1&whoami=JprocessButton",
+	                "cls": "x-tree-cls-node",
+	                "addurl" : "jsps/common/commonpage.jsp?whoami=JprocessButton",
+	                "leaf": true,
+	                "id" : 13172
+    			},{
+    				"text":"流程转移",
+	                "url" : "jsps/common/jprocessTransfer.jsp",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13173
+    			},{
+    				"text":"流程类型",
+	                "url" : "jsps/common/datalist.jsp?whoami=JProClassify",
+	                "cls": "x-tree-cls-node",
+	                "addurl":"jsps/common/jproClassify.jsp?whoami=JProClassify",
+	                "leaf": true,
+	                "id" : 13174
+    			},{
+    				"text":"流程归类",
+	                "url" : "jsps/common/jprocessClassify.jsp",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13175
+    			},{
+    				"text":"流程异常处理人设置",
+	                "url" : "jsps/common/jprocessBaseSet.jsp?formCondition=1IS1",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13176
+    			},{
+    				"text":"流程节点信息",
+	                "url" : "jsps/common/batchDeal.jsp?whoami=JProcess!QueryJnode",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13177
+    			},{
+    				"text":"流程批量同步",
+	                "url" : "jsps/common/batchDeal.jsp?whoami=JProcessDeploy!Post",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13178
+    			},{
+    				"text":"流程修改日志",
+	                "url" : "jsps/common/datalist.jsp?whoami=JProcessDeployLog",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13179
+    			},{
+    				"text":"自定义流程模板",
+	                "url" : "jsps/common/datalist.jsp?whoami=JprocessTemplate",
+	                "cls": "x-tree-cls-node",
+	                "addurl":"jsps/ma/jprocess/JprocessTemplateSet.jsp",
+	                "leaf": true,
+	                "id" : 13180
+    			},{
+    				"text":"自定义流程发起",
+	                "url" : "jsps/common/datalist.jsp?whoami=Jprocess!Luanch&urlcondition=em_id=session:em_id",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13181
+    			},{
+    				"text":"自定义流程单据",
+	                "url" : "jsps/common/datalist.jsp?whoami=AutoProcess",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13182
+    			},{
+    				"text":"流程转移批量同步",
+	                "url" : "jsps/common/batchDeal.jsp?whoami=JprocessTransfer!Post",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13219
+    			}]
+    		},{
+    			"text":"流程处理",
+	            "leaf":false,
+	            "cls": "x-tree-cls-parent",
+				"queryMode": "SYSSETTING",
+	            "children":[{
+	            	"text":"已发起流程",
+	                "url" : "jsps/common/datalist.jsp?whoami=JProcess",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13183
+	            },{
+	            	"text":"已发起未审批流程",
+	                "url" : "jsps/common/datalist.jsp?whoami=JProcess&urlcondition=jp_status='待审批'",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13184
+	            },{
+	            	"text":"已发起未结束流程",
+	                "url" : "jsps/common/datalist.jsp?whoami=JProcess&urlcondition=jp_status!='已结束'",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13185
+	            },{
+	            	"text":"已发起可选待办流程",
+	                "url" : "jsps/common/datalist.jsp?whoami=JProCand&urlcondition=jp_flag=1",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13186
+	            },{
+	            	"text":"流程查询",
+	                "url" : "jsps/common/batchDeal.jsp?whoami=JProcess!Query",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13187
+	            },{
+	            	"text":"流程催办处理",
+	                "url" : "jsps/common/batchDeal.jsp?whoami=Process!Remind",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13188
+	            },{
+	            	"text":"异常流程处理",
+	                "url" : "jsps/common/batchDeal.jsp?whoami=JProcess!BatchDeal",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13189
+	            },{
+	            	"text":"知会信息查询",
+	                "url" : "jsps/common/datalist.jsp?whoami=NotifyJprocessAll&urlcondition=IHD_RECEIVEID=session:em_id",
+	                "cls": "x-tree-cls-node",
+	                "leaf": true,
+	                "id" : 13190
+	            }]
+    		},{
+    			"text":"稽核设置",
+	            "leaf":false,
+	            "cls": "x-tree-cls-parent",
+				"queryMode": "SYSSETTING",
+	            "children":[{
+	            	"text":"稽核规则定义",
+	                "url" : "jsps/common/datalist.jsp?whoami=SysCheckFormula",
+	                "cls": "x-tree-cls-node",
+	                "addurl":"jsps/ma/syscheckformula.jsp",
+	                "leaf": true,
+	                "id" : 13191
+	            }]
+    		}]
+    	},{
+    		"text":"配置中心",
+            "leaf":false,
+            "cls": "x-tree-cls-parent",
+			"queryMode": "SYSSETTING",
+            "children":[{
+            	"text":"系统参数设置",
+                "url" : "jsps/ma/logic/config.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13192
+            },{
+            	"text":"账套禁用/启用设置",
+                "url" : "jsps/ma/logic/masterManage.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13193
+            },{
+            	"text":"期末对账设置",
+                "url" : "jsps/fa/checkAccountSet.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13194
+            },{
+            	"text":"jasper打印设置",
+                "url" : "jsps/ma/printSet.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13195
+            },{
+            	"text":"平台产生任务设置",
+                "url" : "jsps/common/gridpage.jsp?whoami=Btob$NoticeSet",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13196
+            },{
+            	"text":"任务模板设置",
+                "url" : "jsps/common/datalist.jsp?whoami=TaskTemplate",
+                "cls": "x-tree-cls-node",
+                "addurl":"jsps/oa/task/TaskTemplate.jsp",
+                "leaf": true,
+                "id" : 13197
+            },{
+            	"text":"自动执行JOB",
+                "url" : "jsps/common/datalist.jsp?whoami=SYSJob",
+                "cls": "x-tree-cls-node",
+                "addurl":"jsps/pm/mps/SYSJob.jsp?whoami=SYSJob",
+                "leaf": true,
+                "id" : 13198
+            },{
+            	"text":"JOB执行出错信息",
+                "url" : "jsps/common/datalist.jsp?whoami=JobError",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13199
+            },{
+            	"text":"UAS升级日志",
+                "url" : "jsps/common/datalist.jsp?whoami=UpgradeLog",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13200
+            },{
+            	"text":"UAS升级检查",
+                "url" : "jsps/common/datalist.jsp?whoami=UpgradeCheck",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13201
+            },{
+            	"text":"更新供应商/客户UU信息",
+                "url" : "jsps/b2b/ma/batchDealUU.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13202
+            },{
+            	"text":"消息中心设置",
+                "url" : "jsps/sysmng/MsgSetting.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13203
+            },{
+            	"text":"基础资料维护设置",
+                "url" : "jsps/ma/group/basedataset.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13216
+            },{
+            	"text":"单据复制设置",
+                "url" : "jsps/common/datalist.jsp?whoami=COPYCONFIG",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13220
+            },{
+            	"text":"定时任务设置",
+                "url" : "jsps/common/datalist.jsp?whoami=scheduleConfig",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13218,
+                "addurl": "jsps/sys/scheduleConfig.jsp?whoami=scheduleConfig"
+            }]
+    	},{
+    		"text":"技术中心",
+            "leaf":false,
+            "cls": "x-tree-cls-parent",
+			"queryMode": "SYSSETTING",
+            "children":[{
+            	"text":"系统优化",
+                "url" : "jsps/ma/optimize.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13204
+            },{
+            	"text":"在线人员管理",
+                "url" : "jsps/ma/online.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13205
+            },{
+            	"text":"APP使用情况",
+                "url" : "jsps/ma/mobileCondition.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13206
+            },{
+            	"text":"操作系统日志",
+                "url" : "jsps/common/datalist.jsp?whoami=MessageLog",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13209
+            },{
+            	"text":"平台传输日志",
+                "url" : "jsps/common/datalist.jsp?whoami=LogB2BTask",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13210
+            },{
+            	"text":"回收站",
+                "url" : "jsps/common/datalist.jsp?whoami=Recycles",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13211
+            },{
+            	"text":"批量更新方案",
+                "url" : "jsps/ma/update/updateScheme.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13212
+            },{
+            	"text":"数据批量更新",
+                "url" : "jsps/ma/update/dataUpdate.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13213
+            },{
+            	"text":"SQL工具",
+                "url" : "jsps/ma/sql.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13214
+            },{
+            	"text":"系统更新",
+                "url" : "jsps/ma/sysupdate.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13215
+            }]
+    	},{
+    		"text":"预警管理",
+            "leaf":false,
+            "cls": "x-tree-cls-parent",
+			"queryMode": "SYSSETTING",
+			"children":[{
+            	"text":"预警项目",
+                "url" : "jsps/common/datalist.jsp?whoami=AlertItem",
+                "addurl": "jsps/sys/alert/alertItem.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13221
+            },{
+            	"text":"预警项次",
+                "url" : "jsps/common/datalist.jsp?whoami=AlertInstance",
+                "addurl": "jsps/sys/alert/alertInstance.jsp",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13222
+            },{
+            	"text":"预警信息列表",
+                "url" : "jsps/common/datalist.jsp?whoami=AlertData",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13223
+            },{
+            	"text":"预警信息批量处理",
+                "url" : "jsps/common/batchDeal.jsp?whoami=AlertData!Deal",
+                "cls": "x-tree-cls-node",
+                "leaf": true,
+                "id" : 13224
+            }]
+    	}]
+    }

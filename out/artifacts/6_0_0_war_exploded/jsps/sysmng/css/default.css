@@ -1,0 +1,109 @@
+.x-toolbar-sencha {
+	background: #e0e0e0;
+	color: #304c33;
+	border: none !important;
+}
+.x-toolbar-sencha .x-logo {
+	padding: 10px 10px 10px 31px;
+	color:#666; 
+	text-align:center;
+	font-size: 22px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #4e691f;
+}
+
+#progressbar .progress {
+  height: 100%;
+  clear: both;
+  color: #888;
+  text-align: center;
+  font-family: "Lucida Grande","Microsoft YaHei",Verdana,Lucida,Arial,Helvetica,sans-serif;
+}
+#progressbar .progress>ul>li {
+  display: inline-block;
+  height: 100%;
+  margin-right: 150px;
+  position: relative;
+  background: none;
+  border: 0; 
+}
+#progressbar .progress>ul.steps {
+	display: inline-block;
+	height: 100%;
+	margin: 0px -4px;
+	position: relative;
+	background: none;
+	border: 0;
+}
+
+#progressbar .progress>ul>li>span.font{
+  display: block;
+  line-height: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  width: 100px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+#progressbar .progress>ul>li>span.circle{
+  z-index: 2;
+  position: relative;
+  height: 5px;
+  width: 100px;
+  background: #e0e0e0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+}
+#progressbar .progress>ul>li.active>span.circle {
+   background: rgba(188, 190, 205, 0.61);
+}
+
+.progressbar {
+  height: 100%;
+  width:100%;
+  clear: both;
+  color: #888;
+  text-align: center;
+  font-family: "Lucida Grande","Microsoft YaHei",Verdana,Lucida,Arial,Helvetica,sans-serif;
+}
+.progressbar>ul.steps {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  margin: 20px 0;
+  position: relative;
+  background: none;
+  border: 0;
+}
+.progressbar>ul>li {
+  display: inline-block;
+  height: 40px;
+  width:100%;
+  position: relative;
+  background: none;
+  border: 0; 
+}
+.progressbar>ul>li>span.font{
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  height: 40px;
+  width: 100%;
+  color: black;
+  padding: 8px 0 8px 0;
+  cursor: pointer;
+}
+.progressbar>ul>li.active>span.font {
+  background: rgba(188, 190, 205, 0.61);
+}
+#FreezeGridPanel1 .x-panel-header-text-default {
+  font-weight: bold;
+}
+#FreezeGridPanel2 .x-panel-header-text-default {
+  font-weight: bold;
+}

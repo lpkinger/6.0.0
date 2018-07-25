@@ -1,0 +1,47 @@
+<pre><code>
+/**
+ * This is a general event listener function to show cell onBlur.
+ */
+var sheet = SHEET_API_HD.sheet;
+var editor = sheet.getEditor();
+editor.on('quit', function(editor, sheetId, row, col){
+	console.log('sheetId: = ' + sheetId + ', row : '+row+', col : '+col);
+}, this);   
+</code></pre>
+
+<pre><code>
+===============================================================================
+</code></pre>
+
+<pre><code>
+callbackCellBlurJson : {
+	fileName: 'onCellBlur call back',
+    sheets: [{name: 'cell blur', id: 1, color: 'red' }],
+    floatings: [
+              { sheet:1, name:"merge1", ftype:"meg", json:"[2,2,2,8]" },
+	],
+    cells: [
+        {sheet: 1, row: 2, col: 0, json: {height:30, hoff:0}}, 	
+        {sheet: 1, row: 2, col: 2, json: {data: "Cell onBlur event callback", fw:"bold", fz:14 }}, 
+        {sheet: 1, row: 4, col: 2, json: {data: "1) Defined a callback fn, such as: CELL_ON_BLUR_CALLBACK_FN"}},
+        {sheet: 1, row: 5, col: 2, json: {data: "2) add onCellBlurFn: \"CELL_ON_BLUR_CALLBACK_FN\" in the cell json data structure"}},
+        {sheet: 1, row: 6, col: 2, json: {data: "3) \"CELL_ON_BLUR_CALLBACK_FN\" will return 3 parameter: cell value, row index, column index"}},
+        {sheet: 1, row: 8, col: 2, json: {data: "Do cell onBlur in here to test", onCellBlurFn: "CELL_ON_BLUR_CALLBACK_FN", fw:"bold"}}
+    ]
+},
+</code></pre>
+
+<pre><code>
+/**
+ * This function will be called on cell blur action.
+ * You need define the following data structure in your json data:
+ * 
+ * {sheet: 1, row: 3, col: 2, json: {data: "call back onCellBlur", onCellBlurFn: "CELL_ON_BLUR_CALLBACK_FN"}}
+ * 
+ * The callback will return back 3 parameters: 
+ *      cell value, cell row number and cell column number
+ */
+function CELL_ON_BLUR_CALLBACK_FN(value, row, column) {
+    alert("Cell value: " + value + "; Row: " + row + "; Colum: " + column);
+};
+</code></pre>

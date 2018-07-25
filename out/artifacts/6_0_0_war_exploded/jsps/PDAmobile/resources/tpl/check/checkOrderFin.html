@@ -1,0 +1,36 @@
+<style>
+	.m-l-10 {
+		margin-left: 10px;
+	}
+	.col-xs-5 {
+        padding-left:2px;
+        padding-right:2px;
+	}
+</style>
+         
+<div ng-controller="CheckCtrl" style="min-height: 400px;">	
+    <div><a ng-href="#/checkContents" class="m-l-15 btn btn-success btn-sm m-t-10 m-b-10" > 返回 </a></div>	
+	<div class="m-b-10">
+	    <input type="text" class="col-xs-5 col-xs-offset-2 " id="saleCode" ng-model="saleCode" placeholder="订单号" ng-keyup="searchSaleCode($event)" focus-me required> 	 
+	    <button class="btn btn-success btn-sm m-l-10 " ng-click="checkSaleCode(saleCode)" >查找</button>
+	</div>	
+	<div class="m-b-10 col-xs-offset-2" ng-show="code">订单号：{{code}}</div>    
+	<div  class="col-xs-12  col-sm-11 col-sm-offset-1">
+		<table ng-table="tableParams" 
+			class="table table-bordered table-striped ng-table-rowselected"  >
+			<tr >
+				<th width="20%">料号</th>
+				<th width="20%">仓库</th>
+				<th width="20%">储位</th>
+				<th width="20%">数量</th>
+			</tr>
+			<tr ng-repeat="item in $data"
+	                ng-class="{'active': item.$selected}" >
+	            <td >{{item.bar_prodcode}}</td>
+	            <td >{{item.bar_whcode}}</td>	
+	            <td >{{item.bar_location}}</td>
+	            <td >{{item.bar_remain}}</td>	                     
+			</tr>			
+		</table>
+	</div>
+</div>
